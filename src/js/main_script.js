@@ -35,6 +35,39 @@ $(document).ready(function(){
         //42.37422180175781
         //-71.23595428466797
         //Boston: -71.0589
+        console.log('checking line_geo here')
+        console.log(line_geo[route_id])
+        var coords = []
+        for (var i of line_geo[route_id]){
+            for (var [_long, _lat] of i.geometry.coordinates){
+                if (direction_id === 1){
+                    if (Math.abs(_long) >= Math.abs(long)){
+                        coords.push([_long, _lat])
+                    }
+                }
+                else{
+                    if (Math.abs(_long) <= Math.abs(long)){
+                        coords.push([_long, _lat])
+                    }
+                }
+            }
+        }
+        $(`path[vpid="${payload.id}"]`).remove();
+        p.data([{
+                "type": "Feature",
+                "properties": {
+                    "name": "na",
+                    "route_id": "na"
+                },
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": coords
+                }
+        }])
+            .enter()
+            .append("path")
+            .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', 'orange').attr('vpid', payload.id)
+        
     }
     function handle_vehicle_endpoint(response, handler){
         if (handler != 'remove'){
@@ -72,8 +105,6 @@ $(document).ready(function(){
                 .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray')
                 .attr('class', 'stop')
                 .attr('name', i.properties.name)
-    
-                
             }
         }
         /*
@@ -108,17 +139,14 @@ $(document).ready(function(){
         var evtSource = new EventSource('https://api-v3.mbta.com/vehicles?filter[route]=CR-Fitchburg&filter[route_type]=2&page[limit]=100&page[offset]=0&sort=current_stop_sequence&api_key=ec477916907d435d9cdc835309d1a9f0');
         evtSource.addEventListener('reset', function(e){
             console.log('got reset')
-            console.log(e)
             handle_vehicle_endpoint(e, 'reset')
         })
         evtSource.addEventListener('update', function(e){
             console.log('got update')
-            console.log(e)
             handle_vehicle_endpoint(e, 'update')
         })
         evtSource.addEventListener('add', function(e){
             console.log('got add')
-            console.log(e)
             handle_vehicle_endpoint(e, 'add')
         });
         evtSource.addEventListener('remove', function(e){
