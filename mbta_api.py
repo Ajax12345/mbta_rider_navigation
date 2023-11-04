@@ -62,16 +62,16 @@ def vehicles() -> None:
 def shapes() -> None:
     s = requests.get('https://api-v3.mbta.com/shapes?sort=polyline&filter[route]=CR-Fitchburg').json()['data']
     with open('json_data/f_line_shapes.json', 'w') as f:
-        json.dump({
+        json.dump({'type':'FeatureCollection', 'features':[{
             "type": "Feature",
             "properties": {
                 "name": "na"
             },
             "geometry": {
-                "type": "Polygon",
-                "coordinates": [[*map(lambda x:[x[0]*1000000, x[1]*1000000], polyline.decode(i['attributes']['polyline'], 10, geojson = True))] for i in s]
+                "type": "LineString",
+                "coordinates": [*map(lambda x:[x[0]*100000, x[1]*100000], polyline.decode(i['attributes']['polyline'], 10, geojson = True))]
             }
-        }, f, indent=4)
+        } for i in s]}, f, indent=4)
 
 if __name__ == '__main__':
     shapes()

@@ -2,18 +2,15 @@
 d3.json('json_data/f_line_shapes.json', function(data){
     var width = window.innerWidth
     var height = window.innerHeight;
-    var projection = d3.geoTransverseMercator().translate([width / 2, height / 2]).center([
-        -710.8029,
-        423.7448
-    ]).scale([100])
+    var projection = d3.geoMercator().translate([width / 2, height / 2]).center([
+        -71.0589,
+        42.3601
+    ]).scale([30000])
     var pathGenerator = d3.geoPath().projection(projection);
     var svg = d3.select("#map").append("svg").attr("width", width).attr("height", height);
     svg.selectAll("path")
-        .data([data])
+        .data(data.features)
         .enter()
         .append("path")
-        .attr("d", pathGenerator)
-        .style('fill', function(d, i){
-            
-        })
+        .attr("d", pathGenerator).attr('stroke-width', '5')
 })
