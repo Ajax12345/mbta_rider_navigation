@@ -1,9 +1,40 @@
 
 $(document).ready(function(){
     var line_geo = {}
+    var width = window.innerWidth
+    var height = window.innerHeight;
+    var boston_coords = [
+        -71.0589,
+        42.3601
+    ]
+    var projection = d3.geoMercator().translate([width / 2, height / 2]).center(boston_coords).scale([50000])
+    var pathGenerator = d3.geoPath().projection(projection);
+    var svg = d3.select("#map").append("svg").attr("width", width).attr("height", height);
+    var p = svg.selectAll("path")
     function draw_train_progress(payload){
         console.log('payload in draw_train_progress')
         console.log(payload)
+        var direction_id = payload.attributes.direction_id;
+        var route_id = payload.relationships.route.data.id;
+        var lat = payload.attributes.latitude;
+        var long = payload.attributes.longitude;
+        $(`path[vid="${payload.id}"]`).remove();
+        p.data([{
+                "type": "Feature",
+                "properties": {
+                    "name": "train"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [long, lat]
+                }
+            }])
+            .enter()
+            .append("path")
+            .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', 'red').attr('vid', payload.id);
+        //42.37422180175781
+        //-71.23595428466797
+        //Boston: -71.0589
     }
     function handle_vehicle_endpoint(response, handler){
         if (handler != 'remove'){
@@ -20,15 +51,6 @@ $(document).ready(function(){
 
     }
     d3.json('json_data/lines_and_stops_geo.json', function(data){
-        var width = window.innerWidth
-        var height = window.innerHeight;
-        var boston_coords = [
-            -71.0589,
-            42.3601
-        ]
-        var projection = d3.geoMercator().translate([width / 2, height / 2]).center(boston_coords).scale([50000])
-        var pathGenerator = d3.geoPath().projection(projection);
-        var svg = d3.select("#map").append("svg").attr("width", width).attr("height", height);
         var p = svg.selectAll("path")
         for (var i of data.features){
             if (i.geometry.type === 'LineString'){
