@@ -105,7 +105,8 @@ def shapes() -> None:
         root['features'].extend([{
             "type": "Feature",
             "properties": {
-                "name": route['attributes']['long_name']
+                "name": route['attributes']['long_name'],
+                "route_id": route['id']
             },
             "geometry": {
                 "type": "LineString",
@@ -117,4 +118,4 @@ def shapes() -> None:
         json.dump(root, f, indent=4)
 
 if __name__ == '__main__':
-    vehicles()
+    stops_and_lines()
