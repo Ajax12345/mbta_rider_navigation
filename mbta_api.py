@@ -1,5 +1,5 @@
 import requests, json, time
-import datetime, re
+import datetime, re, polyline
 
 API_KEY = 'ec477916907d435d9cdc835309d1a9f0'
 
@@ -59,6 +59,19 @@ def vehicles() -> None:
         print(json.dumps(scheduled, indent=4))
         print('-'*30)
 
+def shapes() -> None:
+    s = requests.get('https://api-v3.mbta.com/shapes?sort=polyline&filter[route]=CR-Fitchburg').json()['data']
+    with open('json_data/f_line_shapes.json', 'w') as f:
+        json.dump({
+            "type": "Feature",
+            "properties": {
+                "name": "na"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[*map(lambda x:[x[0]*1000000, x[1]*1000000], polyline.decode(i['attributes']['polyline'], 10, geojson = True))] for i in s]
+            }
+        }, f, indent=4)
 
 if __name__ == '__main__':
-    vehicles()
+    shapes()
