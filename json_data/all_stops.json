@@ -1,0 +1,6196 @@
+[
+    {
+        "attributes": {
+            "address": "Blue Hill Ave or Cummins Hwy at Woodhaven St, Mattapan, MA 02126",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.271466,
+            "location_type": 1,
+            "longitude": -71.095782,
+            "municipality": "Boston",
+            "name": "Blue Hill Avenue",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-DB-2222",
+        "links": {
+            "self": "/stops/place-DB-2222"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-DB-2222"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Fairmount Ave and Truman Hwy, Hyde Park, MA 02136",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.253638,
+            "location_type": 1,
+            "longitude": -71.11927,
+            "municipality": "Boston",
+            "name": "Fairmount",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-DB-2205",
+        "links": {
+            "self": "/stops/place-DB-2205"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-DB-2205"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "171 Geneva Ave, Boston, MA 02121",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.305037,
+            "location_type": 1,
+            "longitude": -71.076833,
+            "municipality": "Boston",
+            "name": "Four Corners/Geneva",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-DB-2249",
+        "links": {
+            "self": "/stops/place-DB-2249"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-DB-2249"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "865 Morton St, Mattapan, MA 02126",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.280994,
+            "location_type": 1,
+            "longitude": -71.085475,
+            "municipality": "Boston",
+            "name": "Morton Street",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-DB-2230",
+        "links": {
+            "self": "/stops/place-DB-2230"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-DB-2230"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1070 Massachusetts Ave, Boston, MA 02118",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.327415,
+            "location_type": 1,
+            "longitude": -71.065674,
+            "municipality": "Boston",
+            "name": "Newmarket",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-DB-2265",
+        "links": {
+            "self": "/stops/place-DB-2265"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-DB-2265"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1800 Hyde Park Ave, Hyde Park, MA 02136",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.238405,
+            "location_type": 1,
+            "longitude": -71.133246,
+            "municipality": "Boston",
+            "name": "Readville",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-DB-0095",
+        "links": {
+            "self": "/stops/place-DB-0095"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-DB-0095"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Atlantic Ave, Boston, MA 02110",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.352271,
+            "location_type": 1,
+            "longitude": -71.055242,
+            "municipality": "Boston",
+            "name": "South Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-sstat",
+        "links": {
+            "self": "/stops/place-sstat"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-sstat"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "210 Talbot Ave, Boston, MA 02124",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.292246,
+            "location_type": 1,
+            "longitude": -71.07814,
+            "municipality": "Boston",
+            "name": "Talbot Avenue",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-DB-2240",
+        "links": {
+            "self": "/stops/place-DB-2240"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-DB-2240"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "691 Dudley St, Dorchester, MA 02125",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.319125,
+            "location_type": 1,
+            "longitude": -71.068627,
+            "municipality": "Boston",
+            "name": "Uphams Corner",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-DB-2258",
+        "links": {
+            "self": "/stops/place-DB-2258"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-DB-2258"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "70 Main St, Ayer, MA 01432",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.559074,
+            "location_type": 1,
+            "longitude": -71.588476,
+            "municipality": "Ayer",
+            "name": "Ayer",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FR-0361",
+        "links": {
+            "self": "/stops/place-FR-0361"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0361"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Common St and Concord Ave, Belmont, MA 02478",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.395896,
+            "location_type": 1,
+            "longitude": -71.17619,
+            "municipality": "Belmont",
+            "name": "Belmont",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FR-0064",
+        "links": {
+            "self": "/stops/place-FR-0064"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0064"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Sawyer Rd, Waltham, MA 02453",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.361898,
+            "location_type": 1,
+            "longitude": -71.260065,
+            "municipality": "Waltham",
+            "name": "Brandeis/Roberts",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FR-0115",
+        "links": {
+            "self": "/stops/place-FR-0115"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0115"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "90 Thoreau St, Concord, MA 01742",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.456565,
+            "location_type": 1,
+            "longitude": -71.357677,
+            "municipality": "Concord",
+            "name": "Concord",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FR-0201",
+        "links": {
+            "self": "/stops/place-FR-0201"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0201"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "150 Main St, Fitchburg, MA 01420",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.58072,
+            "location_type": 1,
+            "longitude": -71.792611,
+            "municipality": "Fitchburg",
+            "name": "Fitchburg",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FR-0494",
+        "links": {
+            "self": "/stops/place-FR-0494"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0494"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "198 Church St, Weston, MA",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.37897,
+            "location_type": 1,
+            "longitude": -71.282411,
+            "municipality": "Weston",
+            "name": "Kendal Green",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FR-0132",
+        "links": {
+            "self": "/stops/place-FR-0132"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0132"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "160 Lincoln Rd, Lincoln, MA 01773",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.413641,
+            "location_type": 1,
+            "longitude": -71.325512,
+            "municipality": "Lincoln",
+            "name": "Lincoln",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FR-0167",
+        "links": {
+            "self": "/stops/place-FR-0167"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0167"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Grimes Ln and Foster St, Littleton, MA 01460",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.519236,
+            "location_type": 1,
+            "longitude": -71.502643,
+            "municipality": "Littleton",
+            "name": "Littleton/Route 495",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FR-0301",
+        "links": {
+            "self": "/stops/place-FR-0301"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0301"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-7",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "44 Nashua St, Leominster, MA 01453",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.539017,
+            "location_type": 1,
+            "longitude": -71.739186,
+            "municipality": "Leominster",
+            "name": "North Leominster",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FR-0451",
+        "links": {
+            "self": "/stops/place-FR-0451"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0451"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "135 Causeway St, Boston, MA 02114",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.365577,
+            "location_type": 1,
+            "longitude": -71.06129,
+            "municipality": "Boston",
+            "name": "North Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-north",
+        "links": {
+            "self": "/stops/place-north"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-north"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1899 Massachusetts Ave, Cambridge, MA 02140",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.3884,
+            "location_type": 1,
+            "longitude": -71.119149,
+            "municipality": "Cambridge",
+            "name": "Porter",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-portr",
+        "links": {
+            "self": "/stops/place-portr"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-portr"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Ayer Rd and Phoenix St, Shirley, MA 01464",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.545089,
+            "location_type": 1,
+            "longitude": -71.648004,
+            "municipality": "Shirley",
+            "name": "Shirley",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FR-0394",
+        "links": {
+            "self": "/stops/place-FR-0394"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0394"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "4 Central St, Acton, MA 01720",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.460375,
+            "location_type": 1,
+            "longitude": -71.457744,
+            "municipality": "Acton",
+            "name": "South Acton",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FR-0253",
+        "links": {
+            "self": "/stops/place-FR-0253"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0253"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "55 Authority Dr, Fitchburg, MA 01420",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.553477,
+            "location_type": 1,
+            "longitude": -71.848488,
+            "municipality": "Fitchburg",
+            "name": "Wachusett",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FR-3338",
+        "links": {
+            "self": "/stops/place-FR-3338"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-3338"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "75 Carter St, Waltham, MA 02453",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.374296,
+            "location_type": 1,
+            "longitude": -71.235615,
+            "municipality": "Waltham",
+            "name": "Waltham",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FR-0098",
+        "links": {
+            "self": "/stops/place-FR-0098"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0098"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "525 Trapelo Rd, Belmont, MA 02478",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.3876,
+            "location_type": 1,
+            "longitude": -71.190744,
+            "municipality": "Belmont",
+            "name": "Waverley",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FR-0074",
+        "links": {
+            "self": "/stops/place-FR-0074"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0074"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Commonwealth Ave and Main St, West Concord, MA 01742",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.457043,
+            "location_type": 1,
+            "longitude": -71.392892,
+            "municipality": "Concord",
+            "name": "West Concord",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FR-0219",
+        "links": {
+            "self": "/stops/place-FR-0219"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FR-0219"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "145 Dartmouth St Boston, MA 02116",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.34735,
+            "location_type": 1,
+            "longitude": -71.075727,
+            "municipality": "Boston",
+            "name": "Back Bay",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-bbsta",
+        "links": {
+            "self": "/stops/place-bbsta"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-bbsta"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "125 Allied Dr, Dedham, MA 02026",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.227079,
+            "location_type": 1,
+            "longitude": -71.174254,
+            "municipality": "Dedham",
+            "name": "Dedham Corporate Center",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FB-0118",
+        "links": {
+            "self": "/stops/place-FB-0118"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0118"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Gillette Stadium near Lots 3 and 4, Foxborough, MA 02035",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.0951,
+            "location_type": 1,
+            "longitude": -71.26151,
+            "municipality": "Foxborough",
+            "name": "Foxboro",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FS-0049",
+        "links": {
+            "self": "/stops/place-FS-0049"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FS-0049"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Atlantic Ave, Boston, MA 02110",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.352271,
+            "location_type": 1,
+            "longitude": -71.055242,
+            "municipality": "Boston",
+            "name": "South Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-sstat",
+        "links": {
+            "self": "/stops/place-sstat"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-sstat"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Pleasant St and Cordaville Rd, Ashland, MA 01721",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.26149,
+            "location_type": 1,
+            "longitude": -71.482161,
+            "municipality": "Ashland",
+            "name": "Ashland",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WML-0252",
+        "links": {
+            "self": "/stops/place-WML-0252"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0252"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Auburn St and Woodland Rd, Newton, MA 02466",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.345833,
+            "location_type": 1,
+            "longitude": -71.250373,
+            "municipality": "Newton",
+            "name": "Auburndale",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WML-0102",
+        "links": {
+            "self": "/stops/place-WML-0102"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0102"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "145 Dartmouth St Boston, MA 02116",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.34735,
+            "location_type": 1,
+            "longitude": -71.075727,
+            "municipality": "Boston",
+            "name": "Back Bay",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-bbsta",
+        "links": {
+            "self": "/stops/place-bbsta"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-bbsta"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "100 Arthur St, Boston, MA 02134",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.357293,
+            "location_type": 1,
+            "longitude": -71.139883,
+            "municipality": "Boston",
+            "name": "Boston Landing",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WML-0035",
+        "links": {
+            "self": "/stops/place-WML-0035"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0035"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "417 Waverly St, Framingham, MA 01702",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.276108,
+            "location_type": 1,
+            "longitude": -71.420055,
+            "municipality": "Framingham",
+            "name": "Framingham",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WML-0214",
+        "links": {
+            "self": "/stops/place-WML-0214"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0214"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Pine St, North Grafton, MA 01536-1856",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.2466,
+            "location_type": 1,
+            "longitude": -71.685325,
+            "municipality": "Grafton",
+            "name": "Grafton",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WML-0364",
+        "links": {
+            "self": "/stops/place-WML-0364"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0364"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "25 David Ortiz Dr, Boston, MA 02215",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.347581,
+            "location_type": 1,
+            "longitude": -71.099974,
+            "municipality": "Boston",
+            "name": "Lansdowne",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WML-0025",
+        "links": {
+            "self": "/stops/place-WML-0025"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0025"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Walnut St, Natick, MA 01760",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.285719,
+            "location_type": 1,
+            "longitude": -71.347133,
+            "municipality": "Natick",
+            "name": "Natick Center",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WML-0177",
+        "links": {
+            "self": "/stops/place-WML-0177"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0177"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "770 Washington St, Newton, MA 02460",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.351702,
+            "location_type": 1,
+            "longitude": -71.205408,
+            "municipality": "Newton",
+            "name": "Newtonville",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WML-0081",
+        "links": {
+            "self": "/stops/place-WML-0081"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0081"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Atlantic Ave, Boston, MA 02110",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.352271,
+            "location_type": 1,
+            "longitude": -71.055242,
+            "municipality": "Boston",
+            "name": "South Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-sstat",
+        "links": {
+            "self": "/stops/place-sstat"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-sstat"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "87 Southville Rd, Southborough, MA 01772",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.267024,
+            "location_type": 1,
+            "longitude": -71.524371,
+            "municipality": "Southborough",
+            "name": "Southborough",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WML-0274",
+        "links": {
+            "self": "/stops/place-WML-0274"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0274"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "90 Croton St, Wellesley, MA 02481",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.323608,
+            "location_type": 1,
+            "longitude": -71.272288,
+            "municipality": "Wellesley",
+            "name": "Wellesley Farms",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WML-0125",
+        "links": {
+            "self": "/stops/place-WML-0125"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0125"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "341 Washington St, Wellesley, MA 02481",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.31037,
+            "location_type": 1,
+            "longitude": -71.277044,
+            "municipality": "Wellesley",
+            "name": "Wellesley Hills",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WML-0135",
+        "links": {
+            "self": "/stops/place-WML-0135"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0135"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Grove St, Wellesley, MA 02482",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.297526,
+            "location_type": 1,
+            "longitude": -71.294173,
+            "municipality": "Wellesley",
+            "name": "Wellesley Square",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WML-0147",
+        "links": {
+            "self": "/stops/place-WML-0147"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0147"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "249 West Central St, Natick, MA 01760",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.283064,
+            "location_type": 1,
+            "longitude": -71.391797,
+            "municipality": "Natick",
+            "name": "West Natick",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WML-0199",
+        "links": {
+            "self": "/stops/place-WML-0199"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0199"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1395 Washington St, Newton, MA 02465",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.347878,
+            "location_type": 1,
+            "longitude": -71.230528,
+            "municipality": "Newton",
+            "name": "West Newton",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WML-0091",
+        "links": {
+            "self": "/stops/place-WML-0091"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0091"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Smith Pkwy and Fisher St, Westborough, MA 01581",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.269644,
+            "location_type": 1,
+            "longitude": -71.647076,
+            "municipality": "Westborough",
+            "name": "Westborough",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WML-0340",
+        "links": {
+            "self": "/stops/place-WML-0340"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0340"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-7",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "2 Washington Sq, Worcester, MA 01608",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.261835,
+            "location_type": 1,
+            "longitude": -71.791806,
+            "municipality": "Worcester",
+            "name": "Worcester",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WML-0442",
+        "links": {
+            "self": "/stops/place-WML-0442"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WML-0442"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "145 Dartmouth St Boston, MA 02116",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.34735,
+            "location_type": 1,
+            "longitude": -71.075727,
+            "municipality": "Boston",
+            "name": "Back Bay",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-bbsta",
+        "links": {
+            "self": "/stops/place-bbsta"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-bbsta"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "125 Allied Dr, Dedham, MA 02026",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.227079,
+            "location_type": 1,
+            "longitude": -71.174254,
+            "municipality": "Dedham",
+            "name": "Dedham Corporate Center",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FB-0118",
+        "links": {
+            "self": "/stops/place-FB-0118"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0118"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "186 Grant Ave, Dedham, MA 02026",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.233249,
+            "location_type": 1,
+            "longitude": -71.158647,
+            "municipality": "Dedham",
+            "name": "Endicott",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FB-0109",
+        "links": {
+            "self": "/stops/place-FB-0109"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0109"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Washington St and Hyde Park Ave, Jamaica Plain, MA 02130",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.300713,
+            "location_type": 1,
+            "longitude": -71.113943,
+            "municipality": "Boston",
+            "name": "Forest Hills",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-forhl",
+        "links": {
+            "self": "/stops/place-forhl"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-forhl"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1000 W Central St, Franklin, MA 02038",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.089941,
+            "location_type": 1,
+            "longitude": -71.43902,
+            "municipality": "Franklin",
+            "name": "Forge Park/495",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FB-0303",
+        "links": {
+            "self": "/stops/place-FB-0303"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0303"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Gillette Stadium near Lots 3 and 4, Foxborough, MA 02035",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.0951,
+            "location_type": 1,
+            "longitude": -71.26151,
+            "municipality": "Foxborough",
+            "name": "Foxboro",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FS-0049",
+        "links": {
+            "self": "/stops/place-FS-0049"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FS-0049"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "75 Depot St, Franklin, MA 02038",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.083238,
+            "location_type": 1,
+            "longitude": -71.396102,
+            "municipality": "Franklin",
+            "name": "Franklin",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FB-0275",
+        "links": {
+            "self": "/stops/place-FB-0275"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0275"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Pingree St, Hyde Park, MA 02136",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.25503,
+            "location_type": 1,
+            "longitude": -71.125526,
+            "municipality": "Boston",
+            "name": "Hyde Park",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-2203",
+        "links": {
+            "self": "/stops/place-NEC-2203"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-2203"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "48 Carroll Ave, Westwood, MA 02090",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.22105,
+            "location_type": 1,
+            "longitude": -71.183961,
+            "municipality": "Westwood",
+            "name": "Islington",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FB-0125",
+        "links": {
+            "self": "/stops/place-FB-0125"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0125"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "9 Rockwood Rd, Norfolk, MA 02056",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.120694,
+            "location_type": 1,
+            "longitude": -71.325217,
+            "municipality": "Norfolk",
+            "name": "Norfolk",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FB-0230",
+        "links": {
+            "self": "/stops/place-FB-0230"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0230"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "164 Broadway, Norwood, MA 02062",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.188775,
+            "location_type": 1,
+            "longitude": -71.199665,
+            "municipality": "Norwood",
+            "name": "Norwood Central",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FB-0148",
+        "links": {
+            "self": "/stops/place-FB-0148"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0148"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "14 Hill St, Norwood, MA 02062",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.196857,
+            "location_type": 1,
+            "longitude": -71.196688,
+            "municipality": "Norwood",
+            "name": "Norwood Depot",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-FB-0143",
+        "links": {
+            "self": "/stops/place-FB-0143"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0143"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1800 Hyde Park Ave, Hyde Park, MA 02136",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.238405,
+            "location_type": 1,
+            "longitude": -71.133246,
+            "municipality": "Boston",
+            "name": "Readville",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-DB-0095",
+        "links": {
+            "self": "/stops/place-DB-0095"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-DB-0095"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1150 Tremont St, Roxbury, MA 02120",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.336377,
+            "location_type": 1,
+            "longitude": -71.088961,
+            "municipality": "Boston",
+            "name": "Ruggles",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-rugg",
+        "links": {
+            "self": "/stops/place-rugg"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-rugg"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Atlantic Ave, Boston, MA 02110",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.352271,
+            "location_type": 1,
+            "longitude": -71.055242,
+            "municipality": "Boston",
+            "name": "South Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-sstat",
+        "links": {
+            "self": "/stops/place-sstat"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-sstat"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "275 West St, Walpole, MA 02081",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.145477,
+            "location_type": 1,
+            "longitude": -71.25779,
+            "municipality": "Walpole",
+            "name": "Walpole",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FB-0191",
+        "links": {
+            "self": "/stops/place-FB-0191"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0191"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Buckminster Dr and Engamore Ln, Norwood, MA 02062",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.172127,
+            "location_type": 1,
+            "longitude": -71.219366,
+            "municipality": "Norwood",
+            "name": "Windsor Gardens",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-FB-0166",
+        "links": {
+            "self": "/stops/place-FB-0166"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-FB-0166"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "110 Chief Justice Cushing Hwy, Cohasset, MA 02025",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.24421,
+            "location_type": 1,
+            "longitude": -70.837529,
+            "municipality": "Cohasset",
+            "name": "Cohasset",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GRB-0199",
+        "links": {
+            "self": "/stops/place-GRB-0199"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GRB-0199"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1590 Commercial St, East Weymouth, MA 02189",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.2191,
+            "location_type": 1,
+            "longitude": -70.9214,
+            "municipality": "Weymouth",
+            "name": "East Weymouth",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GRB-0146",
+        "links": {
+            "self": "/stops/place-GRB-0146"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GRB-0146"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "247 Old Driftway, Scituate, MA 02066",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.178776,
+            "location_type": 1,
+            "longitude": -70.746641,
+            "municipality": "Scituate",
+            "name": "Greenbush",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GRB-0276",
+        "links": {
+            "self": "/stops/place-GRB-0276"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GRB-0276"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "599 Old Colony Ave, Boston, MA 02127-3805",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.320685,
+            "location_type": 1,
+            "longitude": -71.052391,
+            "municipality": "Boston",
+            "name": "JFK/UMass",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-jfk",
+        "links": {
+            "self": "/stops/place-jfk"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-jfk"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "190 Summer St, Hingham, MA 02043",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.244959,
+            "location_type": 1,
+            "longitude": -70.869205,
+            "municipality": "Hingham",
+            "name": "Nantasket Junction",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GRB-0183",
+        "links": {
+            "self": "/stops/place-GRB-0183"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GRB-0183"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "777 Country Way, Scituate, MA 02066",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.219528,
+            "location_type": 1,
+            "longitude": -70.788602,
+            "municipality": "Scituate",
+            "name": "North Scituate",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GRB-0233",
+        "links": {
+            "self": "/stops/place-GRB-0233"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GRB-0233"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "175 Thomas E Burgin Pkwy, Quincy, MA 02169",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.251809,
+            "location_type": 1,
+            "longitude": -71.005409,
+            "municipality": "Quincy",
+            "name": "Quincy Center",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-qnctr",
+        "links": {
+            "self": "/stops/place-qnctr"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-qnctr"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Atlantic Ave, Boston, MA 02110",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.352271,
+            "location_type": 1,
+            "longitude": -71.055242,
+            "municipality": "Boston",
+            "name": "South Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-sstat",
+        "links": {
+            "self": "/stops/place-sstat"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-sstat"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "20 Fort Hill Rd, Hingham, MA 02043",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.235838,
+            "location_type": 1,
+            "longitude": -70.902708,
+            "municipality": "Hingham",
+            "name": "West Hingham",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GRB-0162",
+        "links": {
+            "self": "/stops/place-GRB-0162"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GRB-0162"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "121 Commercial St, Weymouth, MA 02184",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.221503,
+            "location_type": 1,
+            "longitude": -70.968152,
+            "municipality": "Weymouth",
+            "name": "Weymouth Landing/East Braintree",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GRB-0118",
+        "links": {
+            "self": "/stops/place-GRB-0118"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GRB-0118"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "100 Atlantic Ave, Woburn, MA 01801",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.516987,
+            "location_type": 1,
+            "longitude": -71.144475,
+            "municipality": "Woburn",
+            "name": "Anderson/Woburn",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NHRML-0127",
+        "links": {
+            "self": "/stops/place-NHRML-0127"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NHRML-0127"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "17 Railroad St, Andover, MA 01810",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.658336,
+            "location_type": 1,
+            "longitude": -71.144502,
+            "municipality": "Andover",
+            "name": "Andover",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WR-0228",
+        "links": {
+            "self": "/stops/place-WR-0228"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0228"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "195 Andover St, Andover, MA 01810",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.627356,
+            "location_type": 1,
+            "longitude": -71.159962,
+            "municipality": "Andover",
+            "name": "Ballardvale",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WR-0205",
+        "links": {
+            "self": "/stops/place-WR-0205"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0205"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "10 Railroad Ave, Bradford, MA 01835",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.766912,
+            "location_type": 1,
+            "longitude": -71.088411,
+            "municipality": "Haverhill",
+            "name": "Bradford",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WR-0325",
+        "links": {
+            "self": "/stops/place-WR-0325"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0325"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-7",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "907 Main St, Wakefield, MA 01880",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.483005,
+            "location_type": 1,
+            "longitude": -71.067247,
+            "municipality": "Wakefield",
+            "name": "Greenwood",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WR-0085",
+        "links": {
+            "self": "/stops/place-WR-0085"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0085"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Washington Ave, Haverhill, MA 01832",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.773474,
+            "location_type": 1,
+            "longitude": -71.086237,
+            "municipality": "Haverhill",
+            "name": "Haverhill",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WR-0329",
+        "links": {
+            "self": "/stops/place-WR-0329"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0329"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-7",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "S Union St and Merrimack St, Lawrence, MA 01843",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.701806,
+            "location_type": 1,
+            "longitude": -71.15198,
+            "municipality": "Lawrence",
+            "name": "Lawrence",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WR-0264",
+        "links": {
+            "self": "/stops/place-WR-0264"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0264"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Commercial St and Pleasant St, Malden, MA 02148",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.426632,
+            "location_type": 1,
+            "longitude": -71.07411,
+            "municipality": "Malden",
+            "name": "Malden Center",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-mlmnl",
+        "links": {
+            "self": "/stops/place-mlmnl"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-mlmnl"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "497 Franklin St, Melrose, MA 02176",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.469464,
+            "location_type": 1,
+            "longitude": -71.068297,
+            "municipality": "Melrose",
+            "name": "Melrose Highlands",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WR-0075",
+        "links": {
+            "self": "/stops/place-WR-0075"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0075"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Cedar Park and West Emerson St, Melrose, MA 02176",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.458768,
+            "location_type": 1,
+            "longitude": -71.069789,
+            "municipality": "Melrose",
+            "name": "Melrose/Cedar Park",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WR-0067",
+        "links": {
+            "self": "/stops/place-WR-0067"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0067"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "135 Causeway St, Boston, MA 02114",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.365577,
+            "location_type": 1,
+            "longitude": -71.06129,
+            "municipality": "Boston",
+            "name": "North Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-north",
+        "links": {
+            "self": "/stops/place-north"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-north"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "370 Middlesex Ave, Wilmington, MA 01887",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.569661,
+            "location_type": 1,
+            "longitude": -71.159696,
+            "municipality": "Wilmington",
+            "name": "North Wilmington",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WR-0163",
+        "links": {
+            "self": "/stops/place-WR-0163"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0163"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Washington St and Winter St, Malden, MA 02148",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.43668,
+            "location_type": 1,
+            "longitude": -71.071097,
+            "municipality": "Malden",
+            "name": "Oak Grove",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ogmnl",
+        "links": {
+            "self": "/stops/place-ogmnl"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ogmnl"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "35 Lincoln St, Reading, MA 01867",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.52221,
+            "location_type": 1,
+            "longitude": -71.108294,
+            "municipality": "Reading",
+            "name": "Reading",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-WR-0120",
+        "links": {
+            "self": "/stops/place-WR-0120"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0120"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "225 North Ave, Wakefield, MA 01880",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.502126,
+            "location_type": 1,
+            "longitude": -71.075566,
+            "municipality": "Wakefield",
+            "name": "Wakefield",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WR-0099",
+        "links": {
+            "self": "/stops/place-WR-0099"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0099"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "40 West Wyoming Ave, Melrose, MA 02176",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.451731,
+            "location_type": 1,
+            "longitude": -71.069379,
+            "municipality": "Melrose",
+            "name": "Wyoming Hill",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-WR-0062",
+        "links": {
+            "self": "/stops/place-WR-0062"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-WR-0062"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "231 Centre Ave, Abington, MA 02351",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.107156,
+            "location_type": 1,
+            "longitude": -70.934405,
+            "municipality": "Abington",
+            "name": "Abington",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-PB-0194",
+        "links": {
+            "self": "/stops/place-PB-0194"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-PB-0194"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "197 Ivory St, Braintree, MA 02184",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.207854,
+            "location_type": 1,
+            "longitude": -71.001138,
+            "municipality": "Braintree",
+            "name": "Braintree",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-brntn",
+        "links": {
+            "self": "/stops/place-brntn"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-brntn"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "6 Garden Rd, Halifax, MA 02338",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.014739,
+            "location_type": 1,
+            "longitude": -70.824263,
+            "municipality": "Halifax",
+            "name": "Halifax",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-PB-0281",
+        "links": {
+            "self": "/stops/place-PB-0281"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-PB-0281"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-7",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1070 Main St, Hanson, MA 02341",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.043967,
+            "location_type": 1,
+            "longitude": -70.882438,
+            "municipality": "Hanson",
+            "name": "Hanson",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-PB-0245",
+        "links": {
+            "self": "/stops/place-PB-0245"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-PB-0245"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "599 Old Colony Ave, Boston, MA 02127-3805",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.320685,
+            "location_type": 1,
+            "longitude": -71.052391,
+            "municipality": "Boston",
+            "name": "JFK/UMass",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-jfk",
+        "links": {
+            "self": "/stops/place-jfk"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-jfk"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "134 Marion Dr, Kingston, MA 02364",
+            "at_street": null,
+            "description": null,
+            "latitude": 41.97762,
+            "location_type": 1,
+            "longitude": -70.721709,
+            "municipality": "Kingston",
+            "name": "Kingston",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-KB-0351",
+        "links": {
+            "self": "/stops/place-KB-0351"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-KB-0351"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "175 Thomas E Burgin Pkwy, Quincy, MA 02169",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.251809,
+            "location_type": 1,
+            "longitude": -71.005409,
+            "municipality": "Quincy",
+            "name": "Quincy Center",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-qnctr",
+        "links": {
+            "self": "/stops/place-qnctr"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-qnctr"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Atlantic Ave, Boston, MA 02110",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.352271,
+            "location_type": 1,
+            "longitude": -71.055242,
+            "municipality": "Boston",
+            "name": "South Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-sstat",
+        "links": {
+            "self": "/stops/place-sstat"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-sstat"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "89 Trotter Rd, Weymouth, MA 02190",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.155025,
+            "location_type": 1,
+            "longitude": -70.953302,
+            "municipality": "Weymouth",
+            "name": "South Weymouth",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-PB-0158",
+        "links": {
+            "self": "/stops/place-PB-0158"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-PB-0158"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "383 South Ave, Whitman, MA 02382",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.082749,
+            "location_type": 1,
+            "longitude": -70.923411,
+            "municipality": "Whitman",
+            "name": "Whitman",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-PB-0212",
+        "links": {
+            "self": "/stops/place-PB-0212"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-PB-0212"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "100 Atlantic Ave, Woburn, MA 01801",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.516987,
+            "location_type": 1,
+            "longitude": -71.144475,
+            "municipality": "Woburn",
+            "name": "Anderson/Woburn",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NHRML-0127",
+        "links": {
+            "self": "/stops/place-NHRML-0127"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NHRML-0127"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "101 Thorndike St, Lowell, MA 01852",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.63535,
+            "location_type": 1,
+            "longitude": -71.314543,
+            "municipality": "Lowell",
+            "name": "Lowell",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NHRML-0254",
+        "links": {
+            "self": "/stops/place-NHRML-0254"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NHRML-0254"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Ruggles St and Station St, North Billerica, MA 01862",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.593248,
+            "location_type": 1,
+            "longitude": -71.280995,
+            "municipality": "Billerica",
+            "name": "North Billerica",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NHRML-0218",
+        "links": {
+            "self": "/stops/place-NHRML-0218"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NHRML-0218"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "135 Causeway St, Boston, MA 02114",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.365577,
+            "location_type": 1,
+            "longitude": -71.06129,
+            "municipality": "Boston",
+            "name": "North Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-north",
+        "links": {
+            "self": "/stops/place-north"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-north"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "25 Mystic Valley Pkwy, Winchester, MA 01890",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.444948,
+            "location_type": 1,
+            "longitude": -71.140169,
+            "municipality": "Winchester",
+            "name": "Wedgemere",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NHRML-0073",
+        "links": {
+            "self": "/stops/place-NHRML-0073"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NHRML-0073"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "481 High St, Medford, MA 02155",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.421776,
+            "location_type": 1,
+            "longitude": -71.133342,
+            "municipality": "Medford",
+            "name": "West Medford",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-NHRML-0055",
+        "links": {
+            "self": "/stops/place-NHRML-0055"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NHRML-0055"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "405 Main St, Wilmington, MA 01887",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.546624,
+            "location_type": 1,
+            "longitude": -71.174334,
+            "municipality": "Wilmington",
+            "name": "Wilmington",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NHRML-0152",
+        "links": {
+            "self": "/stops/place-NHRML-0152"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NHRML-0152"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "197 Ivory St, Braintree, MA 02184",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.207854,
+            "location_type": 1,
+            "longitude": -71.001138,
+            "municipality": "Braintree",
+            "name": "Braintree",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-brntn",
+        "links": {
+            "self": "/stops/place-brntn"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-brntn"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "85 Burrill Ave, Bridgewater, MA 02324",
+            "at_street": null,
+            "description": null,
+            "latitude": 41.984916,
+            "location_type": 1,
+            "longitude": -70.96537,
+            "municipality": "Bridgewater",
+            "name": "Bridgewater",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-MM-0277",
+        "links": {
+            "self": "/stops/place-MM-0277"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-MM-0277"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "7 Commercial St, Brockton, MA 02302",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.084659,
+            "location_type": 1,
+            "longitude": -71.016534,
+            "municipality": "Brockton",
+            "name": "Brockton",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-MM-0200",
+        "links": {
+            "self": "/stops/place-MM-0200"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-MM-0200"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "30 Riverside Ave, Brockton, MA 02301",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.060951,
+            "location_type": 1,
+            "longitude": -71.011004,
+            "municipality": "Brockton",
+            "name": "Campello",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-MM-0219",
+        "links": {
+            "self": "/stops/place-MM-0219"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-MM-0219"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Union St and Center St, Randolph, MA 02368",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.156343,
+            "location_type": 1,
+            "longitude": -71.027371,
+            "municipality": "Randolph",
+            "name": "Holbrook/Randolph",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-MM-0150",
+        "links": {
+            "self": "/stops/place-MM-0150"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-MM-0150"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "599 Old Colony Ave, Boston, MA 02127-3805",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.320685,
+            "location_type": 1,
+            "longitude": -71.052391,
+            "municipality": "Boston",
+            "name": "JFK/UMass",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-jfk",
+        "links": {
+            "self": "/stops/place-jfk"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-jfk"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "125 Commercial Dr, Lakeville, MA 02347",
+            "at_street": null,
+            "description": null,
+            "latitude": 41.87821,
+            "location_type": 1,
+            "longitude": -70.918444,
+            "municipality": "Lakeville",
+            "name": "Middleborough/Lakeville",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-MM-0356",
+        "links": {
+            "self": "/stops/place-MM-0356"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-MM-0356"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "150 Spark St, Brockton, MA 02302",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.106555,
+            "location_type": 1,
+            "longitude": -71.022001,
+            "municipality": "Brockton",
+            "name": "Montello",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-MM-0186",
+        "links": {
+            "self": "/stops/place-MM-0186"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-MM-0186"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "175 Thomas E Burgin Pkwy, Quincy, MA 02169",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.251809,
+            "location_type": 1,
+            "longitude": -71.005409,
+            "municipality": "Quincy",
+            "name": "Quincy Center",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-qnctr",
+        "links": {
+            "self": "/stops/place-qnctr"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-qnctr"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Atlantic Ave, Boston, MA 02110",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.352271,
+            "location_type": 1,
+            "longitude": -71.055242,
+            "municipality": "Boston",
+            "name": "South Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-sstat",
+        "links": {
+            "self": "/stops/place-sstat"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-sstat"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "145 Dartmouth St Boston, MA 02116",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.34735,
+            "location_type": 1,
+            "longitude": -71.075727,
+            "municipality": "Boston",
+            "name": "Back Bay",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-bbsta",
+        "links": {
+            "self": "/stops/place-bbsta"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-bbsta"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "35 Colbert St, West Roxbury, MA 02132",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.286588,
+            "location_type": 1,
+            "longitude": -71.145557,
+            "municipality": "Boston",
+            "name": "Bellevue",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NB-0072",
+        "links": {
+            "self": "/stops/place-NB-0072"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NB-0072"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Washington St and Hyde Park Ave, Jamaica Plain, MA 02130",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.300713,
+            "location_type": 1,
+            "longitude": -71.113943,
+            "municipality": "Boston",
+            "name": "Forest Hills",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-forhl",
+        "links": {
+            "self": "/stops/place-forhl"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-forhl"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Great Plain Ave and Broad Meadow Rd, Needham, MA 02492",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.275648,
+            "location_type": 1,
+            "longitude": -71.215528,
+            "municipality": "Needham",
+            "name": "Hersey",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NB-0109",
+        "links": {
+            "self": "/stops/place-NB-0109"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NB-0109"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Corey St and Hastings St, West Roxbury, MA 02132",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.284969,
+            "location_type": 1,
+            "longitude": -71.153937,
+            "municipality": "Boston",
+            "name": "Highland",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NB-0076",
+        "links": {
+            "self": "/stops/place-NB-0076"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NB-0076"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Great Plain Ave and Eaton Sq, Needham, MA 02492",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.280775,
+            "location_type": 1,
+            "longitude": -71.237686,
+            "municipality": "Needham",
+            "name": "Needham Center",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NB-0127",
+        "links": {
+            "self": "/stops/place-NB-0127"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NB-0127"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "95 Avery Sq, Needham, MA 02494",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.293444,
+            "location_type": 1,
+            "longitude": -71.236027,
+            "municipality": "Needham",
+            "name": "Needham Heights",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NB-0137",
+        "links": {
+            "self": "/stops/place-NB-0137"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NB-0137"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "51 Junction St, Needham, MA 02492",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.273187,
+            "location_type": 1,
+            "longitude": -71.235559,
+            "municipality": "Needham",
+            "name": "Needham Junction",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NB-0120",
+        "links": {
+            "self": "/stops/place-NB-0120"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NB-0120"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Belgrade Ave, Roslindale, MA 02131",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.287442,
+            "location_type": 1,
+            "longitude": -71.130283,
+            "municipality": "Boston",
+            "name": "Roslindale Village",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NB-0064",
+        "links": {
+            "self": "/stops/place-NB-0064"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NB-0064"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1150 Tremont St, Roxbury, MA 02120",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.336377,
+            "location_type": 1,
+            "longitude": -71.088961,
+            "municipality": "Boston",
+            "name": "Ruggles",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-rugg",
+        "links": {
+            "self": "/stops/place-rugg"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-rugg"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Atlantic Ave, Boston, MA 02110",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.352271,
+            "location_type": 1,
+            "longitude": -71.055242,
+            "municipality": "Boston",
+            "name": "South Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-sstat",
+        "links": {
+            "self": "/stops/place-sstat"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-sstat"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "450 Lagrange St, West Roxbury, MA 02132",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.281358,
+            "location_type": 1,
+            "longitude": -71.160065,
+            "municipality": "Boston",
+            "name": "West Roxbury",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NB-0080",
+        "links": {
+            "self": "/stops/place-NB-0080"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NB-0080"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "10 Park St, Beverly, MA 01915",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.547276,
+            "location_type": 1,
+            "longitude": -70.885432,
+            "municipality": "Beverly",
+            "name": "Beverly",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ER-0183",
+        "links": {
+            "self": "/stops/place-ER-0183"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0183"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Oak St, Beverly, MA 01915",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.561651,
+            "location_type": 1,
+            "longitude": -70.811405,
+            "municipality": "Beverly",
+            "name": "Beverly Farms",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GB-0229",
+        "links": {
+            "self": "/stops/place-GB-0229"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GB-0229"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "174 Everett Ave, Chelsea, MA 02150",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.397024,
+            "location_type": 1,
+            "longitude": -71.041314,
+            "municipality": "Chelsea",
+            "name": "Chelsea",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-chels",
+        "links": {
+            "self": "/stops/place-chels"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-chels"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "75 Railroad Ave, Gloucester, MA 01930",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.616799,
+            "location_type": 1,
+            "longitude": -70.668345,
+            "municipality": "Gloucester",
+            "name": "Gloucester",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GB-0316",
+        "links": {
+            "self": "/stops/place-GB-0316"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GB-0316"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-7",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Bay Rd and Walnut Rd, Hamilton, MA 01982",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.609212,
+            "location_type": 1,
+            "longitude": -70.874801,
+            "municipality": "Hamilton",
+            "name": "Hamilton/Wenham",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ER-0227",
+        "links": {
+            "self": "/stops/place-ER-0227"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0227"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "4 Peatfield St, Ipswich, MA 01938",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.676921,
+            "location_type": 1,
+            "longitude": -70.840589,
+            "municipality": "Ipswich",
+            "name": "Ipswich",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ER-0276",
+        "links": {
+            "self": "/stops/place-ER-0276"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0276"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "325 Broad St, Lynn, MA 01901",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.462953,
+            "location_type": 1,
+            "longitude": -70.945421,
+            "municipality": "Lynn",
+            "name": "Lynn",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ER-0115",
+        "links": {
+            "self": "/stops/place-ER-0115"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0115"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "40 Beach St, Manchester, MA 01944",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.573687,
+            "location_type": 1,
+            "longitude": -70.77009,
+            "municipality": "Manchester-by-the-Sea",
+            "name": "Manchester",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GB-0254",
+        "links": {
+            "self": "/stops/place-GB-0254"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GB-0254"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "180 Essex St, Beverly, MA 01915",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.562171,
+            "location_type": 1,
+            "longitude": -70.869254,
+            "municipality": "Beverly",
+            "name": "Montserrat",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GB-0198",
+        "links": {
+            "self": "/stops/place-GB-0198"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GB-0198"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "25 Boston Way, Newburyport, MA 01950",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.797837,
+            "location_type": 1,
+            "longitude": -70.87797,
+            "municipality": "Newburyport",
+            "name": "Newburyport",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ER-0362",
+        "links": {
+            "self": "/stops/place-ER-0362"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0362"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Enon St and Dodge St, Beverly, MA 01915",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.583779,
+            "location_type": 1,
+            "longitude": -70.883851,
+            "municipality": "Beverly",
+            "name": "North Beverly",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ER-0208",
+        "links": {
+            "self": "/stops/place-ER-0208"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0208"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-5",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "135 Causeway St, Boston, MA 02114",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.365577,
+            "location_type": 1,
+            "longitude": -71.06129,
+            "municipality": "Boston",
+            "name": "North Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-north",
+        "links": {
+            "self": "/stops/place-north"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-north"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1000 Western Ave, Lynn, MA 01910 (General Electric employees only)",
+            "at_street": null,
+            "description": "GE Employees Only",
+            "latitude": 42.449927,
+            "location_type": 1,
+            "longitude": -70.969848,
+            "municipality": "Lynn",
+            "name": "River Works",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 2
+        },
+        "id": "place-ER-0099",
+        "links": {
+            "self": "/stops/place-ER-0099"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0099"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "17 Railroad Ave, Rockport, MA 01966",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.655491,
+            "location_type": 1,
+            "longitude": -70.627055,
+            "municipality": "Rockport",
+            "name": "Rockport",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GB-0353",
+        "links": {
+            "self": "/stops/place-GB-0353"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GB-0353"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "70 Railroad Ave, Rowley, MA 01969",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.726845,
+            "location_type": 1,
+            "longitude": -70.859034,
+            "municipality": "Rowley",
+            "name": "Rowley",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ER-0312",
+        "links": {
+            "self": "/stops/place-ER-0312"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0312"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-7",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "252 Bridge St, Salem, MA 01970",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.524792,
+            "location_type": 1,
+            "longitude": -70.895876,
+            "municipality": "Salem",
+            "name": "Salem",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ER-0168",
+        "links": {
+            "self": "/stops/place-ER-0168"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0168"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Burrill St and Railroad Ave, Swampscott, MA 01907",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.473743,
+            "location_type": 1,
+            "longitude": -70.922537,
+            "municipality": "Swampscott",
+            "name": "Swampscott",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-ER-0128",
+        "links": {
+            "self": "/stops/place-ER-0128"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-ER-0128"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "290 Essex Ave, Gloucester, MA 01930",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.611933,
+            "location_type": 1,
+            "longitude": -70.705417,
+            "municipality": "Gloucester",
+            "name": "West Gloucester",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-GB-0296",
+        "links": {
+            "self": "/stops/place-GB-0296"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-GB-0296"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-7",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "133 South Main St, Attleboro, MA 02703",
+            "at_street": null,
+            "description": null,
+            "latitude": 41.940739,
+            "location_type": 1,
+            "longitude": -71.285094,
+            "municipality": "Attleboro",
+            "name": "Attleboro",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-1969",
+        "links": {
+            "self": "/stops/place-NEC-1969"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-1969"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-7",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "145 Dartmouth St Boston, MA 02116",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.34735,
+            "location_type": 1,
+            "longitude": -71.075727,
+            "municipality": "Boston",
+            "name": "Back Bay",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-bbsta",
+        "links": {
+            "self": "/stops/place-bbsta"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-bbsta"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "710 Washington St, Canton, MA 02021",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.157095,
+            "location_type": 1,
+            "longitude": -71.14628,
+            "municipality": "Canton",
+            "name": "Canton Center",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-SB-0156",
+        "links": {
+            "self": "/stops/place-SB-0156"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-SB-0156"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "Beaumont St and Sherman St, Canton, MA 02021",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.163204,
+            "location_type": 1,
+            "longitude": -71.15376,
+            "municipality": "Canton",
+            "name": "Canton Junction",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-2139",
+        "links": {
+            "self": "/stops/place-NEC-2139"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-2139"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-3",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Pingree St, Hyde Park, MA 02136",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.25503,
+            "location_type": 1,
+            "longitude": -71.125526,
+            "municipality": "Boston",
+            "name": "Hyde Park",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-2203",
+        "links": {
+            "self": "/stops/place-NEC-2203"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-2203"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Crocker St, Mansfield, MA 02048",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.032787,
+            "location_type": 1,
+            "longitude": -71.219917,
+            "municipality": "Mansfield",
+            "name": "Mansfield",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-2040",
+        "links": {
+            "self": "/stops/place-NEC-2040"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-2040"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-6",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "300 Pine St, Pawtucket, RI 02860",
+            "at_street": null,
+            "description": null,
+            "latitude": 41.878762,
+            "location_type": 1,
+            "longitude": -71.392,
+            "municipality": "Pawtucket",
+            "name": "Pawtucket/Central Falls",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-1891",
+        "links": {
+            "self": "/stops/place-NEC-1891"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-1891"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "100 Gaspee St, Providence, RI 02903",
+            "at_street": null,
+            "description": null,
+            "latitude": 41.829293,
+            "location_type": 1,
+            "longitude": -71.413301,
+            "municipality": "Providence",
+            "name": "Providence",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-1851",
+        "links": {
+            "self": "/stops/place-NEC-1851"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-1851"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-8",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "50 University Ave, Westwood, MA 02090",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.210308,
+            "location_type": 1,
+            "longitude": -71.147134,
+            "municipality": "Westwood",
+            "name": "Route 128",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-2173",
+        "links": {
+            "self": "/stops/place-NEC-2173"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-2173"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-2",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1150 Tremont St, Roxbury, MA 02120",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.336377,
+            "location_type": 1,
+            "longitude": -71.088961,
+            "municipality": "Boston",
+            "name": "Ruggles",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-rugg",
+        "links": {
+            "self": "/stops/place-rugg"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-rugg"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1 Upland Rd, Sharon, MA 02067",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.124553,
+            "location_type": 1,
+            "longitude": -71.184468,
+            "municipality": "Sharon",
+            "name": "Sharon",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-2108",
+        "links": {
+            "self": "/stops/place-NEC-2108"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-2108"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Atlantic Ave, Boston, MA 02110",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.352271,
+            "location_type": 1,
+            "longitude": -71.055242,
+            "municipality": "Boston",
+            "name": "South Station",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-sstat",
+        "links": {
+            "self": "/stops/place-sstat"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-sstat"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-1A",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "45 Wyman St, Stoughton, MA 02072",
+            "at_street": null,
+            "description": null,
+            "latitude": 42.124084,
+            "location_type": 1,
+            "longitude": -71.103627,
+            "municipality": "Stoughton",
+            "name": "Stoughton",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-SB-0189",
+        "links": {
+            "self": "/stops/place-SB-0189"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-SB-0189"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-4",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "700 Jefferson Blvd, Warwick, RI 02886",
+            "at_street": null,
+            "description": null,
+            "latitude": 41.726599,
+            "location_type": 1,
+            "longitude": -71.442453,
+            "municipality": "Warwick",
+            "name": "TF Green Airport",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-1768",
+        "links": {
+            "self": "/stops/place-NEC-1768"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-1768"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-9",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    },
+    {
+        "attributes": {
+            "address": "1011 Ten Rod Rd, North Kingstown, RI",
+            "at_street": null,
+            "description": null,
+            "latitude": 41.581289,
+            "location_type": 1,
+            "longitude": -71.491147,
+            "municipality": "North Kingstown",
+            "name": "Wickford Junction",
+            "on_street": null,
+            "platform_code": null,
+            "platform_name": null,
+            "vehicle_type": null,
+            "wheelchair_boarding": 1
+        },
+        "id": "place-NEC-1659",
+        "links": {
+            "self": "/stops/place-NEC-1659"
+        },
+        "relationships": {
+            "facilities": {
+                "links": {
+                    "related": "/facilities/?filter[stop]=place-NEC-1659"
+                }
+            },
+            "parent_station": {
+                "data": null
+            },
+            "zone": {
+                "data": {
+                    "id": "CR-zone-10",
+                    "type": "zone"
+                }
+            }
+        },
+        "type": "stop"
+    }
+]

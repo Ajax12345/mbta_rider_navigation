@@ -36,8 +36,38 @@ def routes() -> None:
 
 
 def stops() -> None:
-    with open('json_data/stops1.json', 'a') as f:
-        json.dump(requests.get('https://api-v3.mbta.com/stops?filter[direction_id]=0&filter[route]=CR-Fitchburg&page[limit]=100&page[offset]=0&sort=name').json()['data'], f, indent = 4)
+    with open('json_data/routes.json') as f:
+        all_routes = json.load(f)
+
+
+    with open('json_data/all_stops.json', 'a') as f:
+        json.dump([j for k in all_routes for j in requests.get(f'https://api-v3.mbta.com/stops?filter[direction_id]=0&filter[route]={k["id"]}&page[limit]=100&page[offset]=0&sort=name').json()['data']], f, indent = 4)
+
+def stops_and_lines() -> None:
+    with open('json_data/all_stops.json') as f:
+        all_stops = json.load(f)
+
+    with open('json_data/f_line_shapes.json') as f1:
+        line_geo = json.load(f1)
+    
+
+    line_geo['features'].extend([{
+            "type": "Feature",
+            "properties": {
+                "name": i['attributes']['name']
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": 
+                    [
+                        float(i['attributes']['longitude']),
+                        float(i['attributes']['latitude'])
+                    ]
+            }
+    } for i in all_stops])
+
+    with open('json_data/lines_and_stops_geo.json', 'a') as f2:
+        json.dump(line_geo, f2, indent=4)
 
 def to_dt(s:str) -> datetime.datetime:
     return datetime.datetime(*map(int, re.findall('\d+', s)[:6]))
@@ -82,4 +112,4 @@ def shapes() -> None:
         json.dump(root, f, indent=4)
 
 if __name__ == '__main__':
-    shapes()
+    stops_and_lines()
