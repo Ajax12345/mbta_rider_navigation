@@ -15,13 +15,13 @@ d3.json('json_data/lines_and_stops_geo.json', function(data){
             p.data([i])
             .enter()
             .append("path")
-            .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', '#cdcdcd')
+            .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', '#cdcdcd')
         }
         else if (i.properties.route === 'Fitchburg Line'){
             p.data([i])
             .enter()
             .append("path")
-            .attr("d", pathGenerator).attr('stroke-width', '3').attr('stroke', 'gray')
+            .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray')
             .attr('class', 'stop')
             .attr('name', i.properties.name)
 
