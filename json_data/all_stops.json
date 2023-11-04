@@ -35,7 +35,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fairmount Line",
+        "route_id": "CR-Fairmount"
     },
     {
         "attributes": {
@@ -73,7 +75,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fairmount Line",
+        "route_id": "CR-Fairmount"
     },
     {
         "attributes": {
@@ -111,7 +115,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fairmount Line",
+        "route_id": "CR-Fairmount"
     },
     {
         "attributes": {
@@ -149,7 +155,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fairmount Line",
+        "route_id": "CR-Fairmount"
     },
     {
         "attributes": {
@@ -187,7 +195,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fairmount Line",
+        "route_id": "CR-Fairmount"
     },
     {
         "attributes": {
@@ -225,7 +235,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fairmount Line",
+        "route_id": "CR-Fairmount"
     },
     {
         "attributes": {
@@ -263,7 +275,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fairmount Line",
+        "route_id": "CR-Fairmount"
     },
     {
         "attributes": {
@@ -301,7 +315,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fairmount Line",
+        "route_id": "CR-Fairmount"
     },
     {
         "attributes": {
@@ -339,7 +355,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fairmount Line",
+        "route_id": "CR-Fairmount"
     },
     {
         "attributes": {
@@ -377,7 +395,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -415,7 +435,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -453,7 +475,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -491,7 +515,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -529,7 +555,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -567,7 +595,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -605,7 +635,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -643,7 +675,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -681,7 +715,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -719,7 +755,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -757,7 +795,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -795,7 +835,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -833,7 +875,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -871,7 +915,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -909,7 +955,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -947,7 +995,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -985,7 +1035,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Fitchburg Line",
+        "route_id": "CR-Fitchburg"
     },
     {
         "attributes": {
@@ -1023,7 +1075,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Foxboro Event Service",
+        "route_id": "CR-Foxboro"
     },
     {
         "attributes": {
@@ -1061,7 +1115,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Foxboro Event Service",
+        "route_id": "CR-Foxboro"
     },
     {
         "attributes": {
@@ -1099,7 +1155,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Foxboro Event Service",
+        "route_id": "CR-Foxboro"
     },
     {
         "attributes": {
@@ -1137,7 +1195,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Foxboro Event Service",
+        "route_id": "CR-Foxboro"
     },
     {
         "attributes": {
@@ -1175,7 +1235,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1213,7 +1275,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1251,7 +1315,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1289,7 +1355,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1327,7 +1395,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1365,7 +1435,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1403,7 +1475,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1441,7 +1515,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1479,7 +1555,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1517,7 +1595,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1555,7 +1635,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1593,7 +1675,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1631,7 +1715,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1669,7 +1755,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1707,7 +1795,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1745,7 +1835,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1783,7 +1875,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1821,7 +1915,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Framingham/Worcester Line",
+        "route_id": "CR-Worcester"
     },
     {
         "attributes": {
@@ -1859,7 +1955,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -1897,7 +1995,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -1935,7 +2035,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -1973,7 +2075,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2011,7 +2115,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2049,7 +2155,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2087,7 +2195,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2125,7 +2235,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2163,7 +2275,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2201,7 +2315,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2239,7 +2355,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2277,7 +2395,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2315,7 +2435,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2353,7 +2475,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2391,7 +2515,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2429,7 +2555,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2467,7 +2595,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Franklin/Foxboro Line",
+        "route_id": "CR-Franklin"
     },
     {
         "attributes": {
@@ -2505,7 +2635,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2543,7 +2675,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2581,7 +2715,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2619,7 +2755,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2657,7 +2795,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2695,7 +2835,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2733,7 +2875,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2771,7 +2915,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2809,7 +2955,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2847,7 +2995,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Greenbush Line",
+        "route_id": "CR-Greenbush"
     },
     {
         "attributes": {
@@ -2885,7 +3035,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -2923,7 +3075,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -2961,7 +3115,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -2999,7 +3155,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3037,7 +3195,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3075,7 +3235,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3113,7 +3275,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3151,7 +3315,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3189,7 +3355,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3227,7 +3395,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3265,7 +3435,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3303,7 +3475,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3341,7 +3515,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3379,7 +3555,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3417,7 +3595,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3455,7 +3635,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Haverhill Line",
+        "route_id": "CR-Haverhill"
     },
     {
         "attributes": {
@@ -3493,7 +3675,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3531,7 +3715,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3569,7 +3755,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3607,7 +3795,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3645,7 +3835,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3683,7 +3875,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3721,7 +3915,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3759,7 +3955,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3797,7 +3995,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3835,7 +4035,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Kingston Line",
+        "route_id": "CR-Kingston"
     },
     {
         "attributes": {
@@ -3873,7 +4075,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Lowell Line",
+        "route_id": "CR-Lowell"
     },
     {
         "attributes": {
@@ -3911,7 +4115,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Lowell Line",
+        "route_id": "CR-Lowell"
     },
     {
         "attributes": {
@@ -3949,7 +4155,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Lowell Line",
+        "route_id": "CR-Lowell"
     },
     {
         "attributes": {
@@ -3987,7 +4195,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Lowell Line",
+        "route_id": "CR-Lowell"
     },
     {
         "attributes": {
@@ -4025,7 +4235,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Lowell Line",
+        "route_id": "CR-Lowell"
     },
     {
         "attributes": {
@@ -4063,7 +4275,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Lowell Line",
+        "route_id": "CR-Lowell"
     },
     {
         "attributes": {
@@ -4101,7 +4315,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Lowell Line",
+        "route_id": "CR-Lowell"
     },
     {
         "attributes": {
@@ -4139,7 +4355,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4177,7 +4395,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4215,7 +4435,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4253,7 +4475,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4291,7 +4515,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4329,7 +4555,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4367,7 +4595,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4405,7 +4635,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4443,7 +4675,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4481,7 +4715,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Middleborough/Lakeville Line",
+        "route_id": "CR-Middleborough"
     },
     {
         "attributes": {
@@ -4519,7 +4755,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4557,7 +4795,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4595,7 +4835,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4633,7 +4875,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4671,7 +4915,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4709,7 +4955,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4747,7 +4995,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4785,7 +5035,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4823,7 +5075,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4861,7 +5115,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4899,7 +5155,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4937,7 +5195,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Needham Line",
+        "route_id": "CR-Needham"
     },
     {
         "attributes": {
@@ -4975,7 +5235,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5013,7 +5275,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5051,7 +5315,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5089,7 +5355,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5127,7 +5395,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5165,7 +5435,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5203,7 +5475,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5241,7 +5515,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5279,7 +5555,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5317,7 +5595,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5355,7 +5635,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5393,7 +5675,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5431,7 +5715,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5469,7 +5755,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5507,7 +5795,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5545,7 +5835,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5583,7 +5875,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5621,7 +5915,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Newburyport/Rockport Line",
+        "route_id": "CR-Newburyport"
     },
     {
         "attributes": {
@@ -5659,7 +5955,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -5697,7 +5995,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -5735,7 +6035,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -5773,7 +6075,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -5811,7 +6115,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -5849,7 +6155,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -5887,7 +6195,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -5925,7 +6235,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -5963,7 +6275,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -6001,7 +6315,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -6039,7 +6355,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -6077,7 +6395,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -6115,7 +6435,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -6153,7 +6475,9 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     },
     {
         "attributes": {
@@ -6191,6 +6515,8 @@
                 }
             }
         },
-        "type": "stop"
+        "type": "stop",
+        "route": "Providence/Stoughton Line",
+        "route_id": "CR-Providence"
     }
 ]

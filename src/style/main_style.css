@@ -1,3 +1,14 @@
 path {
     fill: white;
 }
+.stop-tooltip{
+    padding:10px;
+    border-radius:4px;
+    background-color:black;
+    color:white;
+    font-size:12px;
+    font-weight: bold;
+    visibility: hidden;
+    display: inline-block;
+    position: absolute;
+}
