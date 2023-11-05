@@ -20,15 +20,15 @@ $(document).ready(function(){
         console.log(min_behind);
         if (min_behind < 2){
             console.log('got green!')
-            return '#21D648'
+            return {color:'#21D648', message: 'on time'}
         }   
         else if (min_behind >= 2 && min_behind < 5){
             console.log('got orange!')
-            return 'orange'
+            return {color:'orange', message: `${Math.round(min_behind, 0)} minutes behind schedule`}
         }
         else if (min_behind >= 5){
             console.log('got red!')
-            return 'red'
+            return {color:'red', message: `${Math.round(min_behind, 0)} minutes behind schedule`}
         }
     }
     function record_new_schedule_prediction(vehicle_id, direction_id, route_id, trip_id, stop_id, s_p, prediction, pred_date, d1){
@@ -43,9 +43,9 @@ $(document).ready(function(){
             scheduled_date: d1
         }
         var min_behind = (pred_date - d1)/(1000*60);
-        var color = min_to_color(min_behind);
-        d3.selectAll(`path[vpid="${vehicle_id}"]`).attr('stroke', color)
-        $('.line-about span').html(`- ${Math.round(min_behind, 0)} minutes behind schedule`)
+        var response_payload = min_to_color(min_behind);
+        d3.selectAll(`path[vpid="${vehicle_id}"]`).attr('stroke', response_payload.color)
+        $('.line-about span').html(`- ${response_payload.message}`)
 
     }
     function check_against_schedule(vehicle_id, direction_id, route_id, trip_id, stop_id, prediction){
@@ -57,25 +57,23 @@ $(document).ready(function(){
                 console.log('schedule response here')
                 console.log(response);
                 var all_results = []
+                var s_p = null;
+                var d1 = null;
+                var dt = null;
                 for (var i of response.data){
-                    var d1 = new Date(i.attributes.arrival_time)
-                    if (d1 <= pred_date){
-                        all_results.push([i, d1])
+                    var _d1 = new Date(i.attributes.arrival_time)
+                    if (dt === null || Math.abs(pred_date - _d1) <= dt){
+                        s_p = i;
+                        dt = Math.abs(pred_date - _d1);
+                        d1 = _d1
                     }
                 }
-                if (all_results.length){
-                    var [s_p, d1] = all_results[all_results.length - 1]
-                    console.log('found scheduled inference')
-                    console.log(pred_date)
-                    console.log(d1)
-                    console.log(pred_date - d1)
-                    record_new_schedule_prediction(vehicle_id, direction_id, route_id, trip_id, stop_id, s_p, prediction, pred_date, d1)
-                }
-                else{
-                    console.log('no inference made')
-                    console.log(prediction)
-                    console.log(response)
-                }
+                console.log('found scheduled inference')
+                console.log(pred_date)
+                console.log(d1)
+                console.log(pred_date - d1)
+                record_new_schedule_prediction(vehicle_id, direction_id, route_id, trip_id, stop_id, s_p, prediction, pred_date, d1)
+                
                 
             },
             error: function(xhr) {
