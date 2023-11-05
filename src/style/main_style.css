@@ -11,9 +11,57 @@
     visibility: hidden;
     display: inline-block;
     position: absolute;
+    font-family: 'Inter', sans-serif;
+
+}
+.line-about{
+    font-family: 'Inter', sans-serif;
+    color:black;
+    font-size:30px;
+    font-weight:bold;
+    margin-left: 20px;
 }
 .train-icon{
     width:50px;
     position: absolute;
     height:25px;
+}
+.legend{
+    border:1px solid black;
+    margin-left: 20px;
+    border-radius:2px;
+    padding:10px;
+    display: inline-block;
+}
+.legend-text{
+    font-family: 'Inter', sans-serif;
+    color:rgb(21, 21, 21);
+    font-size:18px;
+    font-weight:400;
+}
+.legend-items{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    align-items: center;
+    row-gap: 10px;
+}
+.legend-block{
+    width:60px;
+    border-radius:2px;
+    height:20px;
+}
+.legend-block.on-time{
+    background-color:#21D648;
+}
+.legend-block.behind-schedule{
+    background-color:orange;
+}
+.legend-block.late{
+    background-color:red;
+}
+.legend-block-text{
+    font-size:15px;
+    color:rgb(60, 60, 60);
+    font-family: 'Inter', sans-serif;
 }

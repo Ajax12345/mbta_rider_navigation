@@ -10,7 +10,7 @@ $(document).ready(function(){
     ]
     var projection = d3.geoMercator().translate([width / 2, height / 2]).center(boston_coords).scale([50000])
     var pathGenerator = d3.geoPath().projection(projection);
-    var svg = d3.select("#map").append("svg").attr("width", width).attr("height", height);
+    var svg = d3.select("#map").append("svg").attr("width", 1000).attr("height", 500);
     var p = svg.selectAll("path")
     //"2023-11-05T10:54:44-05:00"
     //"2023-11-05T10:54:00-05:00"
@@ -21,11 +21,11 @@ $(document).ready(function(){
             console.log('got green!')
             return '#21D648'
         }   
-        else if (min_behind >= 2 && min_behind < 10){
+        else if (min_behind >= 2 && min_behind < 5){
             console.log('got orange!')
             return 'orange'
         }
-        else if (min_behind >= 10){
+        else if (min_behind >= 5){
             console.log('got red!')
             return 'red'
         }
@@ -44,6 +44,7 @@ $(document).ready(function(){
         var min_behind = (pred_date - d1)/(1000*60);
         var color = min_to_color(min_behind);
         d3.selectAll(`path[vpid="${vehicle_id}"]`).attr('stroke', color)
+        $('.line-about span').html(`- ${Math.round(min_behind, 0)} minutes behind schedule`)
 
     }
     function check_against_schedule(vehicle_id, direction_id, route_id, trip_id, stop_id, prediction){
