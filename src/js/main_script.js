@@ -19,7 +19,7 @@ $(document).ready(function(){
         console.log(min_behind);
         if (min_behind < 2){
             console.log('got green!')
-            return 'green'
+            return '#21D648'
         }   
         else if (min_behind >= 2 && min_behind < 10){
             console.log('got orange!')
