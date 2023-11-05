@@ -64,4 +64,29 @@
     font-size:15px;
     color:rgb(60, 60, 60);
     font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+}
+.nav-main{
+    display: grid;
+    grid-template-columns: min-content min-content;
+    column-gap: 100px;
+}
+.line-selector-outer{
+    display: grid;
+    grid-template-columns: min-content min-content;
+    align-items: center;
+    column-gap: 20px;
+}
+.line-selector-prompt{
+    font-size:17px;
+    color:rgb(60, 60, 60);
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+}
+.line-options{
+    font-size:17px;
+    color:rgb(60, 60, 60);
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+    padding:5px;
 }

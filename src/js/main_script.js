@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
     var line_geo = {}
+    var line_registry = {}
     var vehicle_registry = {}
     var width = window.innerWidth
     var height = window.innerHeight;
@@ -207,6 +208,7 @@ $(document).ready(function(){
                     line_geo[i.properties.route_id] = []
                 }
                 line_geo[i.properties.route_id].push(i)
+                line_registry[i.properties.route_id] = i.properties.name
             }
             if (i.geometry.type === 'LineString' && i.properties.name === "Fitchburg Line"){
                 p.data([{...i, skey: 1}])
@@ -223,6 +225,10 @@ $(document).ready(function(){
                 .attr('name', i.properties.name)
             }
         }
+        for (var i of Object.keys(line_registry)){
+            $('.line-options').append(`<option value="${i}">${line_registry[i]}</option>`)
+        }
+        $('.line-options').val('CR-Fitchburg')
         d3.selectAll("#map path").sort(function(a,b) {
             if (a.skey > b.skey){
                 return 1
