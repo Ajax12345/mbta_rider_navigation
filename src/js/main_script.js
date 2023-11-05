@@ -36,9 +36,10 @@ $(document).ready(function(){
             .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', 'red').attr('vid', payload.id).attr('skey', '5')
             var elem = document.querySelector(`path[vid="${payload.id}"]`)
             var b = elem.getBoundingClientRect()
+            console.log('b below')
             console.log(b)
-            $('.train-icon').css('left', b.left)
-            $('.train-icon').css('top', b.top)
+            $('.train-icon').css('left', b.left-20)
+            $('.train-icon').css('top', b.top-5)
         }
         //42.37422180175781
         //-71.23595428466797

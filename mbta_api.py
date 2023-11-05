@@ -118,4 +118,4 @@ def shapes() -> None:
         json.dump(root, f, indent=4)
 
 if __name__ == '__main__':
-    stops_and_lines()
+    vehicles()
