@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
     var line_geo = {}
+    var vehicle_registry = {}
     var width = window.innerWidth
     var height = window.innerHeight;
     var boston_coords = [
@@ -11,11 +12,100 @@ $(document).ready(function(){
     var pathGenerator = d3.geoPath().projection(projection);
     var svg = d3.select("#map").append("svg").attr("width", width).attr("height", height);
     var p = svg.selectAll("path")
+    //"2023-11-05T10:54:44-05:00"
+    //"2023-11-05T10:54:00-05:00"
+    function min_to_color(min_behind){
+        console.log('min_behind')
+        console.log(min_behind);
+        if (min_behind < 2){
+            console.log('got green!')
+            return 'green'
+        }   
+        else if (min_behind >= 2 && min_behind < 10){
+            console.log('got orange!')
+            return 'orange'
+        }
+        else if (min_behind >= 10){
+            console.log('got red!')
+            return 'red'
+        }
+    }
+    function record_new_schedule_prediction(vehicle_id, direction_id, route_id, trip_id, stop_id, s_p, prediction, pred_date, d1){
+        vehicle_registry[vehicle_id] = {
+            direction_id: direction_id,
+            route_id: route_id,
+            trip_id: trip_id,
+            stop_id: stop_id,
+            schedule: s_p,
+            prediction: prediction,
+            pred_date: pred_date,
+            scheduled_date: d1
+        }
+        var min_behind = (pred_date - d1)/(1000*60);
+        var color = min_to_color(min_behind);
+        d3.selectAll(`path[vpid="${vehicle_id}"]`).attr('stroke', color)
+
+    }
+    function check_against_schedule(vehicle_id, direction_id, route_id, trip_id, stop_id, prediction){
+        var pred_date = new Date(prediction.attributes.arrival_time);
+        $.ajax({
+            url: `https://api-v3.mbta.com/schedules?filter[direction_id]=${direction_id}&filter[route]=${route_id}&filter[route_type]=2&filter[stop]=${stop_id}&filter[trip]=${trip_id}&page[limit]=100&page[offset]=0&sort=arrival_time`,
+            type: "get",
+            success: function(response) {
+                console.log('schedule response here')
+                console.log(response);
+                var all_results = []
+                for (var i of response.data){
+                    var d1 = new Date(i.attributes.arrival_time)
+                    if (d1 <= pred_date){
+                        all_results.push([i, d1])
+                    }
+                }
+                if (all_results.length){
+                    var [s_p, d1] = all_results[all_results.length - 1]
+                    console.log('found scheduled inference')
+                    console.log(pred_date)
+                    console.log(d1)
+                    console.log(pred_date - d1)
+                    record_new_schedule_prediction(vehicle_id, direction_id, route_id, trip_id, stop_id, s_p, prediction, pred_date, d1)
+                }
+                else{
+                    console.log('no inference made')
+                    console.log(prediction)
+                    console.log(response)
+                }
+                
+            },
+            error: function(xhr) {
+              //Do Something to handle error
+            }
+        });
+    }
+    function make_predictions(vehicle_id, direction_id, route_id, trip_id, stop_id){
+        $.ajax({
+            url: `https://api-v3.mbta.com/predictions?filter[direction_id]=${direction_id}&filter[route]=${route_id}&filter[route_type]=2&filter[stop]=${stop_id}&filter[trip]=${trip_id}&page[limit]=100&page[offset]=0&sort=arrival_time`,
+            type: "get",
+            success: function(response) {
+                console.log('prediction response here')
+                console.log(response);
+                if (response.data.length > 0){
+                    check_against_schedule(vehicle_id, direction_id, route_id, trip_id, stop_id, response.data[0])
+                }
+            },
+            error: function(xhr) {
+              //Do Something to handle error
+            }
+        });
+    }
     function draw_train_progress(payload){
         console.log('payload in draw_train_progress')
         console.log(payload)
+        vehicle_registry[payload.id] = null
+        var vehicle_id = payload.id;
         var direction_id = payload.attributes.direction_id;
         var route_id = payload.relationships.route.data.id;
+        var trip_id = payload.relationships.trip.data.id;
+        var stop_id = payload.relationships.stop.data.id
         var lat = payload.attributes.latitude;
         var long = payload.attributes.longitude;
         $(`path[vid="${payload.id}"]`).remove();
@@ -38,14 +128,12 @@ $(document).ready(function(){
             var b = elem.getBoundingClientRect()
             console.log('b below')
             console.log(b)
-            $('.train-icon').css('left', b.left-20)
-            $('.train-icon').css('top', b.top-5)
+            $('.train-icon').css('left', b.left-18)
+            $('.train-icon').css('top', b.top-7)
         }
         //42.37422180175781
         //-71.23595428466797
         //Boston: -71.0589
-        console.log('checking line_geo here')
-        console.log(line_geo[route_id])
         var coords = []
         for (var i of line_geo[route_id]){
             for (var [_long, _lat] of i.geometry.coordinates){
@@ -77,8 +165,9 @@ $(document).ready(function(){
         }])
             .enter()
             .append("path")
-            .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', 'orange').attr('vpid', payload.id).attr('skey', '3')
+            .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', '#cdcdcd').attr('vpid', payload.id).attr('skey', '3')
 
+        make_predictions(vehicle_id, direction_id, route_id, trip_id, stop_id)
         d3.selectAll("#map path").sort(function(a,b) {
             if (a.skey > b.skey){
                 return 1
@@ -105,6 +194,7 @@ $(document).ready(function(){
         else{
             $(`path[vid="${data.id}"]`).remove();
             $(`path[vpid="${data.id}"]`).remove();
+            delete vehicle_registry[data.id]
         }
 
     }
@@ -133,7 +223,6 @@ $(document).ready(function(){
             }
         }
         d3.selectAll("#map path").sort(function(a,b) {
-            console.log('in sort')
             if (a.skey > b.skey){
                 return 1
             }
@@ -173,15 +262,12 @@ $(document).ready(function(){
         });
         var evtSource = new EventSource('https://api-v3.mbta.com/vehicles?filter[route]=CR-Fitchburg&filter[route_type]=2&page[limit]=100&page[offset]=0&sort=current_stop_sequence&api_key=ec477916907d435d9cdc835309d1a9f0');
         evtSource.addEventListener('reset', function(e){
-            console.log('got reset')
             handle_vehicle_endpoint(e, 'reset')
         })
         evtSource.addEventListener('update', function(e){
-            console.log('got update')
             handle_vehicle_endpoint(e, 'update')
         })
         evtSource.addEventListener('add', function(e){
-            console.log('got add')
             handle_vehicle_endpoint(e, 'add')
         });
         evtSource.addEventListener('remove', function(e){
