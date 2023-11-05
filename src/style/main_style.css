@@ -1,4 +1,4 @@
-path {
+#map * {
     fill: white;
 }
 .stop-tooltip{
@@ -10,5 +10,9 @@ path {
     font-weight: bold;
     visibility: hidden;
     display: inline-block;
+    position: absolute;
+}
+.train-icon{
+    width:50px;
     position: absolute;
 }

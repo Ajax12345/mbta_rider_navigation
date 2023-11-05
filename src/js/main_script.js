@@ -19,7 +19,8 @@ $(document).ready(function(){
         var lat = payload.attributes.latitude;
         var long = payload.attributes.longitude;
         $(`path[vid="${payload.id}"]`).remove();
-        p.data([{
+        if (direction_id === 1){
+            p.data([{
                 "type": "Feature",
                 "properties": {
                     "name": "train"
@@ -27,11 +28,18 @@ $(document).ready(function(){
                 "geometry": {
                     "type": "Point",
                     "coordinates": [long, lat]
-                }
+                },
+                "skey": 5
             }])
             .enter()
             .append("path")
-            .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', 'red').attr('vid', payload.id);
+            .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', 'red').attr('vid', payload.id).attr('skey', '5')
+            var elem = document.querySelector(`path[vid="${payload.id}"]`)
+            var b = elem.getBoundingClientRect()
+            console.log(b)
+            $('.train-icon').css('left', b.left)
+            $('.train-icon').css('top', b.top)
+        }
         //42.37422180175781
         //-71.23595428466797
         //Boston: -71.0589
@@ -46,6 +54,7 @@ $(document).ready(function(){
                     }
                 }
                 else{
+                    continue;
                     if (Math.abs(_long) <= Math.abs(long)){
                         coords.push([_long, _lat])
                     }
@@ -62,11 +71,22 @@ $(document).ready(function(){
                 "geometry": {
                     "type": "LineString",
                     "coordinates": coords
-                }
+                },
+                "skey": 3
         }])
             .enter()
             .append("path")
-            .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', 'orange').attr('vpid', payload.id)
+            .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', 'orange').attr('vpid', payload.id).attr('skey', '3')
+
+        d3.selectAll("#map path").sort(function(a,b) {
+            if (a.skey > b.skey){
+                return 1
+            }
+            else if (a.skey < b.skey){
+                return -1
+            }
+            return 0
+        }).order()
         
     }
     function handle_vehicle_endpoint(response, handler){
@@ -81,6 +101,10 @@ $(document).ready(function(){
                 draw_train_progress(data)
             }
         }
+        else{
+            $(`path[vid="${data.id}"]`).remove();
+            $(`path[vpid="${data.id}"]`).remove();
+        }
 
     }
     d3.json('json_data/lines_and_stops_geo.json', function(data){
@@ -93,20 +117,30 @@ $(document).ready(function(){
                 line_geo[i.properties.route_id].push(i)
             }
             if (i.geometry.type === 'LineString' && i.properties.name === "Fitchburg Line"){
-                p.data([i])
+                p.data([{...i, skey: 1}])
                 .enter()
                 .append("path")
-                .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', '#cdcdcd')
+                .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', '#cdcdcd').attr('skey', '1')
             }
             else if (i.properties.route === 'Fitchburg Line'){
-                p.data([i])
+                p.data([{...i, skey: 4}])
                 .enter()
                 .append("path")
-                .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray')
+                .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray').attr('skey', '4')
                 .attr('class', 'stop')
                 .attr('name', i.properties.name)
             }
         }
+        d3.selectAll("#map path").sort(function(a,b) {
+            console.log('in sort')
+            if (a.skey > b.skey){
+                return 1
+            }
+            else if (a.skey < b.skey){
+                return -1
+            }
+            return 0
+        }).order()
         /*
         p.data([{
             "type": "Feature",
