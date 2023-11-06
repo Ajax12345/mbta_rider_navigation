@@ -109,6 +109,7 @@ $(document).ready(function(){
         var lat = payload.attributes.latitude;
         var long = payload.attributes.longitude;
         $(`path[vid="${payload.id}"]`).remove();
+        $(`path[vpid="${payload.id}"]`).remove();
         if (direction_id === 1){
             p.data([{
                 "type": "Feature",
@@ -119,17 +120,20 @@ $(document).ready(function(){
                     "type": "Point",
                     "coordinates": [long, lat]
                 },
-                "skey": 5
+                "skey": 5,
+                "s_len": 0
             }])
             .enter()
             .append("path")
             .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', 'red').attr('vid', payload.id).attr('skey', '5')
             var elem = document.querySelector(`path[vid="${payload.id}"]`)
             var b = elem.getBoundingClientRect()
+            $(`.train-icon[vid="${payload.id}"]`).remove();
+            $('body').append(`<img src='/src/img/train_icon.svg' class='train-icon' vid="${payload.id}">`)
             console.log('b below')
             console.log(b)
-            $('.train-icon').css('left', b.left-18)
-            $('.train-icon').css('top', b.top-7)
+            $(`.train-icon[vid="${payload.id}"]`).css('left', b.left-18)
+            $(`.train-icon[vid="${payload.id}"]`).css('top', b.top-7)
         }
         //42.37422180175781
         //-71.23595428466797
@@ -150,7 +154,6 @@ $(document).ready(function(){
                 }
             }
         }
-        $(`path[vpid="${payload.id}"]`).remove();
         p.data([{
                 "type": "Feature",
                 "properties": {
@@ -161,7 +164,8 @@ $(document).ready(function(){
                     "type": "LineString",
                     "coordinates": coords
                 },
-                "skey": 3
+                "skey": 3,
+                "s_len": coords.length
         }])
             .enter()
             .append("path")
@@ -173,6 +177,9 @@ $(document).ready(function(){
                 return 1
             }
             else if (a.skey < b.skey){
+                return -1
+            }
+            else if (a.s_len > b.s_len){
                 return -1
             }
             return 0
@@ -209,13 +216,13 @@ $(document).ready(function(){
                 line_registry[i.properties.route_id] = i.properties.name
             }
             if (i.geometry.type === 'LineString' && i.properties.name === "Fitchburg Line"){
-                p.data([{...i, skey: 1}])
+                p.data([{...i, skey: 1, s_len: 0}])
                 .enter()
                 .append("path")
                 .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', '#cdcdcd').attr('skey', '1')
             }
             else if (i.properties.route === 'Fitchburg Line'){
-                p.data([{...i, skey: 4}])
+                p.data([{...i, skey: 4, s_len: 0}])
                 .enter()
                 .append("path")
                 .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray').attr('skey', '4')
