@@ -13,6 +13,9 @@ $(document).ready(function(){
     var p = svg.selectAll("path")
     d3.json('json_data/lines_and_stops_geo.json', function(data){
         d3.csv('agg_datasets/train_reliability.csv', function(csv_data){
+            for (var i of csv_data){
+                $('.record-container').append(`<div class='cell' name='${i.name}'>${i.name}</div><div class='cell' name='${i.name}'>${Math.round(parseFloat(i.reliability)*100,0)}%</div>`)
+            }
             var train_reliability = Object.fromEntries(csv_data.map(function(x){return [x.name, parseFloat(x.reliability)]}))
             console.log(train_reliability);
             var p = svg.selectAll("path")
@@ -115,11 +118,14 @@ $(document).ready(function(){
                 var rect = this.getBoundingClientRect();
                 $('.stop-tooltip').css('top', rect.top);
                 $('.stop-tooltip').css('left', rect.left);
+                $(`.cell[name="${details.name}"]`).addClass('cell-hover')
             })
             .on("mousemove", function(){
         
             })
             .on("mouseout", function(){
+                var details = JSON.parse(this.getAttribute('details'))
+                $(`.cell[name="${details.name}"]`).removeClass('cell-hover')
                 $('.stop-tooltip').css('visibility', 'hidden')
             });
         });

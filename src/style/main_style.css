@@ -93,3 +93,30 @@
     white-space: nowrap;
     padding:5px;
 }
+.record-container{
+    display: grid;
+    grid-template-columns:  min-content min-content;
+    align-items: center;
+    position: absolute;
+    top:40px;
+    right:40px;
+    border-bottom:1px solid black;
+}
+.cell{
+    font-size:15px;
+    color:rgb(60, 60, 60);
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+    padding:5px;
+    border:1px solid black;
+    border-bottom:none;
+}
+.cell:nth-child(odd){
+    border-right:none;
+}
+.cell-header{
+    font-weight: bold;
+}
+.cell-hover{
+    background-color:rgb(235, 162, 162);
+}
