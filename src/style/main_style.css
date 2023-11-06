@@ -47,9 +47,9 @@
     row-gap: 10px;
 }
 .legend-block{
-    width:60px;
+    width:40px;
     border-radius:2px;
-    height:20px;
+    height:17px;
 }
 .legend-block.on-time{
     background-color:#21D648;
@@ -60,8 +60,11 @@
 .legend-block.late{
     background-color:red;
 }
+.legend-block.no-data{
+    background-color: #cdcdcd;
+}
 .legend-block-text{
-    font-size:15px;
+    font-size:13px;
     color:rgb(60, 60, 60);
     font-family: 'Inter', sans-serif;
     white-space: nowrap;
