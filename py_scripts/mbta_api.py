@@ -1,7 +1,9 @@
 import requests, json, time
 import datetime, re, polyline
+import collections, csv
 
 API_KEY = 'ec477916907d435d9cdc835309d1a9f0'
+API_KEYv2 = 'wX9NwuHnZU2ToO7GmGR9uw'
 
 def lines() -> None:
     url = 'https://api-v3.mbta.com/lines?page[limit]=100&page[offset]=0&sort=color'
@@ -117,5 +119,39 @@ def shapes() -> None:
     with open('json_data/f_line_shapes.json', 'w') as f:
         json.dump(root, f, indent=4)
 
+def dt_offset(days:int = 1) -> str:
+    d = datetime.datetime.now()
+    return re.sub('\.0+$', '',str((datetime.datetime(d.year, d.month, d.day) - datetime.timedelta(days = days)).timestamp()))
+
+def travel_times() -> None:
+    
+    with open('raw_datasets/MBTA_rail_stops.csv') as f:
+        header, *data = csv.reader(f)
+        vals = [dict(zip(header, i)) for i in data]
+        d = collections.defaultdict(list)
+        for i in vals:
+            d[re.sub('\-\w+$', '', i['stop_id'])].append(i['OBJECTID'])
+    
+    with open('json_data/all_stops.json') as f:
+        all_stops = json.load(f)
+    
+    line_stops = collections.defaultdict(list)
+    for i in all_stops:
+        line_stops[(i['route'], i['route_id'])].append((i['id'], d.get(i['id'].replace('place-', '')), i['attributes']['name']))
+
+    key = [*filter(None, requests.get('https://cdn.mbta.com/sites/default/files/2017-11/api-public-key.txt').text.split('\n'))][-1]
+    for x in ['place-FR-0115']:
+        for y in ['place-FR-0132']:
+            #results = requests.get(f'https://performanceapi.mbta.com/developer/api/v2.1/dwells?api_key={key}&format=json&stop={x}&from_datetime={dt_offset(20)}&to_datetime={dt_offset(14)}').json()
+            results = requests.get(f'https://performanceapi.mbta.com/developer/api/v2.1/traveltimes?api_key={key}&format=json&from_stop={y}&to_stop={x}&from_datetime={dt_offset(10)}&to_datetime={dt_offset(5)}').json()
+            print(results)
+    
+    print(line_stops[('Fitchburg Line', 'CR-Fitchburg')])
+    
+    #print(json.dumps(results, indent=4))
+
+
+
+
 if __name__ == '__main__':
-    vehicles()
+    travel_times()

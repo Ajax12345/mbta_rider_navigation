@@ -31,6 +31,13 @@ $(document).ready(function(){
             return {color:'red', message: `${Math.round(min_behind, 0)} minutes behind schedule`}
         }
     }
+    function render_train_stats(){
+        var results = [];
+        for (var i of Object.keys(vehicle_registry)){
+            results.push(vehicle_registry[i].message)
+        }
+        return results.join(', ')
+    }
     function record_new_schedule_prediction(vehicle_id, direction_id, route_id, trip_id, stop_id, s_p, prediction, pred_date, d1){
         vehicle_registry[vehicle_id] = {
             direction_id: direction_id,
@@ -44,6 +51,7 @@ $(document).ready(function(){
         }
         var min_behind = (pred_date - d1)/(1000*60);
         var response_payload = min_to_color(min_behind);
+        //vehicle_registry[vehicle_id] = {...vehicle_registry[vehicle_id], response_payload}
         d3.selectAll(`path[vpid="${vehicle_id}"]`).attr('stroke', response_payload.color)
         $('.line-about span').html(`- ${response_payload.message}`)
 
