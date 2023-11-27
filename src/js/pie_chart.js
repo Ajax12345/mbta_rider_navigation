@@ -1,13 +1,16 @@
+// Select the body element, append an SVG element, and create three groups for slices, labels, and lines
 var svg = d3.select("body").append("svg").append("g");
 
 svg.append("g").attr("class", "slices");
 svg.append("g").attr("class", "labels");
 svg.append("g").attr("class", "lines");
 
+// Define width, height, and radius for the pie chart
 var width = 960,
   height = 450,
   radius = Math.min(width, height) / 2;
 
+// Define a pie layout with sorting disabled and frequency as the value accessor
 var pie = d3.layout
   .pie()
   .sort(null)
@@ -15,6 +18,7 @@ var pie = d3.layout
     return d.freq;
   });
 
+// Define arc generators for slices and outer arcs
 var arc = d3.svg
   .arc()
   .outerRadius(radius * 0.8)
@@ -25,8 +29,10 @@ var outerArc = d3.svg
   .innerRadius(radius * 0.9)
   .outerRadius(radius * 0.9);
 
+// Translate the SVG to the center of the container
 svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
+// Define a key function to identify data points
 var key = function (d) {
   return d.data.cause_name;
 };
@@ -65,6 +71,7 @@ var fixedData = [
   },
 ];
 
+// Extract cause names for color scale domain
 const causeNames = fixedData.map((entry) => entry.cause_name);
 var color = d3.scale
   .ordinal()
@@ -86,10 +93,13 @@ var color = d3.scale
     "#20b2aa",
   ]);
 
+// Call the piechart function with the fixed data
 piechart(fixedData);
 
+// Function to create a pie chart using D3.js
 function piechart(data) {
   /* ------- PIE SLICES -------*/
+   // Select slices, bind data, and set up enter, update, and exit transitions
   var slice = svg
     .select(".slices")
     .selectAll("path.slice")
@@ -160,7 +170,7 @@ function piechart(data) {
   text.exit().remove();
 
   /* ------- SLICE TO TEXT POLYLINES -------*/
-
+  // Select polylines, bind data, and set up enter, update, and exit transitions
   var polyline = svg
     .select(".lines")
     .selectAll("polyline")
