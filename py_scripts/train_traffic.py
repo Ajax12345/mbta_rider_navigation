@@ -137,11 +137,10 @@ def get_delay(predicted_arrival:str, scheduled_arrival:str) -> str:
     return (datetime.datetime(*map(int, re.findall('\d+', predicted_arrival))) - datetime.datetime(*map(int, re.findall('\d+', scheduled_arrival)))).seconds
 
 
-def all_train_traffic() -> None:
+def all_train_traffic(sem) -> None:
     with open('/Users/jamespetullo/cr_project/json_data/routes.json') as f:
         routes = json.load(f)
 
-    sem = Sem()
     for _route in routes:
         route = _route['id']
         for d_id in [0, 1]:
@@ -260,4 +259,5 @@ def travel_times() -> None:
 
 
 if __name__ == '__main__':
-    all_train_traffic()
+    sem = Sem()
+    all_train_traffic(sem)
