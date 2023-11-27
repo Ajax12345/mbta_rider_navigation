@@ -96,14 +96,9 @@ var color = d3.scale
 // Call the piechart function with the fixed data
 piechart(fixedData);
 
-// Function to create a pie chart using D3.js
 function piechart(data) {
   /* ------- PIE SLICES -------*/
-   // Select slices, bind data, and set up enter, update, and exit transitions
-  var slice = svg
-    .select(".slices")
-    .selectAll("path.slice")
-    .data(pie(data), key);
+  var slice = svg.select(".slices").selectAll("path.slice").data(pie(data), key);
 
   slice
     .enter()
@@ -128,7 +123,6 @@ function piechart(data) {
   slice.exit().remove();
 
   /* ------- TEXT LABELS -------*/
-
   var text = svg.select(".labels").selectAll("text").data(pie(data), key);
 
   text
@@ -170,11 +164,7 @@ function piechart(data) {
   text.exit().remove();
 
   /* ------- SLICE TO TEXT POLYLINES -------*/
-  // Select polylines, bind data, and set up enter, update, and exit transitions
-  var polyline = svg
-    .select(".lines")
-    .selectAll("polyline")
-    .data(pie(data), key);
+  var polyline = svg.select(".lines").selectAll("polyline").data(pie(data), key);
 
   polyline.enter().append("polyline");
 
@@ -194,4 +184,32 @@ function piechart(data) {
     });
 
   polyline.exit().remove();
+
+  /* ------- TOOLTIPS -------*/
+  var tooltip = d3.select(".tooltip");
+
+slice
+  .on("mouseover", function (d) {
+    var percent = ((d.endAngle - d.startAngle) / (2 * Math.PI)) * 100;
+    tooltip.transition().duration(200).style("opacity", 0.9);
+    tooltip.html(d.data.cause_name + "<br>" + percent.toFixed(1) + "%")
+      .style("left", d3.event.pageX + "px")
+      .style("top", d3.event.pageY - 28 + "px");
+  })
+  .on("mouseout", function () {
+    tooltip.transition().duration(500).style("opacity", 0);
+  });
+
+polyline
+  .on("mouseover", function (d) {
+    var percent = ((d.endAngle - d.startAngle) / (2 * Math.PI)) * 100;
+    tooltip.transition().duration(200).style("opacity", 0.9);
+    tooltip.html(d.data.cause_name + "<br>" + percent.toFixed(1) + "%")
+      .style("left", d3.event.pageX + "px")
+      .style("top", d3.event.pageY - 28 + "px");
+  })
+  .on("mouseout", function () {
+    tooltip.transition().duration(500).style("opacity", 0);
+  });
+
 }
