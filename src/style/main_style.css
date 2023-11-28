@@ -122,8 +122,10 @@
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*
   width: 960px;
   height: 500px;
+  */
   position: relative;
 }
 
@@ -141,4 +143,36 @@ polyline {
   stroke: black;
   stroke-width: 2px;
   fill: none;
+}
+.main-container{
+  width:90%;
+  margin:0 auto;
+}
+.header-title{
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+.description-text{
+  font-family: "Inter", sans-serif;
+  color: rgb(38, 38, 38);
+  font-size: 16px;
+  line-height:1.4;
+}
+.selection-header{
+  display: grid;
+  grid-template-columns: min-content min-content;
+  column-gap: 15px;
+  align-items: center;
+}
+.choice-prompt{
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.rail-line-options{
+  width:60%;
 }
