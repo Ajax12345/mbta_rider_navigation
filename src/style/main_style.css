@@ -234,3 +234,21 @@ polyline {
 .route-view-stop{
   transition: stroke-width 0.5s;
 }
+.legend-items-horizontal{
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+  column-gap: 20px;
+  align-items: center;
+}
+.legend-delay-stops{
+  display: grid;
+  grid-template-columns: min-content min-content;
+  column-gap: 7px;
+  align-items: center;
+}
+.legend-circle{
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;;
+}

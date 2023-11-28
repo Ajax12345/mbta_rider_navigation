@@ -120,7 +120,27 @@ $(document).ready(function(){
     });
     function display_route_results(route_id){
         d3.csv('agg_datasets/train_reliability.csv', function(csv_data){
-            $('.route-map-outer').html(`<div id="map"></div>`)
+            $('.route-map-outer').html(`
+            <div class="legend">
+                <div class="legend-text">Legend</div>
+                <div style="height:10px"></div>
+                <div class='legend-items-horizontal'>
+                    <div class='legend-delay-stops'>
+                        <div class='legend-circle' style='background-color:#4AE525'></div>
+                        <div class="legend-block-text">less than 5 min</div>
+                    </div>
+                    <div class='legend-delay-stops'>
+                        <div class='legend-circle' style='background-color:#EEC419'></div>
+                        <div class="legend-block-text">between 5 and 15 min </div>
+                    </div>
+                    <div class='legend-delay-stops'>
+                        <div class='legend-circle' style='background-color:#EE5119'></div>
+                        <div class="legend-block-text">more than 15 min</div>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+            `)
             var train_reliability = Object.fromEntries(csv_data.map(function(x){return [x.name, parseFloat(x.reliability)]}))
             console.log(train_reliability)
             console.log(route_mappings)
