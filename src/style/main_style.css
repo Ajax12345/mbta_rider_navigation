@@ -127,7 +127,10 @@
   font-weight: bold;
 }
 .cell-hover {
-  background-color: rgb(235, 162, 162);
+  /*background-color: rgb(235, 162, 162);*/
+    background: #cee0f4!important;
+    border-color: #165c96!important;
+    color: #165c96;
 }
 
 body {
@@ -226,4 +229,7 @@ polyline {
   position: relative !important;
   top:0 !important;
   left:0 !important;
+}
+.route-view-stop{
+  transition: stroke-width 0.5s;
 }

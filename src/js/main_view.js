@@ -66,12 +66,28 @@ $(document).ready(function(){
         $('.route-table-display').html(`<div class='record-container' id='stop-delay-table'>
             <div class='cell cell-header'>Stop</div>
             <div class='cell cell-header'>Average delay</div>
-            <div class='cell cell-header'>Average daily boarding per train</div>
+            <div class='cell cell-header'>Average boarding size</div>
         </div>`);
         for (var i of all_stops){
-            $('#stop-delay-table').append(`<div class='cell' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell' name='${i.stop_name}'>${i.average_boarding}</div>`)
+            $('#stop-delay-table').append(`<div class='cell' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell' name='${i.stop_name}'>${i.average_boarding} passengers</div>`)
         }
-
+        $('.cell').on('mouseenter', function(e){
+            $('.stop-tooltip').html(this.getAttribute('name'));
+            var rect = $(`.route-view-stop[name="${this.getAttribute('name')}"]`)[0].getBoundingClientRect();
+            $('.stop-tooltip').css('top', rect.top + window.scrollY);
+            $('.stop-tooltip').css('left', rect.left + window.scrollX);
+            $('.stop-tooltip').css('visibility', 'visible')
+            $(`.route-view-stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '20')
+            $(`.cell[name="${this.getAttribute('name')}"]`).each(function(){
+                $(this).addClass('cell-hover')
+            });
+        }).on('mouseout', function(){
+            $(`.cell[name="${this.getAttribute('name')}"]`).each(function(){
+                $(this).removeClass('cell-hover')
+            });
+            $('.stop-tooltip').css('visibility', 'hidden')
+            $(`.route-view-stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '8')
+        });
 
     }
     d3.json('json_data/routes.json', function(json_data){
@@ -144,15 +160,19 @@ $(document).ready(function(){
                     console.log(this);
                     //alert('here!')
                     $('.stop-tooltip').html(this.getAttribute('name'));
+                    $(`.route-view-stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '20')
                     $('.stop-tooltip').css('visibility', 'visible')
                     if (first_coords === null){
                         first_coords = [e.pageY - 20, e.pageX]
                     }
                     $('.stop-tooltip').css('top', first_coords[0]);
                     $('.stop-tooltip').css('left', first_coords[1]);
+                    $(`.cell[name="${this.getAttribute('name')}"]`).addClass('cell-hover')
                 }).on('mouseout', function(){
                     first_coords = null;
                     $('.stop-tooltip').css('visibility', 'hidden')
+                    $(`.cell[name="${this.getAttribute('name')}"]`).removeClass('cell-hover')
+                    $(`.route-view-stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '8')
                 });
                 if (Object.keys(route_stop_delays).length > 0){
                     render_delay_table(route_id);
@@ -163,7 +183,7 @@ $(document).ready(function(){
                             if (!(i.route in route_stop_delays)){
                                 route_stop_delays[i.route] = []
                             }
-                            route_stop_delays[i.route].push({...i, mdt:Math.ceil(parseFloat(i.average_min_delay)), average_boarding:Math.ceil(parseFloat(i.average_boarding_rate))});
+                            route_stop_delays[i.route].push({...i, mdt:Math.ceil(parseFloat(i.average_min_delay)), average_boarding:i.average_boarding_rate != 'N/A'? Math.ceil(parseFloat(i.average_boarding_rate)) : 'N/A'});
                         }
                         render_delay_table(route_id);
                     });
