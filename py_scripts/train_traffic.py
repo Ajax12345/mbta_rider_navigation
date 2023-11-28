@@ -126,6 +126,7 @@ if __name__ == '__main__':
         time.sleep(60)
 
     '''
+    '''
     with open('/Users/jamespetullo/cr_project/raw_datasets/MBTA_rail_stops.csv') as f:
         h, *data = csv.reader(f)
 
@@ -136,3 +137,17 @@ if __name__ == '__main__':
 
     conn.commit()
     conn.close()
+    '''
+
+
+    with open('/Users/jamespetullo/cr_project/raw_datasets/MBTA_full_rail_ridership.csv') as f:
+        h, *data = csv.reader(f)
+
+    conn = sqlite3.connect('/Users/jamespetullo/Downloads/reliability_db_1.db')
+    conn.execute(f'create table if not exists stop_ridership ({", ".join(i+" text" for i in h)})')
+    conn.executemany(f'insert into stop_ridership values ({", ".join("?" for _ in h)})', data)
+
+    conn.commit()
+    conn.close()
+  
+    

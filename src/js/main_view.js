@@ -66,9 +66,10 @@ $(document).ready(function(){
         $('.route-table-display').html(`<div class='record-container' id='stop-delay-table'>
             <div class='cell cell-header'>Stop</div>
             <div class='cell cell-header'>Average delay</div>
+            <div class='cell cell-header'>Average daily boarding per train</div>
         </div>`);
         for (var i of all_stops){
-            $('#stop-delay-table').append(`<div class='cell' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div>`)
+            $('#stop-delay-table').append(`<div class='cell' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell' name='${i.stop_name}'>${i.average_boarding}</div>`)
         }
 
 
@@ -157,12 +158,12 @@ $(document).ready(function(){
                     render_delay_table(route_id);
                 }
                 else{
-                    d3.csv('agg_datasets/route_stop_delays.csv', function(data){
+                    d3.csv('agg_datasets/route_stop_delays_avg_boardings.csv', function(data){
                         for (var i of data){
                             if (!(i.route in route_stop_delays)){
                                 route_stop_delays[i.route] = []
                             }
-                            route_stop_delays[i.route].push({...i, mdt:Math.ceil(parseFloat(i.average_min_delay))});
+                            route_stop_delays[i.route].push({...i, mdt:Math.ceil(parseFloat(i.average_min_delay)), average_boarding:Math.ceil(parseFloat(i.average_boarding_rate))});
                         }
                         render_delay_table(route_id);
                     });
