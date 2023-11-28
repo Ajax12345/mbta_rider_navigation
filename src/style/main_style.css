@@ -174,5 +174,33 @@ polyline {
   white-space: nowrap;
 }
 .rail-line-options{
-  width:60%;
+  display: flex;
+  flex-wrap: wrap;
+  gap:8px;
+}
+.route-choice{
+  border: 1px solid #e9eaed;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  line-height: 1.25;
+  padding: 0.75rem;
+  width:250px;
+  color: #165c96;
+  font-size: 16px;
+}
+.route-choice:hover{
+    background: #cee0f4!important;
+    border-color: #165c96!important;
+    cursor:pointer;
+}
+.route-choice-selected{
+    background: #cee0f4!important;
+    border-color: #165c96!important;
+}
+.route-reliability-header{
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 25px;
+  font-weight: 600;
+  white-space: nowrap;
 }
