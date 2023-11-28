@@ -251,3 +251,10 @@ polyline {
   height: 15px;
   border-radius: 50%;;
 }
+.live-view-outer{
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+#live-view-map * {
+  fill: white;
+}
