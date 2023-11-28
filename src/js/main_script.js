@@ -9,6 +9,7 @@ $(document).ready(function(){
         -71.0589,
         42.3601
     ]
+    var evtSource = null;
     var projection = d3.geoMercator().translate([width / 2, height / 2]).center(boston_coords).scale([50000])
     var pathGenerator = d3.geoPath().projection(projection);
     var svg = d3.select("#map").append("svg").attr("width", 1000).attr("height", 500);
@@ -140,8 +141,8 @@ $(document).ready(function(){
             $('body').append(`<img src='/src/img/train_icon.svg' class='train-icon' vid="${payload.id}">`)
             console.log('b below')
             console.log(b)
-            $(`.train-icon[vid="${payload.id}"]`).css('left', b.left-18)
-            $(`.train-icon[vid="${payload.id}"]`).css('top', b.top-7)
+            $(`.train-icon[vid="${payload.id}"]`).css('left', b.left-26)
+            $(`.train-icon[vid="${payload.id}"]`).css('top', b.top-16)
         }
         //42.37422180175781
         //-71.23595428466797
@@ -213,88 +214,87 @@ $(document).ready(function(){
         }
 
     }
-    d3.json('json_data/lines_and_stops_geo.json', function(data){
-        var p = svg.selectAll("path")
-        for (var i of data.features){
-            if (i.geometry.type === 'LineString'){
-                if (!(i.properties.route_id in line_geo)){
-                    line_geo[i.properties.route_id] = []
+    function draw_live_line(route_id){
+        $('.train-icon').each(function(){
+            $(this).remove();
+        });
+        $('.map-container').html(`<div id="map"></div>`);
+        d3.json('json_data/lines_and_stops_geo.json', function(data){
+            svg = d3.select("#map").append("svg").attr("width", 1000).attr("height", 500);
+            p = svg.selectAll("path")
+            for (var i of data.features){
+                if (i.geometry.type === 'LineString'){
+                    if (!(i.properties.route_id in line_geo)){
+                        line_geo[i.properties.route_id] = []
+                    }
+                    line_geo[i.properties.route_id].push(i)
+                    line_registry[i.properties.route_id] = i.properties.name
                 }
-                line_geo[i.properties.route_id].push(i)
-                line_registry[i.properties.route_id] = i.properties.name
+                if (i.geometry.type === 'LineString' && i.properties.route_id === route_id){
+                    p.data([{...i, skey: 1, s_len: 0}])
+                    .enter()
+                    .append("path")
+                    .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', '#cdcdcd').attr('skey', '1')
+                }
+                else if (i.properties.route_id === route_id){
+                    p.data([{...i, skey: 4, s_len: 0}])
+                    .enter()
+                    .append("path")
+                    .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray').attr('skey', '4')
+                    .attr('class', 'stop')
+                    .attr('name', i.properties.name)
+                }
             }
-            if (i.geometry.type === 'LineString' && i.properties.name === "Fitchburg Line"){
-                p.data([{...i, skey: 1, s_len: 0}])
-                .enter()
-                .append("path")
-                .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', '#cdcdcd').attr('skey', '1')
+            for (var i of Object.keys(line_registry)){
+                $('.line-options').append(`<option value="${i}">${line_registry[i]}</option>`)
             }
-            else if (i.properties.route === 'Fitchburg Line'){
-                p.data([{...i, skey: 4, s_len: 0}])
-                .enter()
-                .append("path")
-                .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray').attr('skey', '4')
-                .attr('class', 'stop')
-                .attr('name', i.properties.name)
+            $('.line-options').val(route_id)
+            d3.selectAll("#map path").sort(function(a,b) {
+                if (a.skey > b.skey){
+                    return 1
+                }
+                else if (a.skey < b.skey){
+                    return -1
+                }
+                return 0
+            }).order()
+            d3.selectAll(".stop")
+            .on("mouseover", function(){
+                $('.stop-tooltip').html(this.getAttribute('name'));
+                $('.stop-tooltip').css('visibility', 'visible')
+                var rect = this.getBoundingClientRect();
+                $('.stop-tooltip').css('top', rect.top - 15);
+                $('.stop-tooltip').css('left', rect.left + 15);
+            })
+            .on("mousemove", function(){
+        
+            })
+            .on("mouseout", function(){
+                $('.stop-tooltip').css('visibility', 'hidden')
+            });
+            if (evtSource != null){
+                evtSource.close();
             }
-        }
-        for (var i of Object.keys(line_registry)){
-            $('.line-options').append(`<option value="${i}">${line_registry[i]}</option>`)
-        }
-        $('.line-options').val('CR-Fitchburg')
-        d3.selectAll("#map path").sort(function(a,b) {
-            if (a.skey > b.skey){
-                return 1
-            }
-            else if (a.skey < b.skey){
-                return -1
-            }
-            return 0
-        }).order()
-        /*
-        p.data([{
-            "type": "Feature",
-            "properties": {
-                "name": "Boston Center"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": boston_coords
-            }
-        }])
-            .enter()
-            .append("path")
-            .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', 'red')
-        */
-        d3.selectAll(".stop")
-        .on("mouseover", function(){
-            $('.stop-tooltip').html(this.getAttribute('name'));
-            $('.stop-tooltip').css('visibility', 'visible')
-            var rect = this.getBoundingClientRect();
-            $('.stop-tooltip').css('top', rect.top - 15);
-            $('.stop-tooltip').css('left', rect.left + 15);
-        })
-        .on("mousemove", function(){
-    
-        })
-        .on("mouseout", function(){
-            $('.stop-tooltip').css('visibility', 'hidden')
+            evtSource = new EventSource(`https://api-v3.mbta.com/vehicles?filter[route]=${route_id}&filter[route_type]=2&page[limit]=100&page[offset]=0&sort=current_stop_sequence&api_key=ec477916907d435d9cdc835309d1a9f0`);
+            evtSource.addEventListener('reset', function(e){
+                handle_vehicle_endpoint(e, 'reset')
+            })
+            evtSource.addEventListener('update', function(e){
+                handle_vehicle_endpoint(e, 'update')
+            })
+            evtSource.addEventListener('add', function(e){
+                handle_vehicle_endpoint(e, 'add')
+            });
+            evtSource.addEventListener('remove', function(e){
+                console.log('got remove')
+                console.log(e)
+                handle_vehicle_endpoint(e, 'remove')
+            });
         });
-        var evtSource = new EventSource('https://api-v3.mbta.com/vehicles?filter[route]=CR-Fitchburg&filter[route_type]=2&page[limit]=100&page[offset]=0&sort=current_stop_sequence&api_key=ec477916907d435d9cdc835309d1a9f0');
-        evtSource.addEventListener('reset', function(e){
-            handle_vehicle_endpoint(e, 'reset')
-        })
-        evtSource.addEventListener('update', function(e){
-            handle_vehicle_endpoint(e, 'update')
-        })
-        evtSource.addEventListener('add', function(e){
-            handle_vehicle_endpoint(e, 'add')
-        });
-        evtSource.addEventListener('remove', function(e){
-            console.log('got remove')
-            console.log(e)
-            handle_vehicle_endpoint(e, 'remove')
-        });
+    }
+    $('body').on('change', '.line-options', function(){
+        draw_live_line($(this).val());
     });
+    draw_live_line('CR-Fitchburg');
     
 })
