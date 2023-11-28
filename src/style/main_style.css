@@ -99,7 +99,12 @@
   position: absolute;
   top: 40px;
   right: 40px;
-  border-bottom: 1px solid black;
+}
+.record-container .cell:nth-last-child(1){
+  border-bottom:1px solid black !important;
+}
+.record-container .cell:nth-last-child(2){
+  border-bottom:1px solid black !important;
 }
 .cell {
   font-size: 15px;
@@ -207,4 +212,12 @@ polyline {
 .data-view-outer{
   display: grid;
   grid-template-columns: 60% 40%;
+}
+.route-map-outer{
+  position: relative;
+}
+#stop-delay-table{
+  position: relative !important;
+  top:0 !important;
+  left:0 !important;
 }

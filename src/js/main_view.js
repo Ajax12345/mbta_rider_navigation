@@ -2,6 +2,7 @@ $(document).ready(function(){
     var route_mappings = {}
     var line_geo = {}
     var line_registry = {}
+    var route_stop_delays = {}
     var anchorings = {
         'CR-Fitchburg':[40000, [
             -71.35,
@@ -51,6 +52,26 @@ $(document).ready(function(){
             -71.001,
             42.000001
         ]]
+    }
+    function render_delay_table(route_id){
+        var all_stops = route_stop_delays[route_id].sort(function(a, b){
+            if (a.mdt < b.mdt){
+                return -1
+            }
+            if (a.mdt > b.mdt){
+                return 1
+            }
+            return 0
+        });
+        $('.route-table-display').html(`<div class='record-container' id='stop-delay-table'>
+            <div class='cell cell-header'>Stop</div>
+            <div class='cell cell-header'>Average delay</div>
+        </div>`);
+        for (var i of all_stops){
+            $('#stop-delay-table').append(`<div class='cell' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div>`)
+        }
+
+
     }
     d3.json('json_data/routes.json', function(json_data){
         for (var i of json_data){
@@ -132,7 +153,21 @@ $(document).ready(function(){
                     first_coords = null;
                     $('.stop-tooltip').css('visibility', 'hidden')
                 });
-            })
+                if (Object.keys(route_stop_delays).length > 0){
+                    render_delay_table(route_id);
+                }
+                else{
+                    d3.csv('agg_datasets/route_stop_delays.csv', function(data){
+                        for (var i of data){
+                            if (!(i.route in route_stop_delays)){
+                                route_stop_delays[i.route] = []
+                            }
+                            route_stop_delays[i.route].push({...i, mdt:Math.ceil(parseFloat(i.average_min_delay))});
+                        }
+                        render_delay_table(route_id);
+                    });
+                }
+            });
         });
         //alert(route_id)
     }
