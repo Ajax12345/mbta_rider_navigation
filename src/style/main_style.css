@@ -204,3 +204,7 @@ polyline {
   font-weight: 600;
   white-space: nowrap;
 }
+.data-view-outer{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
