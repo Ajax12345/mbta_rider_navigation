@@ -122,6 +122,7 @@
   /*border: 1px solid black;
   border-bottom: none;*/
   background-color:white;
+  display: flex;
 }
 .cell-header {
   font-weight: bold;

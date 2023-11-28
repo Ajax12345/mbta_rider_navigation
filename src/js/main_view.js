@@ -53,6 +53,24 @@ $(document).ready(function(){
             42.000001
         ]]
     }
+    function stop_delay_color(delay){
+        if (delay < 5){
+            return ['#4AE525', 'caret-arrow-up.png'];
+        }
+        else if (delay >= 5 && delay < 15){
+            return ['#EEC419', 'medium-delay-arrow.png'];
+        }
+        else{
+            return ['#EE5119', 'severe-delay-arrow.png']
+        }
+    }   
+    function render_route_delay_colors(route_id){
+        for (var i of route_stop_delays[route_id]){
+            var [color, img] = stop_delay_color(i.mdt);
+            $(`.route-view-stop[name="${i.stop_name}"]`).css('stroke', color);
+            $(`.cell-stop-name[name="${i.stop_name}"]`).append(`<img src='src/img/${img}' style='width:12px;height:12px;margin-left:5px;margin-top:3px;'>`)
+        }
+    }
     function render_delay_table(route_id){
         var all_stops = route_stop_delays[route_id].sort(function(a, b){
             if (a.mdt < b.mdt){
@@ -69,7 +87,7 @@ $(document).ready(function(){
             <div class='cell cell-header'>Average boarding size</div>
         </div>`);
         for (var i of all_stops){
-            $('#stop-delay-table').append(`<div class='cell' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell' name='${i.stop_name}'>${i.average_boarding} passengers</div>`)
+            $('#stop-delay-table').append(`<div class='cell cell-stop-name' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell' name='${i.stop_name}'>${i.average_boarding} ${i.average_boarding != 'N/A' ? 'passengers' : ''}</div>`)
         }
         $('.cell').on('mouseenter', function(e){
             $('.stop-tooltip').html(this.getAttribute('name'));
@@ -176,6 +194,7 @@ $(document).ready(function(){
                 });
                 if (Object.keys(route_stop_delays).length > 0){
                     render_delay_table(route_id);
+                    render_route_delay_colors(route_id);
                 }
                 else{
                     d3.csv('agg_datasets/route_stop_delays_avg_boardings.csv', function(data){
@@ -186,6 +205,7 @@ $(document).ready(function(){
                             route_stop_delays[i.route].push({...i, mdt:Math.ceil(parseFloat(i.average_min_delay)), average_boarding:i.average_boarding_rate != 'N/A'? Math.ceil(parseFloat(i.average_boarding_rate)) : 'N/A'});
                         }
                         render_delay_table(route_id);
+                        render_route_delay_colors(route_id);
                     });
                 }
             });
