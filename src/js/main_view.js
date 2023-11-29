@@ -103,7 +103,7 @@ $(document).ready(function(){
         for (var i of all_stops){
             $('#stop-delay-table').append(`<div class='cell cell-stop-name' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell' name='${i.stop_name}'>${i.average_boarding} ${i.average_boarding != 'N/A' ? 'passengers' : ''}</div>`)
         }
-        $('.cell').on('mouseenter', function(e){
+        $('.cell.cell-stop-name').on('mouseenter', function(e){
             $('.stop-tooltip').html(this.getAttribute('name'));
             var rect = $(`.route-view-stop[name="${this.getAttribute('name')}"]`)[0].getBoundingClientRect();
             $('.stop-tooltip').css('top', rect.top + window.scrollY);
@@ -162,7 +162,8 @@ $(document).ready(function(){
             console.log(route_mappings[route_id])
             console.log(train_reliability[route_mappings[route_id]])
             $('.route-reliability-header').html(`${route_mappings[route_id]} reliability: ${Math.round(train_reliability[route_mappings[route_id]]*100)}%`)
-            $('.realtime-view-header').html(`${route_mappings[route_id]} live view (Beta)`)
+            $('.realtime-view-header').html(`${route_mappings[route_id]} live view`)
+            $('.live-view-about').css('display', 'block');
             var width = parseInt($('.route-map-outer').css('width').match('^\\d+'));
             var height = 500;
             ROUTE_WIDTH = width;
@@ -262,7 +263,7 @@ $(document).ready(function(){
         console.log(min_behind);
         if (min_behind < 2){
             console.log('got green!')
-            return {color:'#21D648', message: 'on time'}
+            return {color:'green', message: 'on time'}
         }   
         else if (min_behind >= 2 && min_behind < 5){
             console.log('got orange!')
@@ -293,8 +294,13 @@ $(document).ready(function(){
         }
         var min_behind = (pred_date - d1)/(1000*60);
         var response_payload = min_to_color(min_behind);
+        vehicle_registry[vehicle_id].color = response_payload.color;
+        for (var i of ['green', 'orange', 'red', 'purple']){
+            $(`.train-pulse[vid="${vehicle_id}"]`).removeClass(i);
+        }
+        $(`.train-pulse[vid="${vehicle_id}"]`).addClass(response_payload.color);
         //vehicle_registry[vehicle_id] = {...vehicle_registry[vehicle_id], response_payload}
-        d3.selectAll(`path[vpid="${vehicle_id}"]`).attr('stroke', response_payload.color)
+        //d3.selectAll(`path[vpid="${vehicle_id}"]`).attr('stroke', response_payload.color)
         $('.line-about span').html(`- ${response_payload.message}`)
 
     }
@@ -388,7 +394,7 @@ $(document).ready(function(){
             }])
             .enter()
             .append("path")
-            .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', 'red').attr('vid', payload.id).attr('skey', '5')
+            .attr("d", pathGenerator).attr('stroke-width', '6').attr('stroke', 'red').attr('vid', payload.id).attr('skey', '5')
             var elem = document.querySelector(`path[vid="${payload.id}"]`)
             var b = elem.getBoundingClientRect()
             $(`.train-icon[vid="${payload.id}"]`).remove();
@@ -396,10 +402,13 @@ $(document).ready(function(){
             console.log('b below')
             console.log(b)
             //train-pulse
-            $('.train-pulse').each(function(){
-                $(this).remove();
-            });
-            $('body').append(`<div class='train-pulse purple' vid='${payload.id}'></div>`);
+            $(`.train-pulse[vid="${payload.id}"]`).remove();
+            if (payload.id in vehicle_registry && vehicle_registry[payload.id] != null){
+                $('body').append(`<div class='train-pulse ${vehicle_registry[payload.id].color}' vid='${payload.id}'></div>`);
+            }
+            else{
+                $('body').append(`<div class='train-pulse purple' vid='${payload.id}'></div>`);
+            }
             $(`.train-pulse[vid="${payload.id}"]`).css('left', b.left + window.scrollX - 24)
             $(`.train-pulse[vid="${payload.id}"]`).css('top', b.top + window.pageYOffset - 24)
             $(`.train-icon[vid="${payload.id}"]`).css('left', b.left + window.scrollX - 26)
@@ -492,7 +501,28 @@ $(document).ready(function(){
         $('.train-icon').each(function(){
             $(this).remove();
         });
-        $('.live-view-container').html(`<div id="live-view-map"></div>`);
+        $('.live-view-container').html(`
+        <div style="height:20px"></div>
+        <div class="legend">
+            <div class="legend-text">Delay codes</div>
+            <div style="height:10px"></div>
+            <div class='legend-items-horizontal'>
+                <div class='legend-delay-stops'>
+                    <div class='legend-circle' style='background-color:rgb(51, 217, 98)'></div>
+                    <div class="legend-block-text">On time</div>
+                </div>
+                <div class='legend-delay-stops'>
+                    <div class='legend-circle' style='background-color:rgba(255, 121, 63, 1)'></div>
+                    <div class="legend-block-text">2 to 15 min behind</div>
+                </div>
+                <div class='legend-delay-stops'>
+                    <div class='legend-circle' style='background-color:rgba(255, 82, 82, 1)'></div>
+                    <div class="legend-block-text">more than 5 min behind</div>
+                </div>
+            </div>
+        </div>
+        <div id="live-view-map"></div>
+        `);
         var width = parseInt($('.live-view-container').css('width').match('^\\d+'));
         var height = 500;
         var [scale, boston_coords] = anchorings[route_id]
