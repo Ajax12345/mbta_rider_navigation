@@ -342,7 +342,22 @@ $(document).ready(function(){
         $(`.train-pulse[vid="${vehicle_id}"]`).addClass(response_payload.color);
         //vehicle_registry[vehicle_id] = {...vehicle_registry[vehicle_id], response_payload}
         //d3.selectAll(`path[vpid="${vehicle_id}"]`).attr('stroke', response_payload.color)
-
+        $('.cell-live-view').on('mouseenter', function(e){
+            $('.stop-tooltip').html(`Train ${this.getAttribute('vid')}`);
+            var rect = $(`.train-pulse[vid="${this.getAttribute('vid')}"]`)[0].getBoundingClientRect();
+            $('.stop-tooltip').css('top', rect.top + window.scrollY - 10);
+            $('.stop-tooltip').css('left', rect.left + window.scrollX + 20);
+            $('.stop-tooltip').css('visibility', 'visible')
+            $(`.train-pulse[vid="${this.getAttribute('vid')}"]`).css('stroke-width', '20')
+            $(`.cell[vid="${this.getAttribute('vid')}"]`).each(function(){
+                $(this).addClass('cell-hover')
+            });
+        }).on('mouseout', function(){
+            $(`.cell[vid="${this.getAttribute('vid')}"]`).each(function(){
+                $(this).removeClass('cell-hover')
+            });
+            $('.stop-tooltip').css('visibility', 'hidden')
+        });
     }
     function check_against_schedule(vehicle_id, direction_id, route_id, trip_id, stop_id, prediction){
         var pred_date = new Date(prediction.attributes.arrival_time);
@@ -453,6 +468,23 @@ $(document).ready(function(){
             $(`.train-pulse[vid="${payload.id}"]`).css('top', b.top + window.pageYOffset - 24)
             $(`.train-icon[vid="${payload.id}"]`).css('left', b.left + window.scrollX - 26)
             $(`.train-icon[vid="${payload.id}"]`).css('top', b.top + window.pageYOffset - 16)
+            var first_coords = null;
+            $('.train-pulse').on('mouseenter', function(e){
+                //alert('here!')
+                $('.stop-tooltip').html(`Train ${this.getAttribute('vid')}`);
+                $('.stop-tooltip').css('visibility', 'visible')
+                if (first_coords === null){
+                    first_coords = [e.pageY - 10, e.pageX + 10]
+                }
+                $('.stop-tooltip').css('top', first_coords[0]);
+                $('.stop-tooltip').css('left', first_coords[1]);
+                $(`.cell.cell-live-view[vid="${this.getAttribute('vid')}"]`).addClass('cell-hover')
+            }).on('mouseout', function(){
+                first_coords = null;
+                $('.stop-tooltip').css('visibility', 'hidden')
+                $(`.cell.cell-live-view[vid="${this.getAttribute('vid')}"]`).removeClass('cell-hover')
+            });
+        
         }
         //42.37422180175781
         //-71.23595428466797
@@ -591,9 +623,13 @@ $(document).ready(function(){
                     .enter()
                     .append("path")
                     .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray').attr('skey', '4')
-                    .attr('class', 'stop')
+                    .attr('class', 'live-view-stop')
                     .attr('name', i.properties.name)
                 }
+            }
+            if (Object.keys(route_stop_delays).length > 0){
+                render_delay_table(route_id);
+                render_route_delay_colors(route_id);
             }
             for (var i of Object.keys(line_registry)){
                 $('.line-options').append(`<option value="${i}">${line_registry[i]}</option>`)
@@ -608,11 +644,11 @@ $(document).ready(function(){
                 }
                 return 0
             }).order()
-            d3.selectAll(".stop")
+            d3.selectAll(".live-view-stop")
             .on("mouseover", function(){
                 $('.stop-tooltip').html(this.getAttribute('name'));
                 $('.stop-tooltip').css('visibility', 'visible')
-                $(`.stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '20')
+                $(`.live-view-stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '20')
                 var rect = this.getBoundingClientRect();
                 $('.stop-tooltip').css('top', rect.top + window.pageYOffset - 20);
                 $('.stop-tooltip').css('left', rect.left + window.scrollX + 10);
@@ -621,7 +657,7 @@ $(document).ready(function(){
         
             })
             .on("mouseout", function(){
-                $(`.stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '8')
+                $(`.live-view-stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '8')
                 $('.stop-tooltip').css('visibility', 'hidden')
             });
             if (evtSource != null){

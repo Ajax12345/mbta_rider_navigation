@@ -16,6 +16,9 @@
 .stop{
   transition: stroke-width 0.5s;
 }
+.live-view-stop{
+  transition: stroke-width 0.5s;
+}
 .line-about {
   font-family: "Inter", sans-serif;
   color: black;
