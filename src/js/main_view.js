@@ -8,6 +8,13 @@ $(document).ready(function(){
     var ROUTE_ID = null;
     var ROUTE_WIDTH = null;
     var ROUTE_P = null;
+    var stop_registry = {'BNT-0000':"North Station", 'NEC-2287':"South Station", 'ER-0042':'Chelsea'}
+
+    d3.csv('raw_datasets/MBTA_rail_stops.csv', function(data){
+        for (var i of data){
+            stop_registry[i.stop_id] = i.stop_name;
+        }
+    });
     function degreesToRadians(degrees) {
         return (degrees % 360) * (Math.PI / 180);
     }
@@ -101,7 +108,7 @@ $(document).ready(function(){
             <div class='cell cell-header'>Average train boarding size</div>
         </div>`);
         for (var i of all_stops){
-            $('#stop-delay-table').append(`<div class='cell cell-stop-name' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell' name='${i.stop_name}'>${i.average_boarding} ${i.average_boarding != 'N/A' ? 'passengers' : ''}</div>`)
+            $('#stop-delay-table').append(`<div class='cell cell-stop-name' name='${i.stop_name}'>${i.stop_name}</div><div class='cell cell-stop-name' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell cell-stop-name' name='${i.stop_name}'>${i.average_boarding} ${i.average_boarding != 'N/A' ? 'passengers' : ''}</div>`)
         }
         $('.cell.cell-stop-name').on('mouseenter', function(e){
             $('.stop-tooltip').html(this.getAttribute('name'));
@@ -245,6 +252,16 @@ $(document).ready(function(){
                         render_route_delay_colors(route_id);
                     });
                 }
+                $('.train-pulse').each(function(){
+                    $(this).remove()
+                }); 
+                $('.live-view-table').html(`
+                <div class='record-container' id='live-display-table'>
+                    <div class='cell cell-header'>Train</div>
+                    <div class='cell cell-header'>Next Stop</div>
+                    <div class='cell cell-header'>Status</div>
+                    <div class='cell cell-header'>Estimated Arrival</div>
+                </div>`);
                 draw_live_line(route_id);
             });
         });
@@ -293,15 +310,38 @@ $(document).ready(function(){
             scheduled_date: d1
         }
         var min_behind = (pred_date - d1)/(1000*60);
+        var pred_hour_min = `${pred_date.getHours() < 13 ? pred_date.getHours() : pred_date.getHours() - 12}:${pred_date.getMinutes().toString().padStart(2, '0')} ${pred_date.getHours() < 12 ? "AM" : "PM"}`
         var response_payload = min_to_color(min_behind);
         vehicle_registry[vehicle_id].color = response_payload.color;
         for (var i of ['green', 'orange', 'red', 'purple']){
             $(`.train-pulse[vid="${vehicle_id}"]`).removeClass(i);
         }
+        //stop_registry
+        //#live-display-table
+        $(`.cell.cell-live-view[vid="${vehicle_id}"]`).each(function(){
+            $(this).remove();
+        });
+        console.log('stop id in record schedule')
+        console.log(stop_id);
+        console.log(stop_registry)
+        var full_minutes_behind = Math.round(min_behind, 0)
+        if (full_minutes_behind < 0){
+            full_minutes_behind = 0;
+        }
+        if (!(stop_id in stop_registry)){
+            console.log('missing this stop in the registry')
+            console.log(stop_id)
+        }
+        $("#live-display-table").append(`
+            <div class='cell cell-live-view' vid="${vehicle_id}">Train ${vehicle_id}</div>
+
+            <div class='cell cell-live-view' vid="${vehicle_id}">${stop_registry[stop_id]}</div>
+            <div class='cell cell-live-view' vid="${vehicle_id}">${full_minutes_behind === 0 ? "On time" : `${full_minutes_behind} minute${full_minutes_behind === 1 ? "" : "s"} behind`}</div>
+            <div class='cell cell-live-view' vid="${vehicle_id}">${pred_hour_min}</div>
+        `)
         $(`.train-pulse[vid="${vehicle_id}"]`).addClass(response_payload.color);
         //vehicle_registry[vehicle_id] = {...vehicle_registry[vehicle_id], response_payload}
         //d3.selectAll(`path[vpid="${vehicle_id}"]`).attr('stroke', response_payload.color)
-        $('.line-about span').html(`- ${response_payload.message}`)
 
     }
     function check_against_schedule(vehicle_id, direction_id, route_id, trip_id, stop_id, prediction){
@@ -587,7 +627,7 @@ $(document).ready(function(){
             if (evtSource != null){
                 evtSource.close();
             }
-            evtSource = new EventSource(`https://api-v3.mbta.com/vehicles?filter[route]=${route_id}&filter[route_type]=2&page[limit]=100&page[offset]=0&sort=current_stop_sequence&api_key=ec477916907d435d9cdc835309d1a9f0`);
+            evtSource = new EventSource(`https://api-v3.mbta.com/vehicles?filter[route]=${route_id}&filter[route_type]=2&page[limit]=100&page[offset]=0&sort=current_stop_sequence&direction_id=1&api_key=ec477916907d435d9cdc835309d1a9f0`);
             evtSource.addEventListener('reset', function(e){
                 handle_vehicle_endpoint(e, 'reset')
             })
