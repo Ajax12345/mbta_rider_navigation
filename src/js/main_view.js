@@ -8,6 +8,14 @@ $(document).ready(function(){
     var ROUTE_ID = null;
     var ROUTE_WIDTH = null;
     var ROUTE_P = null;
+    function degreesToRadians(degrees) {
+        return (degrees % 360) * (Math.PI / 180);
+    }
+    function coord_dist(lat1, log1, lat2, log2){
+        
+        var r = Math.acos((Math.sin(degreesToRadians(lat1)) * Math.sin(degreesToRadians(lat2))) + (Math.cos(degreesToRadians(lat1)) * Math.cos(degreesToRadians(lat2))) * (Math.cos(degreesToRadians(log2) - degreesToRadians(log1)))) * 6371
+        return r
+    }
     /* DELAYS VIEW JS */
     var anchorings = {
         'CR-Fitchburg':[40000, [
@@ -90,7 +98,7 @@ $(document).ready(function(){
         $('.route-table-display').html(`<div class='record-container' id='stop-delay-table'>
             <div class='cell cell-header'>Stop</div>
             <div class='cell cell-header'>Average delay</div>
-            <div class='cell cell-header'>Average boarding size</div>
+            <div class='cell cell-header'>Average train boarding size</div>
         </div>`);
         for (var i of all_stops){
             $('#stop-delay-table').append(`<div class='cell cell-stop-name' name='${i.stop_name}'>${i.stop_name}</div><div class='cell' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell' name='${i.stop_name}'>${i.average_boarding} ${i.average_boarding != 'N/A' ? 'passengers' : ''}</div>`)
@@ -384,31 +392,51 @@ $(document).ready(function(){
             var elem = document.querySelector(`path[vid="${payload.id}"]`)
             var b = elem.getBoundingClientRect()
             $(`.train-icon[vid="${payload.id}"]`).remove();
-            $('body').append(`<img src='/src/img/train_icon.svg' class='train-icon' vid="${payload.id}">`)
+            //$('body').append(`<img src='/src/img/train_icon.svg' class='train-icon' vid="${payload.id}">`)
             console.log('b below')
             console.log(b)
-            $(`.train-icon[vid="${payload.id}"]`).css('left', b.left-26)
-            $(`.train-icon[vid="${payload.id}"]`).css('top', b.top-16)
+            //train-pulse
+            $('.train-pulse').each(function(){
+                $(this).remove();
+            });
+            $('body').append(`<div class='train-pulse purple' vid='${payload.id}'></div>`);
+            $(`.train-pulse[vid="${payload.id}"]`).css('left', b.left + window.scrollX - 24)
+            $(`.train-pulse[vid="${payload.id}"]`).css('top', b.top + window.pageYOffset - 24)
+            $(`.train-icon[vid="${payload.id}"]`).css('left', b.left + window.scrollX - 26)
+            $(`.train-icon[vid="${payload.id}"]`).css('top', b.top + window.pageYOffset - 16)
         }
         //42.37422180175781
         //-71.23595428466797
         //Boston: -71.0589
         var coords = []
-        for (var i of line_geo[route_id]){
-            for (var [_long, _lat] of i.geometry.coordinates){
-                if (direction_id === 1){
-                    if (Math.abs(_long) >= Math.abs(long)){
-                        coords.push([_long, _lat])
-                    }
-                }
-                else{
-                    continue;
-                    if (Math.abs(_long) <= Math.abs(long)){
-                        coords.push([_long, _lat])
+        var seen_coords = []
+        /*
+        while (true){
+            var f = false;
+            for (var i of line_geo[route_id]){
+                for (var [_long, _lat] of i.geometry.coordinates){
+                    if (direction_id === 1){
+                        if (coord_dist(lat, long, _lat, _long) < 2){
+                            if (!seen_coords.includes(JSON.stringify([_long, _lat]))){
+                                coords.push([long, lat])
+                                seen_coords.push(JSON.stringify([long, lat]))
+                                lat = _lat
+                                long = _long
+                                var f = true
+                            }
+                        }
                     }
                 }
             }
-        }
+            if (!f){
+                break;
+            }
+        }  
+        
+        console.log('fina coords') 
+        console.log(coords)
+        //console.log('testing max of coords')
+        //console.log(Math.min(...coords))
         p.data([{
                 "type": "Feature",
                 "properties": {
@@ -425,7 +453,7 @@ $(document).ready(function(){
             .enter()
             .append("path")
             .attr("d", pathGenerator).attr('stroke-width', '15').attr('stroke', '#cdcdcd').attr('vpid', payload.id).attr('skey', '3')
-
+        */
         make_predictions(vehicle_id, direction_id, route_id, trip_id, stop_id)
         d3.selectAll("#live-view-map path").sort(function(a,b) {
             if (a.skey > b.skey){
@@ -514,14 +542,16 @@ $(document).ready(function(){
             .on("mouseover", function(){
                 $('.stop-tooltip').html(this.getAttribute('name'));
                 $('.stop-tooltip').css('visibility', 'visible')
+                $(`.stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '20')
                 var rect = this.getBoundingClientRect();
-                $('.stop-tooltip').css('top', rect.top - 15);
-                $('.stop-tooltip').css('left', rect.left + 15);
+                $('.stop-tooltip').css('top', rect.top + window.pageYOffset - 20);
+                $('.stop-tooltip').css('left', rect.left + window.scrollX + 10);
             })
             .on("mousemove", function(){
         
             })
             .on("mouseout", function(){
+                $(`.stop[name="${this.getAttribute('name')}"]`).css('stroke-width', '8')
                 $('.stop-tooltip').css('visibility', 'hidden')
             });
             if (evtSource != null){
