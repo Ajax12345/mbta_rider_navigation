@@ -683,7 +683,7 @@ $(document).ready(function(){
     function display_full_line_reliability(){
         var boston_coords = [
             -71.0589,
-            42.220
+            42.260
         ]
         var width = parseInt($('.all-lines-container').css('width').match('^\\d+'));
         var height = 500;
@@ -695,11 +695,20 @@ $(document).ready(function(){
             d3.csv('agg_datasets/estimated_boardings.csv', function(est_boardings){
                 var estimated_boardings = Object.fromEntries(est_boardings.map(function(x){return [x.line, parseInt(x.estimated_boardings)]}))
                 d3.csv('agg_datasets/train_reliability.csv', function(csv_data){
+                    csv_data = csv_data.sort(function(a, b){
+                        if (parseFloat(a.reliability) > parseFloat(b.reliability)){
+                            return -1
+                        }
+                        if (parseFloat(a.reliability) < parseFloat(b.reliability)){
+                            return 1
+                        }
+                        return 0
+                    });
                     for (var i of csv_data){
                         $('#full-route-table').append(`
-                        <div class='cell full-route-cell' name='${i.name}'>${i.name}</div>
-                        <div class='cell full-route-cell' name='${i.name}'>${Math.round(parseFloat(i.reliability)*100,0)}%</div>
-                        <div class='cell full-route-cell' name='${i.name}'>${estimated_boardings[i.name]}</div>
+                        <div class='cell full-route-cell' route='${i.name}'>${i.name}</div>
+                        <div class='cell full-route-cell' route='${i.name}'>${Math.round(parseFloat(i.reliability)*100,0)}%</div>
+                        <div class='cell full-route-cell' route='${i.name}'>${estimated_boardings[i.name]}</div>
                         `)
                     }
                     var train_reliability = Object.fromEntries(csv_data.map(function(x){return [x.name, parseFloat(x.reliability)]}))
@@ -804,6 +813,17 @@ $(document).ready(function(){
                         var details = JSON.parse(this.getAttribute('details'))
                         $(`.cell[name="${details.name}"]`).removeClass('cell-hover')
                         $('.stop-tooltip').css('visibility', 'hidden')
+                    });
+                    $('.full-route-cell').on('mouseenter', function(e){
+                        $(`.line-full[route="${this.getAttribute('route')}"]`).css('stroke-width', '13')
+                        $(`.full-route-cell[route="${this.getAttribute('route')}"]`).each(function(){
+                            $(this).addClass('cell-hover')
+                        });
+                    }).on('mouseout', function(){
+                        $(`.full-route-cell[route="${this.getAttribute('route')}"]`).each(function(){
+                            $(this).removeClass('cell-hover')
+                        });
+                        $(`.line-full[route="${this.getAttribute('route')}"]`).css('stroke-width', '8')
                     });
                 });
             });

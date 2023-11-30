@@ -58,9 +58,9 @@
   row-gap: 10px;
 }
 .legend-block {
-  width: 40px;
+  width: 35px;
   border-radius: 2px;
-  height: 17px;
+  height: 15px;
 }
 .legend-block.on-time {
   background-color: #21d648;
@@ -255,7 +255,7 @@ polyline {
 .legend-items-horizontal{
   display: grid;
   grid-template-columns: min-content min-content min-content;
-  column-gap: 20px;
+  column-gap: 15px;
   align-items: center;
 }
 .legend-delay-stops{
@@ -490,4 +490,10 @@ polyline {
 }
 #full-route-map * {
   fill:white;
+}
+.full-route-view-outer .legend-items{
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content;
+  align-items: center;
+  column-gap: 15px;
 }
