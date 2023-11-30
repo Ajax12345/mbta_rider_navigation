@@ -89,7 +89,7 @@ $(document).ready(function(){
         for (var i of route_stop_delays[route_id]){
             var [color, img] = stop_delay_color(i.mdt);
             $(`.route-view-stop[name="${i.stop_name}"]`).css('stroke', color);
-            $(`.cell-stop-name[name="${i.stop_name}"]`).append(`<img src='src/img/${img}' style='width:12px;height:12px;margin-left:5px;margin-top:3px;'>`)
+            $(`.cell-stop-name-S[name="${i.stop_name}"]`).append(`<img src='src/img/${img}' style='width:12px;height:12px;margin-left:5px;margin-top:3px;'>`)
         }
     }
     function render_delay_table(route_id){
@@ -108,7 +108,7 @@ $(document).ready(function(){
             <div class='cell cell-header'>Average train boarding size</div>
         </div>`);
         for (var i of all_stops){
-            $('#stop-delay-table').append(`<div class='cell cell-stop-name' name='${i.stop_name}'>${i.stop_name}</div><div class='cell cell-stop-name' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell cell-stop-name' name='${i.stop_name}'>${i.average_boarding} ${i.average_boarding != 'N/A' ? 'passengers' : ''}</div>`)
+            $('#stop-delay-table').append(`<div class='cell cell-stop-name cell-stop-name-S' name='${i.stop_name}'>${i.stop_name}</div><div class='cell cell-stop-name' name='${i.stop_name}'>${i.mdt} minute${i.mdt === 1 ? "" : "s"}</div><div class='cell cell-stop-name' name='${i.stop_name}'>${i.average_boarding} ${i.average_boarding != 'N/A' ? 'passengers' : ''}</div>`)
         }
         $('.cell.cell-stop-name').on('mouseenter', function(e){
             $('.stop-tooltip').html(this.getAttribute('name'));
@@ -680,4 +680,143 @@ $(document).ready(function(){
             });
         });
     }
+    function display_full_line_reliability(){
+        var boston_coords = [
+            -71.0589,
+            42.220
+        ]
+        var width = parseInt($('.all-lines-container').css('width').match('^\\d+'));
+        var height = 500;
+        var projection = d3.geoMercator().translate([width / 2, height / 2]).center(boston_coords).scale([15000])
+        var pathGenerator = d3.geoPath().projection(projection);
+        var svg = d3.select("#full-route-map").append("svg").attr("width", width).attr("height", 500);
+        var p = svg.selectAll("path")
+        d3.json('json_data/lines_and_stops_geo.json', function(data){
+            d3.csv('agg_datasets/estimated_boardings.csv', function(est_boardings){
+                var estimated_boardings = Object.fromEntries(est_boardings.map(function(x){return [x.line, parseInt(x.estimated_boardings)]}))
+                d3.csv('agg_datasets/train_reliability.csv', function(csv_data){
+                    for (var i of csv_data){
+                        $('#full-route-table').append(`
+                        <div class='cell full-route-cell' name='${i.name}'>${i.name}</div>
+                        <div class='cell full-route-cell' name='${i.name}'>${Math.round(parseFloat(i.reliability)*100,0)}%</div>
+                        <div class='cell full-route-cell' name='${i.name}'>${estimated_boardings[i.name]}</div>
+                        `)
+                    }
+                    var train_reliability = Object.fromEntries(csv_data.map(function(x){return [x.name, parseFloat(x.reliability)]}))
+                    console.log(train_reliability);
+                    var p = svg.selectAll("path")
+                    function get_train_reliability_details(name){
+                        var reliability = null;
+                        var color = null;
+                        if (name in train_reliability){
+                            reliability = train_reliability[name]
+                        }
+                        else{
+                            for (var n of Object.keys(train_reliability)){
+                                for (var sn of name.split('/')){
+                                    for (var N of n.split(' ')){
+                                        if (sn.includes(N)){
+                                            reliability = train_reliability[n]
+                                            break
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        var r = Math.round(reliability*100, 0)
+                        if (r >= 90){
+                            color = '#21D648'
+                        }
+                        else if (r < 90 && r > 87){
+                            color = 'orange'
+                        }
+                        else if (r <= 87 && r > 0){
+                            color = 'red'
+                        }
+                        else{
+                            color = '#cdcdcd'
+                        }
+                        return {
+                            name:name,
+                            reliability: r > 0 ? r.toString()+'% reliable' : 'No data available',
+                            color:color
+                        }
+                    }
+                    for (var i of data.features){
+                        if (i.geometry.type === 'LineString'){
+                            if (!(i.properties.route_id in line_geo)){
+                                line_geo[i.properties.route_id] = []
+                            }
+                            line_geo[i.properties.route_id].push(i)
+                            line_registry[i.properties.route_id] = i.properties.name
+                        }
+                        if (i.geometry.type === 'LineString'){
+                            if (!(i.properties.name in train_reliability)){
+                                console.log('missed')
+                                console.log(i.properties.name)
+                            }
+                            var details = get_train_reliability_details(i.properties.name)
+                            p.data([{...i, skey: 1, s_len: 0}])
+                            .enter()
+                            .append("path")
+                            .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', details.color).attr('skey', '1').attr('details', JSON.stringify(details)).attr('class', 'line')
+                        }
+                        else if (i.properties.route === 'Fitchburg Line'){
+                            /*
+                            p.data([{...i, skey: 4, s_len: 0}])
+                            .enter()
+                            .append("path")
+                            .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray').attr('skey', '4')
+                            .attr('class', 'stop')
+                            .attr('name', i.properties.name)
+                            */
+                        }
+                    }
+                    d3.selectAll("#map path").sort(function(a,b) {
+                        if (a.skey > b.skey){
+                            return 1
+                        }
+                        else if (a.skey < b.skey){
+                            return -1
+                        }
+                        return 0
+                    }).order()
+                    /*
+                    p.data([{
+                        "type": "Feature",
+                        "properties": {
+                            "name": "Boston Center"
+                        },
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": boston_coords
+                        }
+                    }])
+                        .enter()
+                        .append("path")
+                        .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', 'red')
+                    */
+                    d3.selectAll(".line")
+                    .on("mouseover", function(){
+                        var details = JSON.parse(this.getAttribute('details'))
+                        $('.stop-tooltip').html(`${details.name}: ${details.reliability}`);
+                        $('.stop-tooltip').css('visibility', 'visible')
+                        var rect = this.getBoundingClientRect();
+                        $('.stop-tooltip').css('top', rect.top + window.pageYOffset);
+                        $('.stop-tooltip').css('left', rect.left + window.scrollX);
+                        $(`.cell[name="${details.name}"]`).addClass('cell-hover')
+                    })
+                    .on("mousemove", function(){
+                
+                    })
+                    .on("mouseout", function(){
+                        var details = JSON.parse(this.getAttribute('details'))
+                        $(`.cell[name="${details.name}"]`).removeClass('cell-hover')
+                        $('.stop-tooltip').css('visibility', 'hidden')
+                    });
+                });
+            });
+        });
+    }
+    display_full_line_reliability();
 });

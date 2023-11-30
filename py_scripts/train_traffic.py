@@ -127,6 +127,7 @@ if __name__ == '__main__':
 
     '''
     
+    '''
     with open('/Users/jamespetullo/cr_project/raw_datasets/MBTA_rail_stops.csv') as f:
         h, *data = csv.reader(f)
 
@@ -150,4 +151,14 @@ if __name__ == '__main__':
     conn.commit()
     conn.close()
   
+    '''
+    with open('/Users/jamespetullo/cr_project/raw_datasets/ridership.csv') as f:
+        h, *data = csv.reader(f)
+
+    conn = sqlite3.connect('/Users/jamespetullo/cr_project/reliability_db.db')
+    conn.execute(f'create table if not exists ridership (service_date text,line text,estimated_boardings float,ObjectId int)')
+    conn.executemany(f'insert into ridership values ({", ".join("?" for _ in h)})', data)
+
+    conn.commit()
+    conn.close()
     
