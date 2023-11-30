@@ -759,17 +759,7 @@ $(document).ready(function(){
                             p.data([{...i, skey: 1, s_len: 0}])
                             .enter()
                             .append("path")
-                            .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', details.color).attr('skey', '1').attr('details', JSON.stringify(details)).attr('class', 'line')
-                        }
-                        else if (i.properties.route === 'Fitchburg Line'){
-                            /*
-                            p.data([{...i, skey: 4, s_len: 0}])
-                            .enter()
-                            .append("path")
-                            .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', 'gray').attr('skey', '4')
-                            .attr('class', 'stop')
-                            .attr('name', i.properties.name)
-                            */
+                            .attr("d", pathGenerator).attr('stroke-width', '5').attr('stroke', details.color).attr('skey', '1').attr('details', JSON.stringify(details)).attr('class', 'line').attr('route', details.name);
                         }
                     }
                     d3.selectAll("#map path").sort(function(a,b) {
