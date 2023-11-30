@@ -19,6 +19,12 @@
 .live-view-stop{
   transition: stroke-width 0.5s;
 }
+.line-full{
+  transition: stroke-width 0.3s;
+}
+.line-full:hover{
+  cursor:pointer;
+}
 .line-about {
   font-family: "Inter", sans-serif;
   color: black;
@@ -239,6 +245,12 @@ polyline {
 }
 .route-view-stop{
   transition: stroke-width 0.5s;
+}
+.route-view-stop:hover{
+  cursor:pointer;
+}
+.live-view-stop:hover{
+  cursor:pointer;
 }
 .legend-items-horizontal{
   display: grid;

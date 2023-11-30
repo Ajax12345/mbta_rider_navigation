@@ -687,7 +687,7 @@ $(document).ready(function(){
         ]
         var width = parseInt($('.all-lines-container').css('width').match('^\\d+'));
         var height = 500;
-        var projection = d3.geoMercator().translate([width / 2, height / 2]).center(boston_coords).scale([15000])
+        var projection = d3.geoMercator().translate([width / 2, height / 2]).center(boston_coords).scale([18000])
         var pathGenerator = d3.geoPath().projection(projection);
         var svg = d3.select("#full-route-map").append("svg").attr("width", width).attr("height", 500);
         var p = svg.selectAll("path")
@@ -759,7 +759,7 @@ $(document).ready(function(){
                             p.data([{...i, skey: 1, s_len: 0}])
                             .enter()
                             .append("path")
-                            .attr("d", pathGenerator).attr('stroke-width', '5').attr('stroke', details.color).attr('skey', '1').attr('details', JSON.stringify(details)).attr('class', 'line').attr('route', details.name);
+                            .attr("d", pathGenerator).attr('stroke-width', '8').attr('stroke', details.color).attr('skey', '1').attr('details', JSON.stringify(details)).attr('class', 'line-full').attr('route', details.name);
                         }
                     }
                     d3.selectAll("#map path").sort(function(a,b) {
@@ -786,20 +786,21 @@ $(document).ready(function(){
                         .append("path")
                         .attr("d", pathGenerator).attr('stroke-width', '10').attr('stroke', 'red')
                     */
-                    d3.selectAll(".line")
-                    .on("mouseover", function(){
+                    $('.line-full').on("mouseover", function(e){
+                        $(`.line-full[route="${this.getAttribute('route')}"]`).css('stroke-width', '13');
                         var details = JSON.parse(this.getAttribute('details'))
                         $('.stop-tooltip').html(`${details.name}: ${details.reliability}`);
                         $('.stop-tooltip').css('visibility', 'visible')
                         var rect = this.getBoundingClientRect();
-                        $('.stop-tooltip').css('top', rect.top + window.pageYOffset);
-                        $('.stop-tooltip').css('left', rect.left + window.scrollX);
+                        $('.stop-tooltip').css('top', e.pageY);
+                        $('.stop-tooltip').css('left', e.pageX);
                         $(`.cell[name="${details.name}"]`).addClass('cell-hover')
                     })
                     .on("mousemove", function(){
-                
+
                     })
                     .on("mouseout", function(){
+                        $(`.line-full[route="${this.getAttribute('route')}"]`).css('stroke-width', '8');
                         var details = JSON.parse(this.getAttribute('details'))
                         $(`.cell[name="${details.name}"]`).removeClass('cell-hover')
                         $('.stop-tooltip').css('visibility', 'hidden')
