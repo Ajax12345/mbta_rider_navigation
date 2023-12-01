@@ -164,6 +164,17 @@ path.slice {
   stroke-width: 2px;
 }
 
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+}
+
 polyline {
   opacity: 0.3;
   stroke: black;

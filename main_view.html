@@ -9,6 +9,7 @@
         <script src="http://d3js.org/topojson.v1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <link rel='stylesheet' href='src/style/main_style.css'>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
         <script src='src/js/main_view.js'></script>
     </head>
     <body>
@@ -82,8 +83,12 @@
                     </div>
                 </div>
             </div>
+            <div class='delay-cause-container'>
+                <div id='delay-pie-chart'></div>
+            </div>
         </div>
 
         <div class='stop-tooltip'></div>
+        <div class="tooltip"></div>
     </body>
 </html>
