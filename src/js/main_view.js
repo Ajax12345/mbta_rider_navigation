@@ -144,7 +144,7 @@ $(document).ready(function(){
         d3.csv('agg_datasets/train_reliability.csv', function(csv_data){
             $('.route-map-outer').html(`
             <div class="legend">
-                <div class="legend-text">Legend</div>
+                <div class="legend-text">Stop delay codes</div>
                 <div style="height:10px"></div>
                 <div class='legend-items-horizontal'>
                     <div class='legend-delay-stops'>
@@ -576,7 +576,7 @@ $(document).ready(function(){
         $('.live-view-container').html(`
         <div style="height:20px"></div>
         <div class="legend">
-            <div class="legend-text">Delay codes</div>
+            <div class="legend-text">Train delay codes</div>
             <div style="height:10px"></div>
             <div class='legend-items-horizontal'>
                 <div class='legend-delay-stops'>
