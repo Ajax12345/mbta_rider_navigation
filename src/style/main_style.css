@@ -544,3 +544,29 @@ polyline {
   font-weight: 400;
   display: inline-block;
 }
+.reliability-headers {
+  align-items: center;
+}
+.individual-line-selection{
+  display: inline-grid;
+  grid-template-columns: min-content min-content;
+  column-gap: 10px;
+  align-items: center;
+}
+.line-scatterplot-title{
+  font-family: "Inter", sans-serif;
+  color: rgb(21, 21, 21);
+  font-size: 17px;
+  font-weight: 400;
+  display: inline-block;
+  white-space: nowrap;
+}
+.choose-line-reliability{
+  font-family: "Inter", sans-serif;
+    color: rgb(21, 21, 21);
+    font-size: 17px;
+    font-weight: 400;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid gray;
+}

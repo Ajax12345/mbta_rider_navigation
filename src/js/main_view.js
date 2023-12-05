@@ -8,6 +8,7 @@ $(document).ready(function(){
     var ROUTE_ID = null;
     var ROUTE_WIDTH = null;
     var ROUTE_P = null;
+    var ROUTE_RELIABILITY_YEAR = {}
     var stop_registry = {'BNT-0000':"North Station", 'NEC-2287':"South Station", 'ER-0042':'Chelsea'}
 
     d3.csv('raw_datasets/MBTA_rail_stops.csv', function(data){
@@ -722,8 +723,10 @@ $(document).ready(function(){
                         <div class='cell full-route-cell' route='${i.name}'>${i.name}</div>
                         <div class='cell full-route-cell' route='${i.name}'>${Math.round(parseFloat(i.reliability)*100,0)}%</div>
                         <div class='cell full-route-cell' route='${i.name}'>${estimated_boardings[i.name]}</div>
-                        `)
+                        `);
+                        $('.choose-line-reliability').append(`<option value="${i.name}">${i.name}</option>`)
                     }
+                    display_individual_line_reliability_plot()
                     var train_reliability = Object.fromEntries(csv_data.map(function(x){return [x.name, parseFloat(x.reliability)]}))
                     console.log(train_reliability);
                     var p = svg.selectAll("path")
@@ -911,6 +914,102 @@ $(document).ready(function(){
             
         });
     }
+    function render_line_reliability_by_year(line){
+        var margin = {top: 10, right: 100, bottom: 30, left: 30},
+            width = 400 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+        var data = ROUTE_RELIABILITY_YEAR[line];
+        $('#line-total-reliability').html('')
+        var svg = d3.select("#line-total-reliability")
+        .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+
+        var x = d3.scaleLinear()
+            .domain([Math.min(...data.map(function(x){return x.year})), Math.max(...data.map(function(x){return x.year}))])
+            .range([ 0, width + 250]);
+
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x).tickFormat(d3.format('d')));
+
+        // Add Y axis
+        var y = d3.scaleLinear()
+            .domain( [60, 100])
+            .range([ height, 0 ]);
+        svg.append("g")
+        .call(d3.axisLeft(y));
+
+        var line = svg
+        .append('g')
+        .append("path")
+            .datum(data)
+            .attr("d", d3.line()
+            .x(function(d) { return x(+d.year) })
+            .y(function(d) { return y(+d.reliability) })
+            )
+            .attr("stroke", "rgb(181 181 181)")
+            .style("stroke-width", 4)
+            .style("fill", "none")
+
+        // Initialize dots with group a
+        var dot = svg
+        .selectAll('circle')
+        .data(data)
+        .enter()
+        .append('circle')
+            .attr("cx", function(d) { return x(+d.year) })
+            .attr("cy", function(d) { return y(+d.reliability) })
+            .attr("r", 6)
+            .attr('class', 'line-r-point')
+            .attr('details', function(d){return JSON.stringify(d)})
+            .style("fill", function(d){return get_relability_color(d.reliability)})
+
+        d3.selectAll(".line-r-point")
+            .on("mouseover", function(){
+                var details = JSON.parse(this.getAttribute('details'))
+                $('.stop-tooltip').html(`${details.year} reliability: ${details.reliability}%`);
+                $('.stop-tooltip').css('visibility', 'visible')
+                var rect = this.getBoundingClientRect();
+                $('.stop-tooltip').css('top', rect.top + window.pageYOffset - 20);
+                $('.stop-tooltip').css('left', rect.left + window.scrollX + 10);
+                $(this).css('r', '10')
+
+            })
+            .on("mousemove", function(){
+        
+            })
+            .on("mouseout", function(){
+                $(this).css('r', '6')
+
+                $('.stop-tooltip').css('visibility', 'hidden')
+            });
+    }
+    function display_individual_line_reliability_plot(){
+        d3.csv('agg_datasets/reliability_year_line.csv', function(data){
+            for (var i of data){
+                if (!(i.name in ROUTE_RELIABILITY_YEAR)){
+                    ROUTE_RELIABILITY_YEAR[i.name] = []
+                }
+                ROUTE_RELIABILITY_YEAR[i.name].push({year:parseInt(i.year), reliability:Math.round(parseFloat(i.reliability)*100)});
+            }
+            console.log(ROUTE_RELIABILITY_YEAR)
+            var margin = {top: 10, right: 100, bottom: 30, left: 30},
+            width = 400 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+            data = data.map(function(x){return {year:parseInt(x.year), reliability:Math.round(parseFloat(x.reliability)*100)}})
+            var svg_width = width + margin.left + margin.right;
+            $('.individual-line-selection').css('margin-left', (parseInt($('#line-total-reliability').css('width').match(/^\d+/g)[0])/2 - 30 - parseInt($('.individual-line-selection').css('width').match(/^\d+/g)[0])/2).toString()+'px')
+            render_line_reliability_by_year($('.choose-line-reliability').val())
+        });
+    }
+    $('body').on('input', '.choose-line-reliability', function(){
+        render_line_reliability_by_year($(this).val())
+    });
     display_full_line_reliability();
     display_reliability_by_year();
     //display_delay_causes()
