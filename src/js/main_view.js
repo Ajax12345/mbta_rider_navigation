@@ -681,6 +681,18 @@ $(document).ready(function(){
             });
         });
     }
+    function get_relability_color(r){
+        if (r >= 90){
+            return '#33d962'
+        }
+        else if (r < 90 && r > 87){
+            return '#fdc81a'
+        }
+        else if (r <= 87 && r > 0){
+            return '#ff5252'
+        }
+        return '#cdcdcd'
+    }
     function display_full_line_reliability(){
         var boston_coords = [
             -71.0589,
@@ -734,18 +746,7 @@ $(document).ready(function(){
                             }
                         }
                         var r = Math.round(reliability*100, 0)
-                        if (r >= 90){
-                            color = '#33d962'
-                        }
-                        else if (r < 90 && r > 87){
-                            color = '#fdc81a'
-                        }
-                        else if (r <= 87 && r > 0){
-                            color = '#ff5252'
-                        }
-                        else{
-                            color = '#cdcdcd'
-                        }
+                        color = get_relability_color(r)
                         return {
                             name:name,
                             reliability: r > 0 ? r.toString()+'% reliable' : 'No data available',
@@ -830,203 +831,87 @@ $(document).ready(function(){
             });
         });
     }
-    function display_delay_causes(){
-        var svg = d3.select(".delay-cause-container").append("svg").append("g");
+    function display_reliability_by_year(){
+        d3.csv('agg_datasets/reliability_year.csv', function(data){
+            //console.log(data);
+            var margin = {top: 10, right: 100, bottom: 30, left: 30},
+            width = 460 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
 
-        svg.append("g").attr("class", "slices");
-        svg.append("g").attr("class", "labels");
-        svg.append("g").attr("class", "lines");
+            data = data.map(function(x){return {year:parseInt(x.year), reliability:Math.round(parseFloat(x.reliability)*100)}})
+            console.log(data);
+            var svg = d3.select("#total-reliability")
+            .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
 
-        var width = 960,
-        height = 450,
-        radius = Math.min(width, height) / 2;
 
-        var pie = d3.pie()
-        .sort(null)
-        .value(function (d) {
-            return d.freq;
-        });
+            var x = d3.scaleLinear()
+                .domain([Math.min(...data.map(function(x){return x.year})), Math.max(...data.map(function(x){return x.year}))])
+                .range([ 0, width + 250]);
 
-        var arc = d3.arc()
-        .outerRadius(radius * 0.8)
-        .innerRadius(radius * 0.4);
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x).tickFormat(d3.format('d')));
+        
+            // Add Y axis
+            var y = d3.scaleLinear()
+                .domain( [60, 100])
+                .range([ height, 0 ]);
+            svg.append("g")
+            .call(d3.axisLeft(y));
 
-        var outerArc = d3.arc()
-        .innerRadius(radius * 0.9)
-        .outerRadius(radius * 0.9);
+            var line = svg
+            .append('g')
+            .append("path")
+                .datum(data)
+                .attr("d", d3.line()
+                .x(function(d) { return x(+d.year) })
+                .y(function(d) { return y(+d.reliability) })
+                )
+                .attr("stroke", "rgb(181 181 181)")
+                .style("stroke-width", 4)
+                .style("fill", "none")
 
-        svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-        var key = function (d) {
-            return d.data.cause_name;
-        };
-
-        var fixedData = [
-        {
-            cause_name: "Amtrak train traffic",
-            freq: "9",
-            severity: "3.6666666666666665",
-        },
-        { cause_name: "crossing issue", freq: "5", severity: "4" },
-        { cause_name: "fire department activity", freq: "1", severity: "7" },
-        { cause_name: "freight train interference", freq: "2", severity: "3.5" },
-        { cause_name: "heavy ridership", freq: "1", severity: "3" },
-        { cause_name: "maintenance", freq: "1", severity: "5" },
-        {
-            cause_name: "mechanical issue",
-            freq: "31",
-            severity: "6.161290322580645",
-        },
-        { cause_name: "medical emergency", freq: "2", severity: "5" },
-        {
-            cause_name: "police activity",
-            freq: "21",
-            severity: "7.095238095238095",
-        },
-        { cause_name: "signal issue", freq: "17", severity: "5.294117647058823" },
-        { cause_name: "switch issue", freq: "9", severity: "5.888888888888889" },
-        { cause_name: "tie replacement", freq: "2", severity: "4.5" },
-        { cause_name: "track work", freq: "11", severity: "4.363636363636363" },
-        {
-            cause_name: "train traffic",
-            freq: "22",
-            severity: "4.681818181818182",
-        },
-        ];
-
-        const causeNames = fixedData.map((entry) => entry.cause_name);
-        var color = d3.scaleOrdinal()
-        .domain(causeNames)
-        .range([
-            "#ff5a5f",
-            "#ffa07a",
-            "#ffd700",
-            "#ff8c00",
-            "#e59866",
-            "#f08080",
-            "#cd5c5c",
-            "#ff6347",
-            "#db7093",
-            "#da70d6",
-            "#9370db",
-            "#5f9ea0",
-            "#66cdaa",
-            "#20b2aa",
-        ]);
-
-        piechart(fixedData);
-
-        function piechart(data) {
-        var slice = svg.select(".slices").selectAll("path.slice").data(pie(data), key);
-
-        slice
+            // Initialize dots with group a
+            var dot = svg
+            .selectAll('circle')
+            .data(data)
             .enter()
-            .insert("path")
-            .style("fill", function (d) {
-            return color(d.data.cause_name);
-            })
-            .attr("class", "slice");
+            .append('circle')
+                .attr("cx", function(d) { return x(+d.year) })
+                .attr("cy", function(d) { return y(+d.reliability) })
+                .attr("r", 6)
+                .attr('class', 'line-r-point')
+                .attr('details', function(d){return JSON.stringify(d)})
+                .style("fill", function(d){return get_relability_color(d.reliability)})
 
-        slice
-            .transition()
-            .duration(1000)
-            .attrTween("d", function (d) {
-            this._current = this._current || d;
-            var interpolate = d3.interpolate(this._current, d);
-            this._current = interpolate(0);
-            return function (t) {
-                return arc(interpolate(t));
-            };
-            });
+            d3.selectAll(".line-r-point")
+                .on("mouseover", function(){
+                    var details = JSON.parse(this.getAttribute('details'))
+                    $('.stop-tooltip').html(`${details.year} reliability: ${details.reliability}%`);
+                    $('.stop-tooltip').css('visibility', 'visible')
+                    var rect = this.getBoundingClientRect();
+                    $('.stop-tooltip').css('top', rect.top + window.pageYOffset - 20);
+                    $('.stop-tooltip').css('left', rect.left + window.scrollX + 10);
+                    $(this).css('r', '10')
 
-        slice.exit().remove();
+                })
+                .on("mousemove", function(){
+            
+                })
+                .on("mouseout", function(){
+                    $(this).css('r', '6')
 
-        var text = svg.select(".labels").selectAll("text").data(pie(data), key);
-
-        text
-            .enter()
-            .append("text")
-            .attr("dy", ".35em")
-            .text(function (d) {
-            return d.data.cause_name;
-            });
-
-        function midAngle(d) {
-            return d.startAngle + (d.endAngle - d.startAngle) / 2;
-        }
-
-        text
-            .transition()
-            .duration(1000)
-            .attrTween("transform", function (d) {
-            this._current = this._current || d;
-            var interpolate = d3.interpolate(this._current, d);
-            this._current = interpolate(0);
-            return function (t) {
-                var d2 = interpolate(t);
-                var pos = outerArc.centroid(d2);
-                pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
-                return "translate(" + pos + ")";
-            };
-            })
-            .styleTween("text-anchor", function (d) {
-            this._current = this._current || d;
-            var interpolate = d3.interpolate(this._current, d);
-            this._current = interpolate(0);
-            return function (t) {
-                var d2 = interpolate(t);
-                return midAngle(d2) < Math.PI ? "start" : "end";
-            };
-            });
-
-        text.exit().remove();
-
-        var polyline = svg.select(".lines").selectAll("polyline").data(pie(data), key);
-
-        polyline.enter().append("polyline");
-
-        polyline
-            .transition()
-            .duration(1000)
-            .attrTween("points", function (d) {
-            this._current = this._current || d;
-            var interpolate = d3.interpolate(this._current, d);
-            this._current = interpolate(0);
-            return function (t) {
-                var d2 = interpolate(t);
-                var pos = outerArc.centroid(d2);
-                pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
-                return [arc.centroid(d2), outerArc.centroid(d2), pos];
-            };
-            });
-
-        polyline.exit().remove();
-
-        var tooltip = d3.select(".tooltip");
-
-        slice.on("mouseover", function (d) {
-            var percent = ((d.endAngle - d.startAngle) / (2 * Math.PI)) * 100;
-            tooltip.transition().duration(200).style("opacity", 0.9);
-            tooltip.html(d.data.cause_name + "<br>" + percent.toFixed(1) + "%")
-            .style("left", d3.event.pageX + "px")
-            .style("top", d3.event.pageY - 28 + "px");
-        }).on("mouseout", function () {
-            tooltip.transition().duration(500).style("opacity", 0);
+                    $('.stop-tooltip').css('visibility', 'hidden')
+                });
+            
         });
-
-        polyline.on("mouseover", function (d) {
-            var percent = ((d.endAngle - d.startAngle) / (2 * Math.PI)) * 100;
-            tooltip.transition().duration(200).style("opacity", 0.9);
-            tooltip.html(d.data.cause_name + "<br>" + percent.toFixed(1) + "%")
-            .style("left", d3.event.pageX + "px")
-            .style("top", d3.event.pageY - 28 + "px");
-        }).on("mouseout", function () {
-            tooltip.transition().duration(500).style("opacity", 0);
-        });
-
-        }
-
     }
     display_full_line_reliability();
+    display_reliability_by_year();
     //display_delay_causes()
 });

@@ -508,3 +508,32 @@ polyline {
   align-items: center;
   column-gap: 15px;
 }
+.reliability-years-outer{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.reliability-container{
+  position: relative;
+}
+.all-lines-container .legend{
+  margin-left:0px;
+}
+.all-lines-container .legend{
+  margin-left:0px;
+}
+.full-line-legend{
+  margin-left:0px;
+}
+
+.full-line-legend .legend-items {
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content;
+  align-items: center;
+  column-gap: 15px;
+}
+.line-r-point{
+  transition:r 0.3s;
+}
+.line-r-point:hover{
+  cursor:pointer;
+}
