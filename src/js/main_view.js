@@ -76,13 +76,13 @@ $(document).ready(function(){
     }
     function stop_delay_color(delay){
         if (delay < 5){
-            return ['#4AE525', 'caret-arrow-up.png'];
+            return ['#33d962', 'caret-arrow-up.png'];
         }
         else if (delay >= 5 && delay < 15){
-            return ['#EEC419', 'medium-delay-arrow.png'];
+            return ['#fdc81a', 'medium-delay-arrow.png'];
         }
         else{
-            return ['#EE5119', 'severe-delay-arrow.png']
+            return ['#ff5252', 'severe-delay-arrow.png']
         }
     }   
     function render_route_delay_colors(route_id){
@@ -148,15 +148,15 @@ $(document).ready(function(){
                 <div style="height:10px"></div>
                 <div class='legend-items-horizontal'>
                     <div class='legend-delay-stops'>
-                        <div class='legend-circle' style='background-color:#4AE525'></div>
+                        <div class='legend-circle' style='background-color:#33d962'></div>
                         <div class="legend-block-text">less than 5 min</div>
                     </div>
                     <div class='legend-delay-stops'>
-                        <div class='legend-circle' style='background-color:#EEC419'></div>
+                        <div class='legend-circle' style='background-color:#fdc81a'></div>
                         <div class="legend-block-text">between 5 and 15 min </div>
                     </div>
                     <div class='legend-delay-stops'>
-                        <div class='legend-circle' style='background-color:#EE5119'></div>
+                        <div class='legend-circle' style='background-color:#ff5252'></div>
                         <div class="legend-block-text">more than 15 min</div>
                     </div>
                 </div>
@@ -168,7 +168,7 @@ $(document).ready(function(){
             console.log(route_mappings)
             console.log(route_mappings[route_id])
             console.log(train_reliability[route_mappings[route_id]])
-            $('.route-reliability-header').html(`${route_mappings[route_id]} reliability: ${Math.round(train_reliability[route_mappings[route_id]]*100)}%`)
+            $('.route-reliability-header').html(`${route_mappings[route_id]} reliability: ${Math.round(train_reliability[route_mappings[route_id]]*100)}%<a href='#mbta-rail-reliability' style='text-decoration:none'><span>&#42;</span></a>`)
             $('.realtime-view-header').html(`${route_mappings[route_id]} live view`)
             $('.live-view-about').css('display', 'block');
             var width = parseInt($('.route-map-outer').css('width').match('^\\d+'));
@@ -584,7 +584,7 @@ $(document).ready(function(){
                     <div class="legend-block-text">On time</div>
                 </div>
                 <div class='legend-delay-stops'>
-                    <div class='legend-circle' style='background-color:rgba(255, 121, 63, 1)'></div>
+                    <div class='legend-circle' style='background-color:#fdc81a'></div>
                     <div class="legend-block-text">2 to 15 min behind</div>
                 </div>
                 <div class='legend-delay-stops'>
@@ -734,13 +734,13 @@ $(document).ready(function(){
                         }
                         var r = Math.round(reliability*100, 0)
                         if (r >= 90){
-                            color = '#21D648'
+                            color = '#33d962'
                         }
                         else if (r < 90 && r > 87){
-                            color = 'orange'
+                            color = '#fdc81a'
                         }
                         else if (r <= 87 && r > 0){
-                            color = 'red'
+                            color = '#ff5252'
                         }
                         else{
                             color = '#cdcdcd'
@@ -803,7 +803,7 @@ $(document).ready(function(){
                         var rect = this.getBoundingClientRect();
                         $('.stop-tooltip').css('top', e.pageY);
                         $('.stop-tooltip').css('left', e.pageX);
-                        $(`.cell[name="${details.name}"]`).addClass('cell-hover')
+                        $(`.cell[route="${details.name}"]`).addClass('cell-hover')
                     })
                     .on("mousemove", function(){
 
@@ -811,7 +811,7 @@ $(document).ready(function(){
                     .on("mouseout", function(){
                         $(`.line-full[route="${this.getAttribute('route')}"]`).css('stroke-width', '8');
                         var details = JSON.parse(this.getAttribute('details'))
-                        $(`.cell[name="${details.name}"]`).removeClass('cell-hover')
+                        $(`.cell[route="${details.name}"]`).removeClass('cell-hover')
                         $('.stop-tooltip').css('visibility', 'hidden')
                     });
                     $('.full-route-cell').on('mouseenter', function(e){

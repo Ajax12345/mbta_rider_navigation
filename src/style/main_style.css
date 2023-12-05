@@ -63,13 +63,13 @@
   height: 15px;
 }
 .legend-block.on-time {
-  background-color: #21d648;
+  background-color: #33d962;
 }
 .legend-block.behind-schedule {
-  background-color: orange;
+  background-color: #fdc81a;
 }
 .legend-block.late {
-  background-color: red;
+  background-color: #ff5252;
 }
 .legend-block.no-data {
   background-color: #cdcdcd;
@@ -361,15 +361,15 @@ polyline {
 }
 
 .train-pulse.orange {
-	background: rgba(255, 121, 63, 1);
-	box-shadow: 0 0 0 0 rgba(255, 121, 63, 1);
+	background: rgba(253, 200, 26, 1);
+	box-shadow: 0 0 0 0 rgba(253, 200, 26, 1);
 	animation: pulse-orange 2s infinite;
 }
 
 @keyframes pulse-orange {
 	0% {
 		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+		box-shadow: 0 0 0 0 rgba(255, 201, 63, 0.7);
 	}
 	
 	70% {
