@@ -169,6 +169,7 @@ $(document).ready(function(){
             console.log(route_mappings[route_id])
             console.log(train_reliability[route_mappings[route_id]])
             $('.route-reliability-header').html(`${route_mappings[route_id]} reliability: ${Math.round(train_reliability[route_mappings[route_id]]*100)}%<a href='#mbta-rail-reliability' style='text-decoration:none'><span>&#42;</span></a>`)
+            $('.route-reliability.description-text').html(`Inspect the line map below to find the average delay times for stops along this route.`)
             $('.realtime-view-header').html(`${route_mappings[route_id]} live view`)
             $('.live-view-about').css('display', 'block');
             var width = parseInt($('.route-map-outer').css('width').match('^\\d+'));
