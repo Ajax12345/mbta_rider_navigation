@@ -537,3 +537,10 @@ polyline {
 .line-r-point:hover{
   cursor:pointer;
 }
+.scatterplot-title{
+  font-family: "Inter", sans-serif;
+  color: rgb(21, 21, 21);
+  font-size: 17px;
+  font-weight: 400;
+  display: inline-block;
+}

@@ -837,9 +837,10 @@ $(document).ready(function(){
             var margin = {top: 10, right: 100, bottom: 30, left: 30},
             width = 460 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
-
             data = data.map(function(x){return {year:parseInt(x.year), reliability:Math.round(parseFloat(x.reliability)*100)}})
-            console.log(data);
+            var svg_width = width + margin.left + margin.right;
+            //(svg_width/2 - parseInt($('.scatterplot-title').css('width').match(/^\d+/g)[0])/2).toString()+'px'
+            $('.scatterplot-title').css('margin-left', 144)
             var svg = d3.select("#total-reliability")
             .append("svg")
                 .attr("width", width + margin.left + margin.right)
