@@ -570,3 +570,12 @@ polyline {
     border-radius: 4px;
     border: 1px solid gray;
 }
+.stop-color-green{
+  stroke:#33d962;
+}
+.stop-color-orange{
+  stroke:#fdc81a;
+}
+.stop-color-red{
+  stroke:#ff5252;
+}
