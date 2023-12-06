@@ -1,5 +1,7 @@
-# cr_project
+# MBTA Rider Diagnostics Dashboard
+
+Try it out: https://ajax12345.github.io/cr_project/main_view
 
 ## Acknowledgements
 
-piechart.js is adapted from the example by [dbuezas](https://gist.github.com/dbuezas/9306799). We would like to express our gratitude for the original work and the contribution to the D3.js community.
+This project utilized the third-party libraries [jQuery](https://jquery.com/) and the [d3](https://d3js.org/) visualization library
