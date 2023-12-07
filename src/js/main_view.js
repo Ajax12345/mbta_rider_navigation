@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     d3.csv('raw_datasets/MBTA_rail_stops.csv', function(data){
         // associate stop ids with name
-        for (var i of data){
+        for (let i of data){
             stop_registry[i.stop_id] = i.stop_name;
         }
     });
@@ -71,7 +71,7 @@ $(document).ready(function(){
         ]]
     }
     function stop_delay_color(delay){
-        //color and img arrow to correspond with an average stop delay
+        //color and img arrow to correspond with an average stop delay duration
         if (delay < 5){
             return ['stop-color-green', 'caret-arrow-up.png'];
         }
@@ -83,7 +83,8 @@ $(document).ready(function(){
         }
     }   
     function render_route_delay_colors(route_id){
-        for (var i of route_stop_delays[route_id]){
+        /*render each line with a color that corresponds to the severity of its delays*/
+        for (let i of route_stop_delays[route_id]){
             let [color, img] = stop_delay_color(i.mdt);
             $(`.route-view-stop[name="${i.stop_name}"]`).addClass(color);
             $(`.cell-stop-name-S[name="${i.stop_name}"]`).append(`<img src='src/img/${img}' style='width:12px;height:12px;margin-left:5px;margin-top:3px;'>`)
@@ -91,7 +92,7 @@ $(document).ready(function(){
     }
     function render_delay_table(route_id){
         //display table of all stops for a given route and their corresponding delays
-        var all_stops = route_stop_delays[route_id].sort(function(a, b){
+        let all_stops = route_stop_delays[route_id].sort(function(a, b){
             if (a.mdt < b.mdt){
                 return -1
             }
@@ -272,6 +273,7 @@ $(document).ready(function(){
     /* LIVE VIEW JS */
     function min_to_color(min_behind){
         /*return CSS color classes and associated message for a train's status*/
+        /*i.e .train-pulse.green */
         if (min_behind < 2){
             return {color:'green', message: 'on time'}
         }   
@@ -469,11 +471,11 @@ $(document).ready(function(){
         
     }
     function handle_vehicle_endpoint(response, handler){
-        /*perform a train location update when new stream response is recieved*/
+        /*perform a train location update when new stream response is received*/
         if (handler != 'remove'){
-            var data = JSON.parse(response.data)
+            let data = JSON.parse(response.data)
             if (Array.isArray(data)){
-                for (var i of data){
+                for (let i of data){
                     draw_train_progress(i)
                 }
             }
@@ -583,6 +585,7 @@ $(document).ready(function(){
             if (evtSource != null){
                 evtSource.close();
             }
+            /*live stream a train's journey*/
             evtSource = new EventSource(`https://api-v3.mbta.com/vehicles?filter[route]=${route_id}&filter[route_type]=2&page[limit]=100&page[offset]=0&sort=current_stop_sequence&direction_id=1&api_key=ec477916907d435d9cdc835309d1a9f0`);
             evtSource.addEventListener('reset', function(e){
                 handle_vehicle_endpoint(e, 'reset')
@@ -636,7 +639,7 @@ $(document).ready(function(){
                         }
                         return 0
                     });
-                    for (var i of csv_data){
+                    for (let i of csv_data){
                         $('#full-route-table').append(`
                         <div class='cell full-route-cell' route='${i.name}'>${i.name}</div>
                         <div class='cell full-route-cell' route='${i.name}'>${Math.round(parseFloat(i.reliability)*100,0)}%</div>
@@ -794,10 +797,10 @@ $(document).ready(function(){
 
             d3.selectAll(".line-r-point")
                 .on("mouseover", function(){
-                    var details = JSON.parse(this.getAttribute('details'))
+                    let details = JSON.parse(this.getAttribute('details'))
                     $('.stop-tooltip').html(`${details.year} reliability: ${details.reliability}%`);
                     $('.stop-tooltip').css('visibility', 'visible')
-                    var rect = this.getBoundingClientRect();
+                    let rect = this.getBoundingClientRect();
                     $('.stop-tooltip').css('top', rect.top + window.pageYOffset - 20);
                     $('.stop-tooltip').css('left', rect.left + window.scrollX + 10);
                     $(this).css('r', '10')
@@ -871,10 +874,10 @@ $(document).ready(function(){
 
         d3.selectAll(".line-r-point")
             .on("mouseover", function(){
-                var details = JSON.parse(this.getAttribute('details'))
+                let details = JSON.parse(this.getAttribute('details'))
                 $('.stop-tooltip').html(`${details.year} reliability: ${details.reliability}%`);
                 $('.stop-tooltip').css('visibility', 'visible')
-                var rect = this.getBoundingClientRect();
+                let rect = this.getBoundingClientRect();
                 $('.stop-tooltip').css('top', rect.top + window.pageYOffset - 20);
                 $('.stop-tooltip').css('left', rect.left + window.scrollX + 10);
                 $(this).css('r', '10')
@@ -890,6 +893,7 @@ $(document).ready(function(){
             });
     }
     function display_individual_line_reliability_plot(){
+        /*render a scatterplot of a line's reliability across the years*/
         d3.csv('agg_datasets/reliability_year_line.csv', function(data){
             for (let i of data){
                 if (!(i.name in ROUTE_RELIABILITY_YEAR)){
@@ -911,5 +915,4 @@ $(document).ready(function(){
     });
     display_full_line_reliability();
     display_reliability_by_year();
-    //display_delay_causes()
 });
