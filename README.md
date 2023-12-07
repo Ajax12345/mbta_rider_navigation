@@ -1,6 +1,6 @@
 # MBTA Rider Diagnostics Dashboard
 
-Try it out: https://ajax12345.github.io/cr_project/main_view
+Try it out: https://ajax12345.github.io/cr_project/
 
 ## Acknowledgements
 
