@@ -579,3 +579,16 @@ polyline {
 .stop-color-red{
   stroke:#ff5252;
 }
+#line-total-reliability{
+  position: relative;
+}
+#total-reliability{
+  position: relative;
+}
+.plot-label{
+  position:absolute;
+  top:160;
+  left:-50;
+  display: inline-block;
+  transform:rotate(-90deg);
+}

@@ -738,7 +738,7 @@ $(document).ready(function(){
             });
         });
     }
-    function scatterplot_utilities(data, svg, margin, width, height){
+    function scatterplot_utilities(data, svg, margin, width, height, cid){
         /*builds axis and points for any base scatterplot svg*/
         let x = d3.scaleLinear()
                 .domain([Math.min(...data.map(function(x){return x.year})), Math.max(...data.map(function(x){return x.year}))])
@@ -799,6 +799,25 @@ $(document).ready(function(){
 
                 $('.stop-tooltip').css('visibility', 'hidden')
             });
+
+        svg.append("text")
+            .attr("class", "x label")
+            .attr("text-anchor", "end")
+            .attr("x", width)
+            .attr("y", height + 40)
+            .text("Year");
+
+        /*
+        svg.append("text")
+            .attr("class", "y label")
+            .attr("text-anchor", "end")
+            .attr("y", -40)
+            .attr("dy", ".75em")
+            .attr("transform", "rotate(-90)")
+            .text("Reliability %");
+
+        */
+        $(cid).append(`<text class="y label plot-label">Reliability %</text>`)
     }
     function display_reliability_by_year(){
         d3.csv('agg_datasets/reliability_year.csv', function(data){
@@ -816,7 +835,7 @@ $(document).ready(function(){
                 .attr("transform",
                     "translate(" + margin.left + "," + margin.top + ")");
 
-            scatterplot_utilities(data, svg, margin, width, height);
+            scatterplot_utilities(data, svg, margin, width, height, '#total-reliability');
             
         });
     }
@@ -834,7 +853,7 @@ $(document).ready(function(){
             .attr("transform",
                 "translate(" + margin.left + "," + margin.top + ")");
 
-        scatterplot_utilities(data, svg, margin, width, height);
+        scatterplot_utilities(data, svg, margin, width, height, '#line-total-reliability');
 
     }
     function display_individual_line_reliability_plot(){
