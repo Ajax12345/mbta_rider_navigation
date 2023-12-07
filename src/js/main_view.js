@@ -165,7 +165,7 @@ $(document).ready(function(){
             <div id="map"></div>
             `)
             let train_reliability = Object.fromEntries(csv_data.map(function(x){return [x.name, parseFloat(x.reliability)]}))
-            $('.route-reliability-header').html(`${route_mappings[route_id]} reliability: ${Math.round(train_reliability[route_mappings[route_id]]*100)}%<a href='#mbta-rail-reliability' style='text-decoration:none'><span>&#42;</span></a>`)
+            $('.route-reliability-header').html(`${route_mappings[route_id]} reliability: ${Math.round(train_reliability[route_mappings[route_id]]*100)}%<a href='#mbta-rail-reliability' style='text-decoration:none'><span style='color:#4884c9'>&#42;</span></a>`)
             $('.route-reliability.description-text').html(`Inspect the line map below to find the average delay times for stops along this route.`)
             $('.realtime-view-header').html(`${route_mappings[route_id]} live view`)
             $('.live-view-about').css('display', 'block');
@@ -738,108 +738,16 @@ $(document).ready(function(){
             });
         });
     }
-    function display_reliability_by_year(){
-        d3.csv('agg_datasets/reliability_year.csv', function(data){
-            let margin = {top: 10, right: 100, bottom: 30, left: 30},
-            width = 400 - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
-            data = data.map(function(x){return {year:parseInt(x.year), reliability:Math.round(parseFloat(x.reliability)*100)}})
-            let svg_width = width + margin.left + margin.right;
-            $('.scatterplot-title').css('margin-left', (parseInt($('#total-reliability').css('width').match(/^\d+/g)[0])/2 - 30 - parseInt($('.scatterplot-title').css('width').match(/^\d+/g)[0])/2).toString()+'px')
-            let svg = d3.select("#total-reliability")
-            .append("svg")
-                .attr("width", width + margin.left + margin.right)
-                .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-                .attr("transform",
-                    "translate(" + margin.left + "," + margin.top + ")");
-
-
-            let x = d3.scaleLinear()
+    function scatterplot_utilities(data, svg, margin, width, height){
+        /*builds axis and points for any base scatterplot svg*/
+        let x = d3.scaleLinear()
                 .domain([Math.min(...data.map(function(x){return x.year})), Math.max(...data.map(function(x){return x.year}))])
                 .range([ 0, width + 250]);
-
-            svg.append("g")
-                .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x).tickFormat(d3.format('d')));
-        
-            // Add Y axis
-            let y = d3.scaleLinear()
-                .domain( [60, 100])
-                .range([ height, 0 ]);
-            svg.append("g")
-            .call(d3.axisLeft(y));
-
-            let line = svg
-            .append('g')
-            .append("path")
-                .datum(data)
-                .attr("d", d3.line()
-                .x(function(d) { return x(+d.year) })
-                .y(function(d) { return y(+d.reliability) })
-                )
-                .attr("stroke", "rgb(181 181 181)")
-                .style("stroke-width", 4)
-                .style("fill", "none")
-
-            // Initialize dots with group a
-            let dot = svg
-            .selectAll('circle')
-            .data(data)
-            .enter()
-            .append('circle')
-                .attr("cx", function(d) { return x(+d.year) })
-                .attr("cy", function(d) { return y(+d.reliability) })
-                .attr("r", 6)
-                .attr('class', 'line-r-point')
-                .attr('details', function(d){return JSON.stringify(d)})
-                .style("fill", function(d){return get_relability_color(d.reliability)})
-
-            d3.selectAll(".line-r-point")
-                .on("mouseover", function(){
-                    let details = JSON.parse(this.getAttribute('details'))
-                    $('.stop-tooltip').html(`${details.year} reliability: ${details.reliability}%`);
-                    $('.stop-tooltip').css('visibility', 'visible')
-                    let rect = this.getBoundingClientRect();
-                    $('.stop-tooltip').css('top', rect.top + window.pageYOffset - 20);
-                    $('.stop-tooltip').css('left', rect.left + window.scrollX + 10);
-                    $(this).css('r', '10')
-
-                })
-                .on("mousemove", function(){
-            
-                })
-                .on("mouseout", function(){
-                    $(this).css('r', '6')
-
-                    $('.stop-tooltip').css('visibility', 'hidden')
-                });
-            
-        });
-    }
-    function render_line_reliability_by_year(line){
-        let margin = {top: 10, right: 100, bottom: 30, left: 30},
-            width = 400 - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
-        let data = ROUTE_RELIABILITY_YEAR[line];
-        $('#line-total-reliability').html('')
-        let svg = d3.select("#line-total-reliability")
-        .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-            .attr("transform",
-                "translate(" + margin.left + "," + margin.top + ")");
-
-
-        let x = d3.scaleLinear()
-            .domain([Math.min(...data.map(function(x){return x.year})), Math.max(...data.map(function(x){return x.year}))])
-            .range([ 0, width + 250]);
 
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x).tickFormat(d3.format('d')));
-
+    
         // Add Y axis
         let y = d3.scaleLinear()
             .domain( [60, 100])
@@ -847,7 +755,7 @@ $(document).ready(function(){
         svg.append("g")
         .call(d3.axisLeft(y));
 
-        var line = svg
+        let line = svg
         .append('g')
         .append("path")
             .datum(data)
@@ -891,6 +799,43 @@ $(document).ready(function(){
 
                 $('.stop-tooltip').css('visibility', 'hidden')
             });
+    }
+    function display_reliability_by_year(){
+        d3.csv('agg_datasets/reliability_year.csv', function(data){
+            let margin = {top: 10, right: 100, bottom: 30, left: 30},
+            width = 400 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+            data = data.map(function(x){return {year:parseInt(x.year), reliability:Math.round(parseFloat(x.reliability)*100)}});
+            let svg_width = width + margin.left + margin.right;
+            $('.scatterplot-title').css('margin-left', (parseInt($('#total-reliability').css('width').match(/^\d+/g)[0])/2 - 30 - parseInt($('.scatterplot-title').css('width').match(/^\d+/g)[0])/2).toString()+'px')
+            let svg = d3.select("#total-reliability")
+            .append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")");
+
+            scatterplot_utilities(data, svg, margin, width, height);
+            
+        });
+    }
+    function render_line_reliability_by_year(line){
+        let margin = {top: 10, right: 100, bottom: 30, left: 30},
+            width = 400 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+        let data = ROUTE_RELIABILITY_YEAR[line];
+        $('#line-total-reliability').html('');
+        let svg = d3.select("#line-total-reliability")
+        .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+        scatterplot_utilities(data, svg, margin, width, height);
+
     }
     function display_individual_line_reliability_plot(){
         /*render a scatterplot of a line's reliability across the years*/
