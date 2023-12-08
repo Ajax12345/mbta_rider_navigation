@@ -166,7 +166,7 @@ $(document).ready(function(){
             `)
             let train_reliability = Object.fromEntries(csv_data.map(function(x){return [x.name, parseFloat(x.reliability)]}))
             $('.route-reliability-header').html(`${route_mappings[route_id]} reliability: ${Math.round(train_reliability[route_mappings[route_id]]*100)}%<a href='#mbta-rail-reliability' style='text-decoration:none'><span style='color:#4884c9'>&#42;</span></a>`)
-            $('.route-reliability.description-text').html(`Inspect the line map below to find the average delay times for stops along this route.`)
+            $('.route-reliability.description-text').html(`Hover over stops on the line map below or scan across the table rows to find the average delay duration for stops along this route.`)
             $('.realtime-view-header').html(`${route_mappings[route_id]} live view`)
             $('.live-view-about').css('display', 'block');
             let width = parseInt($('.route-map-outer').css('width').match('^\\d+'));
@@ -237,7 +237,7 @@ $(document).ready(function(){
                     render_route_delay_colors(route_id);
                 }
                 else{
-                    d3.csv('agg_datasets/route_stop_delays_avg_boardings.csv', function(data){
+                    d3.csv('agg_datasets/route_stop_delays_avg_boardings_2.csv', function(data){
                         for (let i of data){
                             if (!(i.route in route_stop_delays)){
                                 route_stop_delays[i.route] = []
