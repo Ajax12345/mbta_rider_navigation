@@ -237,7 +237,7 @@ $(document).ready(function(){
                     render_route_delay_colors(route_id);
                 }
                 else{
-                    d3.csv('agg_datasets/route_stop_delays_avg_boardings_2.csv', function(data){
+                    d3.csv('agg_datasets/route_stop_delays_avg_boardings_1.csv', function(data){
                         for (let i of data){
                             if (!(i.route in route_stop_delays)){
                                 route_stop_delays[i.route] = []
