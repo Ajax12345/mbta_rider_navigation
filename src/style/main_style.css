@@ -592,3 +592,28 @@ polyline {
   display: inline-block;
   transform:rotate(-90deg);
 }
+.route-warnings-banner{
+  display: none;
+}
+.warning-banner{
+  display: inline-block;
+  padding:15px;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: rgb(255 233 192);
+  border: 1px solid rgb(255, 192, 75);
+  color: #c4850f;
+}
+.warning-banner a{
+  font-weight: 600;
+  color: #be7e08;
+}
+.warning-banner a:nth-of-type(2){
+  text-decoration: none;
+}
+.warning-banner a:nth-of-type(2):hover{
+  cursor:pointer;
+  text-decoration: underline !important;
+}

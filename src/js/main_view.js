@@ -11,7 +11,11 @@ $(document).ready(function(){
     var ROUTE_P = null;
     var ROUTE_RELIABILITY_YEAR = {}
     var stop_registry = {'BNT-0000':"North Station", 'NEC-2287':"South Station", 'ER-0042':'Chelsea'}
-
+    const ROUTE_WARNINGS = {
+        'CR-Worcester':'Due to <a href="https://www.mbta.com/news/2023-07-31/ashland-station-receive-25-million-repairs-and-improvements" target="_blank">ongoing maintainance</a>, we do not currently have data on the <a href="https://www.mbta.com/stops/place-WML-0252" target="_blank">Ashland commuter rail station</a>',
+        'CR-Newburyport':'Due to <a href="https://www.mbta.com/projects/lynn-commuter-rail-station-improvements" target="_blank">ongoing maintainance</a>, we do not currently have data on the <a href="https://www.mbta.com/stops/place-ER-0115" target="_blank">Lynn commuter rail station</a>',
+        'CR-Haverhill':'Due to recent changes in the MBTA API, we do not currently have data on the <a href="https://www.mbta.com/stops/place-WML-0252" target="_blank">Anderson/Woburn commuter rail station</a>'
+    }
     d3.csv('raw_datasets/MBTA_rail_stops.csv', function(data){
         // associate stop ids with name
         for (let i of data){
@@ -43,7 +47,7 @@ $(document).ready(function(){
         ]],
         'CR-Haverhill':[50000, [
             -71.005,
-            42.57
+            42.58
         ]],
         'CR-Kingston':[40000, [
             -70.8,
@@ -166,6 +170,11 @@ $(document).ready(function(){
             `)
             let train_reliability = Object.fromEntries(csv_data.map(function(x){return [x.name, parseFloat(x.reliability)]}))
             $('.route-reliability-header').html(`${route_mappings[route_id]} reliability: ${Math.round(train_reliability[route_mappings[route_id]]*100)}%<a href='#mbta-rail-reliability' style='text-decoration:none'><span style='color:#4884c9'>&#42;</span></a>`)
+            $('.route-warnings-banner').css('display', 'none');
+            if (route_id in ROUTE_WARNINGS){
+                $('.warning-banner').html(ROUTE_WARNINGS[route_id]);
+                $('.route-warnings-banner').css('display', 'block');
+            }
             $('.route-reliability.description-text').html(`Hover over stops on the line map below or scan across the table rows to find the average delay duration for stops along this route.`)
             $('.realtime-view-header').html(`${route_mappings[route_id]} live view`)
             $('.live-view-about').css('display', 'block');
