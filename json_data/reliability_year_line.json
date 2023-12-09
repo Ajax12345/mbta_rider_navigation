@@ -1,0 +1,402 @@
+{
+  "2016": [
+    {
+      "name": "Fairmount Line",
+      "reliability": "0.9542670728675767"
+    },
+    {
+      "name": "Fitchburg Line",
+      "reliability": "0.8589193015204688"
+    },
+    {
+      "name": "Framingham/Worcester Line",
+      "reliability": "0.764681982503527"
+    },
+    {
+      "name": "Franklin/Foxboro Line",
+      "reliability": "0.8457573028887913"
+    },
+    {
+      "name": "Greenbush Line",
+      "reliability": "0.9669038756941988"
+    },
+    {
+      "name": "Haverhill Line",
+      "reliability": "0.8593449001715158"
+    },
+    {
+      "name": "Kingston Line",
+      "reliability": "0.9615181279294194"
+    },
+    {
+      "name": "Lowell Line",
+      "reliability": "0.9322142891230888"
+    },
+    {
+      "name": "Middleborough/Lakeville Line",
+      "reliability": "0.9396676710386385"
+    },
+    {
+      "name": "Needham Line",
+      "reliability": "0.9036444116373065"
+    },
+    {
+      "name": "Newburyport/Rockport Line",
+      "reliability": "0.911697227620255"
+    },
+    {
+      "name": "Providence/Stoughton Line",
+      "reliability": "0.85548807114533"
+    }
+  ],
+  "2017": [
+    {
+      "name": "Fairmount Line",
+      "reliability": "0.9719066428473366"
+    },
+    {
+      "name": "Fitchburg Line",
+      "reliability": "0.8449049781271148"
+    },
+    {
+      "name": "Framingham/Worcester Line",
+      "reliability": "0.7976436154753872"
+    },
+    {
+      "name": "Franklin/Foxboro Line",
+      "reliability": "0.8711231310423556"
+    },
+    {
+      "name": "Greenbush Line",
+      "reliability": "0.9430199675972619"
+    },
+    {
+      "name": "Haverhill Line",
+      "reliability": "0.8450605066037687"
+    },
+    {
+      "name": "Kingston Line",
+      "reliability": "0.930533190195027"
+    },
+    {
+      "name": "Lowell Line",
+      "reliability": "0.9143902194151365"
+    },
+    {
+      "name": "Middleborough/Lakeville Line",
+      "reliability": "0.9070648404993051"
+    },
+    {
+      "name": "Needham Line",
+      "reliability": "0.8954816342902984"
+    },
+    {
+      "name": "Newburyport/Rockport Line",
+      "reliability": "0.8788834106828081"
+    },
+    {
+      "name": "Providence/Stoughton Line",
+      "reliability": "0.8597479297280405"
+    }
+  ],
+  "2018": [
+    {
+      "name": "Fairmount Line",
+      "reliability": "0.9606626967007695"
+    },
+    {
+      "name": "Fitchburg Line",
+      "reliability": "0.8547527197643283"
+    },
+    {
+      "name": "Framingham/Worcester Line",
+      "reliability": "0.8709741980307469"
+    },
+    {
+      "name": "Franklin/Foxboro Line",
+      "reliability": "0.8434463079066169"
+    },
+    {
+      "name": "Greenbush Line",
+      "reliability": "0.9338143239253436"
+    },
+    {
+      "name": "Haverhill Line",
+      "reliability": "0.9033256544785685"
+    },
+    {
+      "name": "Kingston Line",
+      "reliability": "0.9040969974829212"
+    },
+    {
+      "name": "Lowell Line",
+      "reliability": "0.8907391462078967"
+    },
+    {
+      "name": "Middleborough/Lakeville Line",
+      "reliability": "0.8994160280568033"
+    },
+    {
+      "name": "Needham Line",
+      "reliability": "0.8936572093610853"
+    },
+    {
+      "name": "Newburyport/Rockport Line",
+      "reliability": "0.890191143854884"
+    },
+    {
+      "name": "Providence/Stoughton Line",
+      "reliability": "0.8435411581128841"
+    }
+  ],
+  "2019": [
+    {
+      "name": "Fairmount Line",
+      "reliability": "0.9428304520079235"
+    },
+    {
+      "name": "Fitchburg Line",
+      "reliability": "0.8494137701871083"
+    },
+    {
+      "name": "Framingham/Worcester Line",
+      "reliability": "0.8498586997184084"
+    },
+    {
+      "name": "Franklin/Foxboro Line",
+      "reliability": "0.8717944447390084"
+    },
+    {
+      "name": "Greenbush Line",
+      "reliability": "0.9041108931456258"
+    },
+    {
+      "name": "Haverhill Line",
+      "reliability": "0.9094766165444682"
+    },
+    {
+      "name": "Kingston Line",
+      "reliability": "0.881028989409444"
+    },
+    {
+      "name": "Lowell Line",
+      "reliability": "0.9043394175117544"
+    },
+    {
+      "name": "Middleborough/Lakeville Line",
+      "reliability": "0.8399434571890135"
+    },
+    {
+      "name": "Needham Line",
+      "reliability": "0.8691877654781566"
+    },
+    {
+      "name": "Newburyport/Rockport Line",
+      "reliability": "0.887537535735441"
+    },
+    {
+      "name": "Providence/Stoughton Line",
+      "reliability": "0.8481857063046057"
+    }
+  ],
+  "2020": [
+    {
+      "name": "Fairmount Line",
+      "reliability": "0.9733444916720924"
+    },
+    {
+      "name": "Fitchburg Line",
+      "reliability": "0.9127126883747814"
+    },
+    {
+      "name": "Framingham/Worcester Line",
+      "reliability": "0.8811088289956651"
+    },
+    {
+      "name": "Franklin/Foxboro Line",
+      "reliability": "0.9289706485752766"
+    },
+    {
+      "name": "Greenbush Line",
+      "reliability": "0.9606903715660773"
+    },
+    {
+      "name": "Haverhill Line",
+      "reliability": "0.9309278636575519"
+    },
+    {
+      "name": "Kingston Line",
+      "reliability": "0.9495380025489526"
+    },
+    {
+      "name": "Lowell Line",
+      "reliability": "0.92625641344149"
+    },
+    {
+      "name": "Middleborough/Lakeville Line",
+      "reliability": "0.9390812251590582"
+    },
+    {
+      "name": "Needham Line",
+      "reliability": "0.942268850886864"
+    },
+    {
+      "name": "Newburyport/Rockport Line",
+      "reliability": "0.9170187604374677"
+    },
+    {
+      "name": "Providence/Stoughton Line",
+      "reliability": "0.947590547475403"
+    }
+  ],
+  "2021": [
+    {
+      "name": "Fairmount Line",
+      "reliability": "0.9750486936866668"
+    },
+    {
+      "name": "Fitchburg Line",
+      "reliability": "0.8812271055866574"
+    },
+    {
+      "name": "Framingham/Worcester Line",
+      "reliability": "0.8993448392291307"
+    },
+    {
+      "name": "Franklin/Foxboro Line",
+      "reliability": "0.8926263205393642"
+    },
+    {
+      "name": "Greenbush Line",
+      "reliability": "0.9205138752678813"
+    },
+    {
+      "name": "Haverhill Line",
+      "reliability": "0.925239457013299"
+    },
+    {
+      "name": "Kingston Line",
+      "reliability": "0.9090162952050919"
+    },
+    {
+      "name": "Lowell Line",
+      "reliability": "0.9392524791138986"
+    },
+    {
+      "name": "Middleborough/Lakeville Line",
+      "reliability": "0.8758287382683524"
+    },
+    {
+      "name": "Needham Line",
+      "reliability": "0.9421525418178751"
+    },
+    {
+      "name": "Newburyport/Rockport Line",
+      "reliability": "0.9284102383010372"
+    },
+    {
+      "name": "Providence/Stoughton Line",
+      "reliability": "0.9501233415528728"
+    }
+  ],
+  "2022": [
+    {
+      "name": "Fairmount Line",
+      "reliability": "0.9703053314348992"
+    },
+    {
+      "name": "Fitchburg Line",
+      "reliability": "0.8727993544429091"
+    },
+    {
+      "name": "Framingham/Worcester Line",
+      "reliability": "0.9163040077737726"
+    },
+    {
+      "name": "Franklin/Foxboro Line",
+      "reliability": "0.8738040462347146"
+    },
+    {
+      "name": "Greenbush Line",
+      "reliability": "0.9478164051173269"
+    },
+    {
+      "name": "Haverhill Line",
+      "reliability": "0.9071256826969741"
+    },
+    {
+      "name": "Kingston Line",
+      "reliability": "0.9267544701404234"
+    },
+    {
+      "name": "Lowell Line",
+      "reliability": "0.9565057298894756"
+    },
+    {
+      "name": "Middleborough/Lakeville Line",
+      "reliability": "0.8957841053273381"
+    },
+    {
+      "name": "Needham Line",
+      "reliability": "0.9350520328470902"
+    },
+    {
+      "name": "Newburyport/Rockport Line",
+      "reliability": "0.8956197804274856"
+    },
+    {
+      "name": "Providence/Stoughton Line",
+      "reliability": "0.9354043456597542"
+    }
+  ],
+  "2023": [
+    {
+      "name": "Fairmount Line",
+      "reliability": "0.9787937954224973"
+    },
+    {
+      "name": "Fitchburg Line",
+      "reliability": "0.8781873614190676"
+    },
+    {
+      "name": "Framingham/Worcester Line",
+      "reliability": "0.9320694471909329"
+    },
+    {
+      "name": "Franklin/Foxboro Line",
+      "reliability": "0.8987435328898757"
+    },
+    {
+      "name": "Greenbush Line",
+      "reliability": "0.9473184068819498"
+    },
+    {
+      "name": "Haverhill Line",
+      "reliability": "0.9045918882058104"
+    },
+    {
+      "name": "Kingston Line",
+      "reliability": "0.9065312377722697"
+    },
+    {
+      "name": "Lowell Line",
+      "reliability": "0.9670744305583561"
+    },
+    {
+      "name": "Middleborough/Lakeville Line",
+      "reliability": "0.8960431844578186"
+    },
+    {
+      "name": "Needham Line",
+      "reliability": "0.9419754276594166"
+    },
+    {
+      "name": "Newburyport/Rockport Line",
+      "reliability": "0.9265199920995514"
+    },
+    {
+      "name": "Providence/Stoughton Line",
+      "reliability": "0.939647068787541"
+    }
+  ]
+}
