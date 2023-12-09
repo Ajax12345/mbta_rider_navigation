@@ -12,8 +12,8 @@ $(document).ready(function(){
     var ROUTE_RELIABILITY_YEAR = {}
     var stop_registry = {'BNT-0000':"North Station", 'NEC-2287':"South Station", 'ER-0042':'Chelsea'}
     const ROUTE_WARNINGS = {
-        'CR-Worcester':'Due to <a href="https://www.mbta.com/news/2023-07-31/ashland-station-receive-25-million-repairs-and-improvements" target="_blank">ongoing maintainance</a>, we do not currently have data on the <a href="https://www.mbta.com/stops/place-WML-0252" target="_blank">Ashland commuter rail station</a>',
-        'CR-Newburyport':'Due to <a href="https://www.mbta.com/projects/lynn-commuter-rail-station-improvements" target="_blank">ongoing maintainance</a>, we do not currently have data on the <a href="https://www.mbta.com/stops/place-ER-0115" target="_blank">Lynn commuter rail station</a>',
+        'CR-Worcester':'Due to an ongoing MBTA <a href="https://www.mbta.com/news/2023-07-31/ashland-station-receive-25-million-repairs-and-improvements" target="_blank">rail station improvement project</a>, there is no data available for the <a href="https://www.mbta.com/stops/place-WML-0252" target="_blank">Ashland stop</a>',
+        'CR-Newburyport':'Due to an ongoing MBTA <a href="https://www.mbta.com/projects/lynn-commuter-rail-station-improvements" target="_blank">rail station improvement project</a>, there is no data available for the <a href="https://www.mbta.com/stops/place-ER-0115" target="_blank">Lynn stop</a>',
         'CR-Haverhill':'Due to recent changes in the MBTA API, we do not currently have data on the <a href="https://www.mbta.com/stops/place-WML-0252" target="_blank">Anderson/Woburn commuter rail station</a>'
     }
     d3.csv('raw_datasets/MBTA_rail_stops.csv', function(data){
