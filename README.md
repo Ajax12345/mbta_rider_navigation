@@ -7,4 +7,3 @@ https://ajax12345.github.io/cr_project/
 ## Acknowledgements
 
 This project utilized the third-party libraries [jQuery](https://jquery.com/) and the [d3](https://d3js.org/) visualization library.
-piechart.js is adapted from the example by [dbuezas](https://gist.github.com/dbuezas/9306799).
