@@ -1,7 +1,6 @@
 var selectElement = document.getElementById('mySelect');
 selectElement.addEventListener('change', function () {
     var selectedValue = selectElement.value;
-    console.log('Selected Value:', selectedValue);
     drawBarChart(selectedValue);
 });
 
@@ -37,7 +36,6 @@ function drawBarChart(year) {
     d3.json("json_data/reliability_year_line.json", function (data) {
         data = data[year];
         handleData(data);
-        console.log(data);
 
         // Scale the range of the data in the domains
         x.domain(data.map(function (d) { return d.name; }));
